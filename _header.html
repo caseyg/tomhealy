@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<title>{{site.title}} | {{title}}</title>
+	<link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
+	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7254632/675602/css/fonts.css" />
+	<link rel="stylesheet" type="text/css" href="/style.css" />
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+			{% for page in site.pages %}
+				<li><a href="{{page.url}}"{% if page.url == url %} class="is-current-page"{% endif %}>{{page.title}}</a></li>
+			{% endfor %}
+			</ul>
+		</nav>
+	</header>

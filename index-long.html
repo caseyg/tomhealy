@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<title>{{site.title}} | {{title}}</title>
+	<link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
+	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7254632/675602/css/fonts.css" />
+	<link rel="stylesheet" type="text/css" href="/style.css" />
+</head>
+<body>
+
+<video width="300" height="225">
+	<source src="tom.mp4"  type="video/mp4; codecs=avc1.42E01E,mp4a.40.2">
+	<source src="tom.webm" type="video/webm; codecs=vp8,vorbis">
+	<source src="tom.ogv"  type="video/ogg; codecs=theora,vorbis">
+</video>
+
+<section id="about">
+	{% for page in site.pages %}
+		{% if page.title == "About" %}
+		<p>{{page.excerpt | truncatewords: 15, ''}}<a class="more" href="/about" title="About Tom Healy">&hellip;</a></p>
+		{% endif %}
+	{% endfor %}
+</section>
+
+<section id="poetry">
+	<h2>Poetry</h2>
+		<ul>
+		{% for page in site.pages %}
+			{% for page in pages %}
+			<article>
+				<h3><a href="{{page.url}}">{{title}}</a></h3>
+			</article>
+			{% endfor %}
+		{% endfor %}
+		</ul>
+</section>
+
+<section id="prose">
+<h2>Prose</h2>
+<ul>
+	{% for post in posts limit:100 %}
+	<li><a href="{{post.url}}"><span class="title">{{post.title}}</span> <span class="date">{{post.date | date: "%b %d, %Y"}}</span></a></a></li>
+{% endfor %}
+</ul>
+<a class="more" href="/prose">&hellip;</a>
+</section>
+
+<section id="events">
+<h2>Events</h2>
+<ul>
+	{% for post in posts limit:100 %}
+	<li><a href="{{post.url}}"><span class="title">{{post.title}}</span> <span class="date">{{post.date | date: "%b %d, %Y"}}</span></a></a></li>
+{% endfor %}
+</ul>
+<a class="more" href="/prose">&hellip;</a>
+</section>
+
+</body>
+</html>

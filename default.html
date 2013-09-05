@@ -1,0 +1,50 @@
+<section id="container">
+	{% include 'header' %}
+
+	<section class="content">
+
+		{% if pages %}
+			{% comment %} Show subpages if there are any available {% endcomment %}
+			<nav class="subpage-menu">
+				{% for subpage in pages %}
+					<a href="{{subpage.url}}">{% for asset in subpage.assets %}<img src="{{asset.url}}" /><br />{% endfor %}
+					{{subpage.title}}</a>
+				{% endfor %}
+			</nav>
+		{% endif %}
+
+		{% if type == "post" %}
+		<article>
+		<h1 class="content-title">{{title}}</h1>
+			{% comment %} Show tagsets if this is a post {% endcomment %}
+
+			{% for tagset in taxonomy %}
+				<strong>{{tagset.key}} ({{tagset | size}} tags)</strong>
+				<ul>
+					{% for tag in tagset %}
+						<li><a href="{{tag.url}}">{{tag.value}}</a></li>
+					{% endfor %}
+				</ul>
+			{% endfor %}
+
+		{{body}}
+		</article>
+
+		{% else %}
+			{% comment %} Loop through any posts and show an excerpt {% endcomment %}
+			{% for post in posts %}
+				<ul>
+					<li><h2><a href="{{post.url}}">{{post.title}}, {{post.date | date: "%B %Y" }}</a></h2></li>
+				</ul>
+			{% endfor %}
+
+		{% endif %}
+
+		{% if parent %}
+			<p><a href="{{parent.url}}">&larr; Back to {{parent.title}}</a></p>
+		{% endif %}
+
+	</section><!-- /content -->
+
+	{% include 'footer' %}
+</section>
