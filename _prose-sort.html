@@ -1,0 +1,10 @@
+<nav id="sort">
+Sort by:
+	<ul>
+		{% for tagset in taxonomy %}
+			{% for tag in tagset %}
+				<li><a href="{{tag.url}}">{{tag.value}}</a></li>
+			{% endfor %}
+		{% endfor %}
+	</ul>
+</nav>
