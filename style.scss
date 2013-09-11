@@ -6,7 +6,7 @@ body{
 	font-weight:100;
 	font-size: 16px;
 	line-height: 1.5;
-	background: #eee;
+	background: #fff;
 	color:#080217;
 	padding:2.5% 5%;
 }
@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, nav, footer {
 }
 
 header {
-	margin-bottom:40px;
+	margin-bottom:30px;
 	li {
 		display:inline-block;
 		margin-right: 2px;
@@ -61,18 +61,23 @@ ul {
 	list-style-type:none;
 	margin:0;
 	padding:0;
-	li {
-		a {
-			span.date {
-				font-size:.65em;
-				color: #ccc!important;
-			}
-		}
+}
+a {
+	span.date {
+		font-size:.65em;
+		color: #ccc!important;
 	}
 }
-
+#taxonomy {
+	border-top:1px solid #eee;
+}
+.subpages ul {
+	margin: 0!important;
+	border-top:1px solid #eee;
+	border-bottom:1px solid #eee;
+}
 footer {
-	margin-top:40px;
+	margin-top:30px;
 	text-align:center;
 	section {
 		vertical-align: top;
@@ -99,6 +104,13 @@ video {
 	margin:auto;
 }
 
+article {
+	h1, h2 {
+		padding:0;
+		margin:0;
+	}
+}
+
 body#poems {
 	article {
 		img {
@@ -106,6 +118,7 @@ body#poems {
 			max-height:200px;
 			max-width:200px;
 			margin-bottom:5px;
+			border:1px solid #ccc;
 		}
 		h2 {
 			text-align: center;

@@ -1,10 +1,8 @@
-<nav id="sort">
-Sort by:
-	<ul>
-		{% for tagset in taxonomy %}
-			{% for tag in tagset %}
-				<li><a href="{{tag.url}}">{{tag.value}}</a></li>
-			{% endfor %}
-		{% endfor %}
-	</ul>
-</nav>
+<section id="taxonomy-filter">
+	<h2>Filter</h2>
+	{% for tagset in taxonomy %}
+		{% if tagset.size != 0 %}
+			<strong>{{tagset.key}}</strong>: {% for tag in tagset %}<a href="{{tag.url}}">{{tag.value}}</a> {% endfor %}<br />
+		{% endif %}
+	{% endfor %}
+</section>

@@ -1,66 +1,91 @@
-<section id="container">
-	{% include 'header' %}
+{% include 'header' %}
+<article>
+	{% if parent %}
+		<h1 class="content-title">{{title}}</h1>
+	{% endif %}
+	{% if type == "tag" or type == "taxonomy" %}
+		<h2 style="margin-bottom:20px;"><em>a collection of</em> <a href="{{ parent.parent.url }}">{{ parent.parent.title }}</a></h2>
+	{% endif %}
+	{% if pages or posts %} 
+		<section class="subpages">
+{% comment %} Show subpages if there are any available {% endcomment %}
+			{% for subpage in pages %}
+				<h2>
+					<a href="{{subpage.url}}">
+						{% for asset in subpage.assets %}<img src="{{asset.url}}" /><br />{% endfor %}
+						{{subpage.title}}
+						{% if title == "Poems" %}<br /><span class="date">{{subpage.date | date: "%B %Y" }}</span>{% endif %}
+					</a>
+				</h2>
+			{% endfor %}
 
-	<section class="content">
-		<article>
-			{% if parent %}
-				<h1 class="content-title">{{title}}</h1>
+			{% if title == "Prose" %}
+			<section id="taxonomy">
+				<h4><strong>Filter by</strong>: {% for tagset in taxonomy %} {% if tagset.size != 0 %} {% for tag in tagset %}<a href="{{tag.url}}">{{tag.value}}</a>  {% endfor %} {% endif %} {% endfor %}</h4>
+			</section>
 			{% endif %}
-			<section class="subpages">
-				{% if pages %} {% comment %} Show subpages if there are any available {% endcomment %}
-					{% for subpage in pages %}
-						<h2><a href="{{subpage.url}}">{% for asset in subpage.assets %}<img src="{{asset.url}}" /><br />{% endfor %}
-						{{subpage.title}}</a></h2>
+
+			{% if type != "post" %}
+{% comment %} Loop through posts {% endcomment %}
+				{% if permalink contains "reviews" %}
+{% comment %} For reviews show "of" which book and vague date {% endcomment %}
+				<h2><em>of</em> <a href="{{parent.url}}">{{parent.title}}</a></h2>
+				<ul>
+					{% for post in posts %}
+						<li><h3><a href="{{post.url}}">{{post.title}} <span class="date">{{post.date | date: "%B %Y" }}</a></h3></li>
 					{% endfor %}
-				{% endif %}
-				{% if type != "post" %} {% comment %} Loop through any posts and show an excerpt {% endcomment %}
-					{% if permalink contains "reviews" %}
-					{% elsif permalink contains "poems/" %}
-						<h2>Selections</h2>
-					{% endif %}
+				</ul>
+				{% elsif permalink contains "poems/" %}
+{% comment %} For poems show "selections" and no date {% endcomment %}
+					<h2 style="margin-top:20px;">Selections</h2>
 					<ul>
 						{% for post in posts %}
-							<li><h3><a href="{{post.url}}">{{post.title}}{% if permalink contains "poems" %}{% else %} <span class="date">{{post.date | date: "%B %Y" }}{% endif %}</span></a></h3></li>
+							<li><h3><a href="{{post.url}}">{{post.title}}</a></h3></li>
 						{% endfor %}
 					</ul>
-				{% endif %}
-			</section>
-			{% if type == "post" %}
-				{% if parent %}
-					<h2><em>from</em> <a href="{{parent.url}}">{{parent.title}}</a></h2>
+				{% elsif title == "Events" %}
+{% comment %} For events show big date {% endcomment %}
+				<ul>
+					{% for post in posts %}
+						<li><h3><a href="{{post.url}}">{{post.date | date: "%B %-d, %Y, %-I%p" }}<br /><strong>{{post.title}}</strong></a></h3></li>
+					{% endfor %}
+				</ul>				
+				{% else %}
+{% comment %} For everything else show small vague date {% endcomment %}
+				<ul>
+					{% for post in posts %}
+						<li><h3><a href="{{post.url}}">{{post.title}} <span class="date">{{post.date | date: "%B %Y" }}</span></a></h3></li>
+					{% endfor %}
+				</ul>
 				{% endif %}
 			{% endif %}
-			{% for asset in assets %}
-				{% if asset.type == 'image' %}
-					<img src="{{asset.url}}">
-				{% elsif asset.type == 'video' %}
-					<video><source src="{{asset.url}}" type="{{asset.content_type}}"></video>
-				{% elsif asset.type == 'other' %}
-					<a href="{{asset.url}}">Download {{asset.filename}}</a></li>
-				{% endif %}
-			{% endfor %}
-			{{body}}
+		</section>
+	{% endif %}
 
-			{% if type == "post" %}
-			<section class="meta">
-				<a title="Click for directions" href="http://maps.google.com/?q={{meta.address}}"><img src="http://maps.googleapis.com/maps/api/staticmap?size=600x300&markers=color:red|{{meta.address}}&sensor=false&key=AIzaSyA0aqlbFHW-CRlBL07LrAkxqanPi7l8olA" alt=""></a>
-				{% comment %} Show tagsets if this is a post {% endcomment %}
+	{% if type == "post" %}
+		{% if parent %}
+			<h2><em>from</em> <a href="{{parent.url}}">{{parent.title}}</a></h2>
+		{% endif %}
+	{% endif %}
 
-				{% for tagset in taxonomy %}
-					{% if tagset.size != 0 %}
-						<strong>{{tagset.key}} ({{tagset | size}} tags)</strong>
-						<ul>
-							{% for tag in tagset %}
-								<li><a href="{{tag.url}}">{{tag.value}}</a></li>
-							{% endfor %}
-						</ul>
-					{% endif %}
-				{% endfor %}
-			</section>
-			{% endif %}
-		</article>
+	{% for asset in assets %}
+		{% if asset.type == 'image' and parent.title != "Prose" %}
+			<img src="{{asset.url}}">
+		{% endif %}
+	{% endfor %}
+	{{body}}
 
-	</section><!-- /content -->
+	{% if type == "post" %}
+		{% if meta.address %}
+		<section class="meta">
+			<a title="Click for directions" href="http://maps.google.com/?q={{meta.address}}"><img src="http://maps.googleapis.com/maps/api/staticmap?size=600x300&markers=color:red|{{meta.address}}&sensor=false&key=AIzaSyA0aqlbFHW-CRlBL07LrAkxqanPi7l8olA" alt=""></a>
+		{% endif %}
+		{% comment %} Show tagsets if this is a post {% endcomment %}
 
-	{% include 'footer' %}
-</section>
+		<section id="taxonomy">
+			<h4><strong>Related collections</strong>: {% for tagset in taxonomy %} {% if tagset.size != 0 %} {% for tag in tagset %}<a href="{{tag.url}}">{{tag.value}}</a>  {% endfor %} {% endif %} {% endfor %}</h4>
+		</section>
+	</section>
+	{% endif %}
+</article>
+{% include 'footer' %}
