@@ -15,23 +15,34 @@ h1, h2, h3, h4, h5, nav, footer {
 	font-family: 'Gotham SSm A', 'Gotham SSm B';
 	font-weight:100;
 	color:black;
-	a:link, a:visited {
-		color:black;
-		text-decoration:none;
-	}
-	a:link, a:visited {
-		vertical-align: baseline;
-		font-weight: 400;
-		letter-spacing: 0;
-		padding:0px 0;
-		margin:0;
-		-webkit-transition:all .25s;
-		border-bottom:2px solid #eee;
-	}
-	a:hover, .is-current-page {
-		border-bottom:2px solid black!important;
-	}
 }
+
+a:link, a:visited {
+	color:black;
+	text-decoration:none;
+}
+a:link, a:visited {
+	vertical-align: baseline;
+	font-weight: 400;
+	letter-spacing: 0;
+	padding:0px 0;
+	margin:0;
+	-webkit-transition:all .25s;
+	border-bottom:2px solid #eee;
+}
+a:hover, .is-current-page {
+	border-bottom:2px solid black!important;
+}
+
+
+h1 { 
+	font-size: 1.75em; 
+	line-height:1.15em;
+}
+h2 { font-size: 1.25em; }
+h3 { font-size: 1.10em; }
+h5 { font-size: .83em; }
+h6 { font-size: .75em; }
 
 header {
 	margin-bottom:30px;
@@ -53,6 +64,12 @@ p {
 	margin:1em auto;
 }
 
+.parent-prose {
+	p {
+		max-width: 600px
+	}
+}
+
 blockquote {
 	font-style: italic;
 }
@@ -68,17 +85,29 @@ a {
 		color: #ccc!important;
 	}
 }
-#taxonomy {
-	border-top:1px solid #eee;
+.subpages {
+	margin:20px 0;
 }
+.parent-poems .subpages, #about .subpages, #taxonomy {
+	border:1px solid #eee;
+	border-radius:5px;
+	padding:10px;
+	ul li {
+		margin-left:1em;
+	}
+}
+#taxonomy {padding:0 10px;margin:0;}
 .subpages ul {
-	margin: 0!important;
-	border-top:1px solid #eee;
-	border-bottom:1px solid #eee;
+		margin: 0!important;
 }
+
+#reviews .subpages ul {
+	border:none;
+}
+
 footer {
 	margin-top:30px;
-	text-align:center;
+	border-top:1px solid #eee;
 	section {
 		vertical-align: top;
 		margin:0;
@@ -130,7 +159,6 @@ body#poems {
 // 480px
 @media only screen and (min-width: 480px) {
 	footer {
-		text-align: left;
 		section {
 			display: inline-block;
 			width:24%;
@@ -144,4 +172,29 @@ body#poems {
 		width:48%;
 		margin:40px 0;
 	}
+}
+@media only screen and (min-width: 600px) {
+	.parent-poems {
+		h1 {
+			margin-bottom:20px;
+		}
+		img {
+			max-width:50%;
+		}
+		.subpages {
+			float:right;
+		}
+	}
+}
+@media only screen and (min-width: 768px) {
+  /* 768 =================================================== */
+}
+@media only screen and (min-width: 992px) {
+  /* 992 =================================================== */
+}
+@media only screen and (min-width: 1382px) {
+  /* 1382 =================================================== */
+  body {
+    max-width: 1440px;
+  }
 }

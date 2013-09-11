@@ -26,17 +26,17 @@
 			{% endif %}
 
 			{% if type != "post" %}
-{% comment %} Loop through posts {% endcomment %}
+			{% comment %} Loop through posts {% endcomment %}
 				{% if permalink contains "reviews" %}
-{% comment %} For reviews show "of" which book and vague date {% endcomment %}
-				<h2><em>of</em> <a href="{{parent.url}}">{{parent.title}}</a></h2>
-				<ul>
-					{% for post in posts %}
-						<li><h3><a href="{{post.url}}">{{post.title}} <span class="date">{{post.date | date: "%B %Y" }}</a></h3></li>
-					{% endfor %}
-				</ul>
+				{% comment %} For reviews show "of" which book and vague date {% endcomment %}
+					<h2><em>of</em> <a href="{{parent.url}}">{{parent.title}}</a></h2>
+					<ul>
+						{% for post in posts %}
+							<li><h3><a href="{{post.url}}">{{post.title}} <span class="date">{{post.date | date: "%B %Y" }}</a></h3></li>
+						{% endfor %}
+					</ul>
 				{% elsif permalink contains "poems/" %}
-{% comment %} For poems show "selections" and no date {% endcomment %}
+				{% comment %} For poems show "selections" and no date {% endcomment %}
 					<h2 style="margin-top:20px;">Selections</h2>
 					<ul>
 						{% for post in posts %}
@@ -44,19 +44,23 @@
 						{% endfor %}
 					</ul>
 				{% elsif title == "Events" %}
-{% comment %} For events show big date {% endcomment %}
-				<ul>
-					{% for post in posts %}
-						<li><h3><a href="{{post.url}}">{{post.date | date: "%B %-d, %Y, %-I%p" }}<br /><strong>{{post.title}}</strong></a></h3></li>
-					{% endfor %}
-				</ul>				
+				{% comment %} For events show big date {% endcomment %}
+					<ul>
+						{% if posts %}
+						{% for post in posts %}
+							<li><h3><a href="{{post.url}}">{{post.date | date: "%B %-d, %Y, %-I%p" }}<br /><strong>{{post.title}}</strong></a></h3></li>
+						{% endfor %}
+						{% endif %}
+					</ul>				
 				{% else %}
-{% comment %} For everything else show small vague date {% endcomment %}
-				<ul>
-					{% for post in posts %}
-						<li><h3><a href="{{post.url}}">{{post.title}} <span class="date">{{post.date | date: "%B %Y" }}</span></a></h3></li>
-					{% endfor %}
-				</ul>
+					{% if posts.size != 0 %}
+						{% comment %} For everything else show small vague date {% endcomment %}
+						<ul>
+							{% for post in posts %}
+								<li><h3><a href="{{post.url}}">{{post.title}} <span class="date">{{post.date | date: "%B %Y" }}</span></a></h3></li>
+							{% endfor %}
+						</ul>
+					{% endif %}
 				{% endif %}
 			{% endif %}
 		</section>
@@ -80,11 +84,11 @@
 		<section class="meta">
 			<a title="Click for directions" href="http://maps.google.com/?q={{meta.address}}"><img src="http://maps.googleapis.com/maps/api/staticmap?size=600x300&markers=color:red|{{meta.address}}&sensor=false&key=AIzaSyA0aqlbFHW-CRlBL07LrAkxqanPi7l8olA" alt=""></a>
 		{% endif %}
-		{% comment %} Show tagsets if this is a post {% endcomment %}
-
+		{% if parent.slug == "prose"  %}
 		<section id="taxonomy">
 			<h4><strong>Related collections</strong>: {% for tagset in taxonomy %} {% if tagset.size != 0 %} {% for tag in tagset %}<a href="{{tag.url}}">{{tag.value}}</a>  {% endfor %} {% endif %} {% endfor %}</h4>
 		</section>
+		{% endif %}
 	</section>
 	{% endif %}
 </article>
