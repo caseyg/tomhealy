@@ -40,8 +40,10 @@
 				{% endif %}
 			{% endfor %}
 			{{body}}
+
 			{% if type == "post" %}
 			<section class="meta">
+				<a title="Click for directions" href="http://maps.google.com/?q={{meta.address}}"><img src="http://maps.googleapis.com/maps/api/staticmap?size=600x300&markers=color:red|{{meta.address}}&sensor=false&key=AIzaSyA0aqlbFHW-CRlBL07LrAkxqanPi7l8olA" alt=""></a>
 				{% comment %} Show tagsets if this is a post {% endcomment %}
 
 				{% for tagset in taxonomy %}
