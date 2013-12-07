@@ -15,7 +15,7 @@
 			<nav>
 				<ul>
 				{% for page in site.pages %}
-					<li><a href="{{page.url}}"{% if page.url == url %} class="is-current-page"{% endif %}>{{page.title}}</a></li>
+					<li class="{{page.slug}}"><a href="{{page.url}}"{% if page.url == url %} class="is-current-page"{% endif %}>{{page.title}}</a></li>
 				{% endfor %}
 				</ul>
 			</nav>

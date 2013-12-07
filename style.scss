@@ -33,6 +33,11 @@ a:link, a:visited {
 a:hover, .is-current-page {
 	border-bottom:2px solid black!important;
 }
+header, footer {
+	a:link, a:visited {
+		border-color:#fff;
+	}
+}
 
 
 h1 { 
@@ -49,6 +54,10 @@ header {
 	li {
 		display:inline-block;
 		margin-right: 2px;
+	}
+	li.events a:link, li.events a:visited {
+		color:orange;
+		border-bototom: 2px solid orange;
 	}
 }
 
@@ -117,6 +126,10 @@ footer {
 		font-size:1em;
 		line-height:1;
 		font-weight:bold;
+	}
+	h2.name {
+		color:lime;
+		text-transform: uppercase;
 	}
 	a {
 		text-transform: none;

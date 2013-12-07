@@ -4,7 +4,7 @@
 		<h1 class="content-title">{{title}}</h1>
 	{% endif %}
 	{% if type == "tag" or type == "taxonomy" %}
-		<h2 style="margin-bottom:20px;"><em>a collection of</em> <a href="{{ parent.parent.url }}">{{ parent.parent.title }}</a></h2>
+		<h2 style="margin-bottom:20px;"><em>a way to organize</em> <a href="{{ parent.parent.url }}">{{ parent.parent.title }}</a></h2>
 	{% endif %}
 	{% if pages or posts %} 
 		<section class="subpages">
@@ -20,8 +20,11 @@
 			{% endfor %}
 
 			{% if title == "Prose" %}
+
+			<p>A chronological list of speeches, essays, criticisms and other prose.</p>
+
 			<section id="taxonomy">
-				<h4><strong>Filter by</strong>: {% for tagset in taxonomy %} {% if tagset.size != 0 %} {% for tag in tagset %}<a href="{{tag.url}}">{{tag.value}}</a>  {% endfor %} {% endif %} {% endfor %}</h4>
+				<h4><strong>Ways to organize</strong>: {% for tagset in taxonomy %} {% if tagset.size != 0 %} {% for tag in tagset %}<a href="{{tag.url}}">{{tag.value}}</a>  {% endfor %} {% endif %} {% endfor %}</h4>
 			</section>
 			{% endif %}
 
@@ -86,7 +89,7 @@
 		{% endif %}
 		{% if parent.slug == "prose"  %}
 		<section id="taxonomy">
-			<h4><strong>Related collections</strong>: {% for tagset in taxonomy %} {% if tagset.size != 0 %} {% for tag in tagset %}<a href="{{tag.url}}">{{tag.value}}</a>  {% endfor %} {% endif %} {% endfor %}</h4>
+			<h4><strong>Related</strong>: {% for tagset in taxonomy %} {% if tagset.size != 0 %} {% for tag in tagset %}<a href="{{tag.url}}">{{tag.value}}</a>  {% endfor %} {% endif %} {% endfor %}</h4>
 		</section>
 		{% endif %}
 	</section>
