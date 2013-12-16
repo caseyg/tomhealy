@@ -27,8 +27,7 @@ a:link, a:visited {
 	letter-spacing: 0;
 	padding:0px 0;
 	margin:0;
-	-webkit-transition:all .25s;
-	border-bottom:2px solid #eee;
+	border-bottom:2px solid #dfdfdf;
 }
 a:hover, .is-current-page {
 	border-bottom:2px solid black!important;
@@ -68,6 +67,45 @@ article, header, nav, section {
 		display: block;
 }
 
+nav .home {
+	display:inline-block;
+	height:24px;
+	a:link, a:visited {
+		display:inline-block;
+		padding:0;
+		margin:1px 1px 0 0;
+		height:23px;
+		width:23px;
+		text-indent: -5000em;
+		background-image: url(home.png);
+		background-size:23px 47px;
+		background-repeat:no-repeat;
+		border:none!important;
+		-webkit-transition: none;
+	}
+	a:hover, a:active {
+		background-position:bottom;
+	}
+}
+
+p.intro {
+	font-style:italic;
+}
+
+body#home nav .home a {
+	background-position:bottom;
+}
+
+nav .events {
+
+	a:link.is-current-page, a:visited.is-current-page {
+		border-color: orange!important;
+	}
+	a:hover, a:active {
+		border-color: orange!important;
+	}
+}
+
 p {
 //	max-width:500px;
 	margin:1em auto;
@@ -98,7 +136,7 @@ a {
 	margin:20px 0;
 }
 .parent-poems .subpages, #about .subpages, #taxonomy {
-	border:1px solid #eee;
+	border:1px solid #dfdfdf;
 	border-radius:5px;
 	padding:10px;
 	ul li {
@@ -116,7 +154,7 @@ a {
 
 footer {
 	margin-top:30px;
-	border-top:1px solid #eee;
+	border-top:1px solid #dfdfdf;
 	section {
 		vertical-align: top;
 		margin:0;
@@ -157,15 +195,22 @@ body#poems {
 	article {
 		img {
 			max-width:100%;
-			max-height:200px;
-			max-width:200px;
+			max-height:300px;
+			max-width:300px;
 			margin-bottom:5px;
 			border:1px solid #ccc;
 		}
 		h2 {
-			text-align: center;
 			margin-bottom:40px;
 		}
+	}
+	.subpages h2 {
+		a:link, a:visited, a:hover, a:active {
+			border:none!important;
+		}
+	}
+	.subpages h2 a:hover .title {
+		border-bottom:2px solid #000;
 	}
 }
 

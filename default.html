@@ -13,15 +13,23 @@
 				<h2>
 					<a href="{{subpage.url}}">
 						{% for asset in subpage.assets %}<img src="{{asset.url}}" /><br />{% endfor %}
-						{{subpage.title}}
-						{% if title == "Poems" %}<br /><span class="date">{{subpage.date | date: "%B %Y" }}</span>{% endif %}
+						<span class="title">{{subpage.title}}</span>
+						{% if title == "Poems" %}<br /><span class="date">{{subpage.date | date: "%Y" }}</span>{% endif %}
 					</a>
 				</h2>
 			{% endfor %}
 
+			{% if title == "Poems" %}
+					<h2>
+						<a href="http://tomhealy.tumblr.com/tagged/poetry">
+							<span class="title">New Poems</span><br /><span class="date">Ongoing</span>
+						</a>
+					</h2>
+			{% endif %}
+
 			{% if title == "Prose" %}
 
-			<p>A chronological list of speeches, essays, criticisms and other prose.</p>
+			<p class="intro">A chronological list of speeches, essays, criticisms and other prose.</p>
 
 			<section id="taxonomy">
 				<h4><strong>Ways to organize</strong>: {% for tagset in taxonomy %} {% if tagset.size != 0 %} {% for tag in tagset %}<a href="{{tag.url}}">{{tag.value}}</a>  {% endfor %} {% endif %} {% endfor %}</h4>
@@ -60,7 +68,9 @@
 						{% comment %} For everything else show small vague date {% endcomment %}
 						<ul>
 							{% for post in posts %}
-								<li><h3><a href="{{post.url}}">{{post.title}} <span class="date">{{post.date | date: "%B %Y" }}</span></a></h3></li>
+								<li>
+									<h3>
+										<a href="{{post.url}}"><span class="date">{{post.date | date: "%B %-d, %Y at %-I%p" }}</span><br />{{meta['locale']}}<br />{{post.title}}</a></h3></li>
 							{% endfor %}
 						</ul>
 					{% endif %}
@@ -92,7 +102,6 @@
 			<h4><strong>Related</strong>: {% for tagset in taxonomy %} {% if tagset.size != 0 %} {% for tag in tagset %}<a href="{{tag.url}}">{{tag.value}}</a>  {% endfor %} {% endif %} {% endfor %}</h4>
 		</section>
 		{% endif %}
-	</section>
 	{% endif %}
 </article>
 {% include 'footer' %}
