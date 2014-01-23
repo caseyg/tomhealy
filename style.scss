@@ -38,6 +38,10 @@ header, footer {
 	}
 }
 
+hr {
+	border:none;
+	border-top:1px solid #ccc;
+}
 
 h1 { 
 	font-size: 1.75em; 
@@ -111,7 +115,7 @@ p {
 	margin:1em auto;
 }
 
-.parent-prose {
+.parent-prose, #about {
 	p {
 		max-width: 600px
 	}
@@ -126,10 +130,18 @@ ul {
 	margin:0;
 	padding:0;
 }
-a {
-	span.date {
-		font-size:.65em;
-		color: #ccc!important;
+#events{
+	a {
+		span.date {
+			font-weight: bold;
+		}
+	}
+}
+#prose, .tag {
+	a {
+		span.title {
+			font-weight: bold;
+		}
 	}
 }
 .subpages {
@@ -137,8 +149,7 @@ a {
 }
 .parent-poems .subpages, #about .subpages, #taxonomy {
 	border:1px solid #dfdfdf;
-	border-radius:5px;
-	padding:10px;
+	padding:0 10px;
 	ul li {
 		margin-left:1em;
 	}
@@ -153,6 +164,7 @@ a {
 }
 
 footer {
+	clear:both;
 	margin-top:30px;
 	border-top:1px solid #dfdfdf;
 	section {
@@ -187,7 +199,7 @@ video {
 article {
 	h1, h2 {
 		padding:0;
-		margin:0;
+		margin:15px 0;
 	}
 }
 
@@ -195,21 +207,18 @@ body#poems {
 	article {
 		img {
 			max-width:100%;
-			max-height:300px;
-			max-width:300px;
+			max-height:400px;
+			max-width:400px;
 			margin-bottom:5px;
 			border:1px solid #ccc;
 		}
-		h2 {
-			margin-bottom:40px;
-		}
 	}
-	.subpages h2 {
+	.subpages h3 {
 		a:link, a:visited, a:hover, a:active {
 			border:none!important;
 		}
 	}
-	.subpages h2 a:hover .title {
+	.subpages h3 a:hover .title {
 		border-bottom:2px solid #000;
 	}
 }
@@ -225,10 +234,10 @@ body#poems {
 	header li {
 		margin-right:10px;
 	}
-	body#poems article h2 {
+	body#poems article h3 {
 		display:inline-block;
 		width:48%;
-		margin:40px 0;
+		margin:10px 0;
 	}
 }
 @media only screen and (min-width: 600px) {
@@ -236,11 +245,13 @@ body#poems {
 		h1 {
 			margin-bottom:20px;
 		}
-		img {
-			max-width:50%;
+		#cover, article {
+			width:48%;
+			display:inline-block;
+			vertical-align: top;
 		}
-		.subpages {
-			float:right;
+		#cover {
+			margin-right: 2%;
 		}
 	}
 }
