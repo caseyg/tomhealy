@@ -245,7 +245,7 @@ nav .events a:hover, nav .events a:active {
 p {
   margin: 1em auto; }
 
-.parent-prose p, #about p, .parent-reviews p {
+.parent-prose p, #about p {
   max-width: 600px; }
 
 blockquote {

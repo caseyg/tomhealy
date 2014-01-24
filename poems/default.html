@@ -9,9 +9,17 @@
 		<h1 class="content-title">{{title}}</h1>
 	{% endif %}
 
+	{% if type == "post" %}
+		{% if parent %}
+			<h2><em>from</em> <a href="{{parent.url}}">{{parent.title}}</a></h2>
+		{% endif %}
+	{% endif %}
+
 	{% if type != "post" %}
 	{% comment %} Loop through posts {% endcomment %}
+			{% if parent.slug == "poems"  %}
 			<h2 style="margin-top:20px;">Peruse</h2>
+			{% endif %}
 			<ul>
 				{% for post in posts %}
 					<li><a href="{{post.url}}">{{post.title}}</a></li>
@@ -28,17 +36,5 @@
 			</a>
 		</h2>
 	{% endfor %}
-
-	{% if type == "post" %}
-		{% if meta.address %}
-		<section class="meta">
-			<a title="Click for directions" href="http://maps.google.com/?q={{meta.address}}"><img src="http://maps.googleapis.com/maps/api/staticmap?size=600x300&markers=color:red|{{meta.address}}&sensor=false&key=AIzaSyA0aqlbFHW-CRlBL07LrAkxqanPi7l8olA" alt=""></a>
-		{% endif %}
-		{% if parent.slug == "prose"  %}
-		<section id="taxonomy">
-			<h4><strong>Related</strong>: {% for tagset in taxonomy %} {% if tagset.size != 0 %} {% for tag in tagset %}<a href="{{tag.url}}">{{tag.value}}</a>  {% endfor %} {% endif %} {% endfor %}</h4>
-		</section>
-		{% endif %}
-	{% endif %}
 </article>
 {% include 'footer' %}

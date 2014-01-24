@@ -59,7 +59,7 @@
 					<ul>
 						{% if posts %}
 						{% for post in posts %}
-							<li><h3><a href="{{post.url}}"><span class="date">{{post.date | date: "%B %-d, %Y, %-I%p" }}</span><br />{% if post.meta['locale'] %}<span class="locale">{{post.meta['locale']}}</span><br />{% endif %}{{post.title}}</a></h3></li>
+							<li><h3><a href="{{post.url}}">{% if post.meta['locale'] %}<span class="locale">{{post.meta['locale']}}</span> on {% endif %}<span class="date">{{post.date | date: "%B %-d, %Y, %-I%p" }}</span><br />{{post.title}}</a></h3></li>
 						{% endfor %}
 						{% endif %}
 					</ul>				
@@ -93,6 +93,10 @@
 	{{body}}
 
 	{% if type == "post" %}
+		{% if meta.url %}
+			<p><a href="{{meta.url}}">More Info</a></p>
+		{% endif %}
+
 		{% if meta.address %}
 		<section class="meta">
 			<a title="Click for directions" href="http://maps.google.com/?q={{meta.address}}"><img src="http://maps.googleapis.com/maps/api/staticmap?size=600x300&markers=color:red|{{meta.address}}&sensor=false&key=AIzaSyA0aqlbFHW-CRlBL07LrAkxqanPi7l8olA" alt=""></a>

@@ -1,4 +1,5 @@
 @import "normalize.css";
+@import "colors";
 
 body{
 	font-family: 'Chronicle SSm A', 'Chronicle SSm B';
@@ -59,8 +60,8 @@ header {
 		margin-right: 2px;
 	}
 	li.events a:link, li.events a:visited {
-		color:orange;
-		border-bototom: 2px solid orange;
+		color:$orange;
+		border-bototom: 2px solid $orange;
 	}
 }
 
@@ -103,10 +104,10 @@ body#home nav .home a {
 nav .events {
 
 	a:link.is-current-page, a:visited.is-current-page {
-		border-color: orange!important;
+		border-color: $orange!important;
 	}
 	a:hover, a:active {
-		border-color: orange!important;
+		border-color: $orange!important;
 	}
 }
 
@@ -115,7 +116,7 @@ p {
 	margin:1em auto;
 }
 
-.parent-prose, #about {
+.parent-prose, #about, .parent-reviews {
 	p {
 		max-width: 600px
 	}
@@ -132,8 +133,11 @@ ul {
 }
 #events{
 	a {
-		span.date {
+		span.date, span.locale {
 			font-weight: bold;
+		}
+		span.locale {
+			color: $orange; 
 		}
 	}
 }
@@ -263,7 +267,5 @@ body#poems {
 }
 @media only screen and (min-width: 1382px) {
   /* 1382 =================================================== */
-  #container {
-    max-width: 1440px;
-  }
+
 }
