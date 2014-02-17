@@ -1,5 +1,95 @@
-<section id="container">
-{% include 'header' %}
-<a href="/about"><img src="tomhealyis.jpg" /></a>
-{% include 'footer' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<title>{{site.title}} | {{title}}</title>
+	<link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
+	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7254632/675602/css/fonts.css" />
+	<link rel="stylesheet" type="text/css" href="/style.css" />
+</head>
+<body id="{{ slug }}" class="{{ type }} parent-{{ parent.slug }}">
+	<section id="container">
+
+<article>
+
+<section id="about">
+	<div class="telescopictext" style="display: block;">
+	<p><span id="tomhealy">Tom Healy</span> is a writer and poet and <span class="a"><span class="b _b">chairman.</span><span class="c" style="display: none;">chairman <span class="a"><span class="b _b">appointed</span><span class="c" style="display: none;">of the Fulbright Foreign Scholarship Board, which oversees the Fulbright program worldwide. He was appointed</span></span> by President Barack Obama.</span></span> Healy <span class="a"><span class="b _b">teaches and</span><span class="c" style="display: none;">teaches at New York University and is currently a visiting professor at the New School. He</span></span> is the author of <span class="a"><span class="b _b">two books of poetry.</span><span class="c" style="display: none;">two books of poetry: <span class="a"><span class="b _b">Animal Spirits</span><span class="c" style="display: none;">Animal Spirits, a collaboration with tattoo artist Duke Riley,</span></span> and <span class="a"><span class="b _b">What the Right Hand Knows.</span><span class="c" style="display: none;">What the Right Hand Knows, a finalist for the 2009 L.A. Times Book Prize and the Lambda Literary Award.</span></span></span></span> Two books of Healy’s essays are <span class="a"><span class="b _b">forthcoming.</span><span class="c" style="display: none;">forthcoming: <span class="a"><span class="b _b">The Rest of the World</span><span class="c" style="display: none;">The Rest of the World, about his work in international education and diplomacy,</span></span> and <span class="a"><span class="b _b">Some Friends.</span><span class="c" style="display: none;">Some Friends, reflections on contemporary artists and writers.</span></span></span></span> Healy has been a <span class="a"><span class="b _b">lecturer or writer-in-residence.</span><span class="c" style="display: none;">lecturer or writer-in-residence at NYU Abu Dhabi <span class="a"><span class="b _b">and....</span><span class="c" style="display: none;">; The Robert Frost Place <span class="a"><span class="b _b">and....</span><span class="c" style="display: none;">; Cheikh Anta Diop University and the Goree Institute in Senegal; <span class="a"><span class="b _b">and....</span><span class="c" style="display: none;">The American University in Cairo, The University of Alexandria and Cairo University in Egypt; <span class="a"><span class="b _b">and....</span><span class="c" style="display: none;">and Civitella Ranieri in Italy.</span></span></span></span></span></span></span></span></span></span> In the <span class="a"><span class="b _b">summer, Healy teaches.</span><span class="c" style="display: none;">summer, Healy teaches at the New York State Writers Institute, the Port Townsend Writers Conference and the John Ashbery School of Poetics.</span></span> He has <span class="a"><span class="b _b">a column</span><span class="c" style="display: none;">a regular column in the Huffington Post</span></span> and is a <span class="a"><span class="b _b">contributing editor.</span><span class="c" style="display: none;">contributing editor to BOMB Magazine, Creative Time Reports and ArtInfo.com.</span></span></p>
+	</div>
 </section>
+
+<header>
+	<nav>
+		<ul>
+		{% for page in site.pages %}
+			<li class="{{page.slug}}"><a href="{{page.url}}"{% if page.url == url %} class="is-current-page"{% endif %}>{{page.title}}</a></li>
+		{% endfor %}
+		</ul>
+	</nav>
+</header>
+
+
+<section id="poems">
+	{% assign page = site.pages.poems %}
+	{% assign pages = page.pages %}
+
+	<h2>{{page.title}}</h2>
+		<ul>
+			{% for page in pages limit:5 %}
+			<li>
+				<a href="{{page.url}}">
+					{% for asset in page.assets %}
+							<section id="cover">
+								<img src="{{asset.url}}">
+							</section>
+					{% endfor %}
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+</section>
+
+<section id="prose">
+	{% assign page = site.pages.prose %}
+	{% assign posts = page.posts %}
+
+	<h2>{{page.title}}</h2>
+		<ul>
+			{% for post in posts limit:5 %}
+			<li>
+				<a href="{{post.url}}">{{post.title}}</a>
+			</li>
+			{% endfor %}
+		</ul>
+</ul>
+<a class="more" href="/prose">&hellip;</a>
+</section>
+
+<section id="events">
+
+	{% assign page = site.pages.events %}
+	{% assign posts = page.posts %}
+
+	<h2>{{page.title}}</h2>
+		<ul>
+			{% for post in posts limit:5 %}
+			<li>
+				<a href="{{post.url}}">{{post.title}}</a>
+			</li>
+			{% endfor %}
+		</ul>
+</section>
+</article>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="reading.min.js"></script>
+    <script src="jquery.tubular.1.0.js"></script>
+	<script type="text/javascript">
+		$('document').ready(function() {
+			var options = { videoId: '6XQeojdV8W4', ratio: 4/3, start: 0 };
+			$('#container').tubular(options);
+		});
+	</script>
+
+{% include 'footer' %}

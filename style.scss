@@ -9,7 +9,6 @@ body{
 	line-height: 1.5;
 	background: #fff;
 	color:#080217;
-	padding:2.5% 5%;
 }
 
 h1, h2, h3, h4, h5, nav, footer {
@@ -34,8 +33,9 @@ a:hover, .is-current-page {
 	border-bottom:2px solid black!important;
 }
 header, footer {
+	text-align: center;
 	a:link, a:visited {
-		border-color:#fff;
+		border-color:rgba(0,0,0,0);
 	}
 }
 
@@ -54,14 +54,10 @@ h5 { font-size: .83em; }
 h6 { font-size: .75em; }
 
 header {
-	margin-bottom:30px;
+	padding:15px;
 	li {
 		display:inline-block;
 		margin-right: 2px;
-	}
-	li.events a:link, li.events a:visited {
-		color:$orange;
-		border-bototom: 2px solid $orange;
 	}
 }
 
@@ -104,11 +100,16 @@ body#home nav .home a {
 nav .events {
 
 	a:link.is-current-page, a:visited.is-current-page {
-		border-color: $orange!important;
+		border-color: #FB0!important;
 	}
 	a:hover, a:active {
-		border-color: $orange!important;
+		border-color: #FB0!important;
 	}
+}
+
+span.locale {
+	color: #FB0; 
+	font-weight: bold;
 }
 
 p {
@@ -131,16 +132,48 @@ ul {
 	margin:0;
 	padding:0;
 }
-#events{
-	a {
-		span.date, span.locale {
-			font-weight: bold;
+
+#tomhealy {
+	font-family: 'Gotham SSm A', 'Gotham SSm B';
+	font-weight:bold;
+	color:#FB0;
+}
+
+body#home {
+	background-image:url('tomhealyis-ghost.png');
+	background-size: cover;
+	background-attachment: fixed;
+	text-align: center;
+	h1 {
+		color:lime;
+	}
+	article section {
+		margin:50px auto;
+	}
+	section#about {
+		margin: 0 auto 35px auto;
+	}
+	section#poems {
+		max-width:800px;
+		#cover {
+			margin:0;
 		}
-		span.locale {
-			color: $orange; 
+		li {
+			display:inline-block;
+			width:48%;
+			margin:10px 0;
+			vertical-align: middle;
+			img {
+				box-shadow: 0px 2px 5px rgba(0,0,0,.15);
+			}
 		}
 	}
 }
+
+body#prose {
+	#taxonomy {padding:0 10px;margin:0;float:right;width:20%;}
+}
+
 #prose, .tag {
 	a {
 		span.title {
@@ -158,7 +191,6 @@ ul {
 		margin-left:1em;
 	}
 }
-#taxonomy {padding:0 10px;margin:0;}
 .subpages ul {
 		margin: 0!important;
 }
@@ -193,6 +225,7 @@ footer {
 #container {
 	max-width:960px;
 	margin:auto;
+	padding:2.5% 5%;
 }
 
 video {
@@ -259,6 +292,58 @@ body#poems {
 		}
 	}
 }
+
+/*	BigVideo Styles 
+	You may need to adjust these styles to get this working right in your design. 
+*/
+#tubular-shield {background:rgba(255,255,255,.75);}
+
+/*
+Telescopic Text
+Concept and code by Joe Michael Lambert Davis, taken from http://www.telescopictext.org
+Thank you!
+*/
+
+.telescopictext {
+	display:none;
+	word-wrap:break-word;
+	p {
+		margin:0 auto;
+		padding:15px;
+	}
+}
+
+span._b {
+	background-color:lime;
+}
+
+span._b:hover {
+	background-color:#BBB;
+	cursor:pointer;
+	cursor:hand;
+}
+span._b:active {
+	background-color:#999;
+}
+
+span._node_content {
+	background-color:#CCC;
+	color:#FFF;
+}
+
+span._node_content:hover {
+	background-color:#AAA;
+	cursor:pointer;
+	cursor:hand;
+}
+span._node_content:active {
+	background-color:#888;
+}
+
+span.c {
+	background-color:rgba(0,255,0,.25);
+}
+
 @media only screen and (min-width: 768px) {
   /* 768 =================================================== */
 }
