@@ -100,15 +100,15 @@ body#home nav .home a {
 nav .events {
 
 	a:link.is-current-page, a:visited.is-current-page {
-		border-color: $orange!important;
+		border-color: #FB0!important;
 	}
 	a:hover, a:active {
-		border-color: $orange!important;
+		border-color: #FB0!important;
 	}
 }
 
 span.locale {
-	color: $orange; 
+	color: #FB0; 
 	font-weight: bold;
 }
 
@@ -136,7 +136,7 @@ ul {
 #tomhealy {
 	font-family: 'Gotham SSm A', 'Gotham SSm B';
 	font-weight:bold;
-	color:$orange;
+	color:#FB0;
 }
 
 body#home {
