@@ -105,7 +105,7 @@ p {
 	margin:1em auto;
 }
 
-.parent-prose, #about, .parent-reviews {
+.parent-essays, #about, .parent-reviews {
 	p {
 		max-width: 600px
 	}
@@ -158,11 +158,11 @@ body#home {
 	}
 }
 
-body#prose {
+body#essays {
 	#taxonomy {padding:0 10px;margin:0;float:right;width:20%;}
 }
 
-#prose, .tag {
+#essays, .tag {
 	a {
 		span.title {
 			font-weight: bold;
