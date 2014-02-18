@@ -1,5 +1,4 @@
 @import "normalize.css";
-@import "colors";
 
 body{
 	font-family: 'Chronicle SSm A', 'Chronicle SSm B';
@@ -97,18 +96,7 @@ body#home nav .home a {
 	background-position:bottom;
 }
 
-nav .events {
-
-	a:link.is-current-page, a:visited.is-current-page {
-		border-color: #FB0!important;
-	}
-	a:hover, a:active {
-		border-color: #FB0!important;
-	}
-}
-
 span.locale {
-	color: #FB0; 
 	font-weight: bold;
 }
 
@@ -136,7 +124,7 @@ ul {
 #tomhealy {
 	font-family: 'Gotham SSm A', 'Gotham SSm B';
 	font-weight:bold;
-	color:#FB0;
+	color:#FFAE00;
 }
 
 body#home {

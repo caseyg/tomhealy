@@ -7,27 +7,10 @@
 		<h2 style="margin-bottom:20px;"><em>a way to organize</em> <a href="{{ parent.parent.url }}">{{ parent.parent.title }}</a></h2>
 	{% endif %}
 	{% if pages or posts %} 
-		<section class="subpages">
-{% comment %} Show subpages if there are any available {% endcomment %}
-						{% if title == "Poems" %}
-						<h2>Books</h2>
-						{% endif %}
-			{% for subpage in pages %}
-				<h3>
-					<a href="{{subpage.url}}">
-						{% for asset in subpage.assets %}<img src="{{asset.url}}" title="{{subpage.title}}" />{% endfor %}
-						{% if title != "Poems" %}
-							<span class="title">{{subpage.title}}</span>
-						{% endif %}
-					</a>
-				</h3>
-			{% endfor %}
 
-			{% if title == "Prose" %}
+			{% if title == "Essays" %}
 
-			<h2>Read</h2>
-
-			<p class="intro">A chronological list of speeches, essays, criticisms and other prose.</p>
+			<p class="intro">A chronological list of speeches, essays, criticism and other prose.</p>
 
 			<section id="taxonomy">
 				<h4><strong>Wayfinding</strong>: {% for tagset in taxonomy %} {% if tagset.size != 0 %} {% for tag in tagset %}<a href="{{tag.url}}">{{tag.value}}</a>  {% endfor %} {% endif %} {% endfor %}</h4>
@@ -76,7 +59,6 @@
 					{% endif %}
 				{% endif %}
 			{% endif %}
-		</section>
 	{% endif %}
 
 	{% if type == "post" %}
@@ -107,5 +89,22 @@
 		</section>
 		{% endif %}
 	{% endif %}
+		<section class="subpages">
+{% comment %} Show subpages if there are any available {% endcomment %}
+						{% if title == "Poems" %}
+						<h2>Books</h2>
+						{% endif %}
+			{% for subpage in pages %}
+				<h3>
+					<a href="{{subpage.url}}">
+						{% for asset in subpage.assets %}<img src="{{asset.url}}" title="{{subpage.title}}" />{% endfor %}
+						{% if title != "Poems" %}
+							<span class="title">{{subpage.title}}</span>
+						{% endif %}
+					</a>
+				</h3>
+			{% endfor %}
+
+		</section>	
 </article>
 {% include 'footer' %}
