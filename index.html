@@ -14,24 +14,37 @@
 <article>
 
 <section id="about">
-	<div class="telescopictext" style="display: block;">
-	<p><span id="tomhealy">Tom Healy</span> is a writer and poet and <span class="a"><span class="b _b">chairman.</span><span class="c" style="display: none;">chairman <span class="a"><span class="b _b">appointed</span><span class="c" style="display: none;">of the Fulbright Foreign Scholarship Board, which oversees the Fulbright program worldwide. He was appointed</span></span> by President Barack Obama.</span></span> Healy <span class="a"><span class="b _b">teaches and</span><span class="c" style="display: none;">teaches at New York University and is currently a visiting professor at the New School. He</span></span> is the author of <span class="a"><span class="b _b">two books of poetry.</span><span class="c" style="display: none;">two books of poetry: <span class="a"><span class="b _b">Animal Spirits</span><span class="c" style="display: none;">Animal Spirits, a collaboration with tattoo artist Duke Riley,</span></span> and <span class="a"><span class="b _b">What the Right Hand Knows.</span><span class="c" style="display: none;">What the Right Hand Knows, a finalist for the 2009 L.A. Times Book Prize and the Lambda Literary Award.</span></span></span></span> Two books of Healy’s essays are <span class="a"><span class="b _b">forthcoming.</span><span class="c" style="display: none;">forthcoming: <span class="a"><span class="b _b">The Rest of the World</span><span class="c" style="display: none;">The Rest of the World, about his work in international education and diplomacy,</span></span> and <span class="a"><span class="b _b">Some Friends.</span><span class="c" style="display: none;">Some Friends, reflections on contemporary artists and writers.</span></span></span></span> Healy has been a <span class="a"><span class="b _b">lecturer or writer-in-residence.</span><span class="c" style="display: none;">lecturer or writer-in-residence at NYU Abu Dhabi <span class="a"><span class="b _b">and....</span><span class="c" style="display: none;">; The Robert Frost Place <span class="a"><span class="b _b">and....</span><span class="c" style="display: none;">; Cheikh Anta Diop University and the Goree Institute in Senegal; <span class="a"><span class="b _b">and....</span><span class="c" style="display: none;">The American University in Cairo, The University of Alexandria and Cairo University in Egypt; <span class="a"><span class="b _b">and....</span><span class="c" style="display: none;">and Civitella Ranieri in Italy.</span></span></span></span></span></span></span></span></span></span> In the <span class="a"><span class="b _b">summer, Healy teaches.</span><span class="c" style="display: none;">summer, Healy teaches at the New York State Writers Institute, the Port Townsend Writers Conference and the John Ashbery School of Poetics.</span></span> He has <span class="a"><span class="b _b">a column</span><span class="c" style="display: none;">a regular column in the Huffington Post</span></span> and is a <span class="a"><span class="b _b">contributing editor.</span><span class="c" style="display: none;">contributing editor to BOMB Magazine, Creative Time Reports and ArtInfo.com.</span></span></p>
-	</div>
+	<p><span id="tomhealy">Tom Healy</span> is a writer and poet <a href="/about">and&hellip;</a></p>
 </section>
 
 <header>
 	<nav>
 		<ul>
-		{% for page in site.pages %}
-			<li class="{{page.slug}}"><a href="{{page.url}}"{% if page.url == url %} class="is-current-page"{% endif %}>{{page.title}}</a></li>
-		{% endfor %}
+			<li class="home"><a href="/" class="is-current-page">T.H.</a></li>
+			<li class="poetry"><a href="/poetry">Poetry</a></li>
+			<li class="essays"><a href="/essays">Essays</a></li>
+			<li class="events"><a href="/events">Where</a>(<a href="/about">About</a>)s</li>
 		</ul>
 	</nav>
 </header>
 
+<section id="essays">
+	{% assign page = site.pages.essays %}
+	{% assign posts = page.posts %}
 
-<section id="poems">
-	{% assign page = site.pages.poems %}
+	<h2>{{page.title}}</h2>
+		<ul>
+			{% for post in posts limit:3 %}
+				<li>
+					<h3>
+						<a href="{{post.url}}"><span class="title">{{post.title}}</span> <span class="date">{{post.date | date: "%B %Y" }}</span></a></h3></li>
+			{% endfor %}
+		</ul>
+<a class="more" href="/prose">&hellip;</a>
+</section>
+
+<section id="poetry">
+	{% assign page = site.pages.poetry %}
 	{% assign pages = page.pages %}
 
 	<h2>{{page.title}}</h2>
@@ -50,35 +63,19 @@
 		</ul>
 </section>
 
-<section id="essays">
-	{% assign page = site.pages.essays %}
-	{% assign posts = page.posts %}
-
-	<h2>{{page.title}}</h2>
-		<ul>
-			{% for post in posts limit:5 %}
-			<li>
-				<a href="{{post.url}}">{{post.title}}</a>
-			</li>
-			{% endfor %}
-		</ul>
-</ul>
-<a class="more" href="/prose">&hellip;</a>
-</section>
-
 <section id="events">
 
 	{% assign page = site.pages.events %}
 	{% assign posts = page.posts %}
 
 	<h2>{{page.title}}</h2>
-		<ul>
-			{% for post in posts limit:5 %}
-			<li>
-				<a href="{{post.url}}">{{post.title}}</a>
-			</li>
-			{% endfor %}
-		</ul>
+	<ul>
+		{% if posts %}
+		{% for post in posts limit:3 %}
+			<li><h3><a href="{{post.url}}">{% if post.meta['locale'] %}<span class="locale">{{post.meta['locale']}}</span> on {% endif %}<span class="date">{{post.date | date: "%B %-d, %Y, %-I%p" }}</span><br />{{post.title}}</a></h3></li>
+		{% endfor %}
+		{% endif %}
+	</ul>
 </section>
 </article>
 
@@ -86,10 +83,13 @@
     <script src="reading.min.js"></script>
     <script src="jquery.tubular.1.0.js"></script>
 	<script type="text/javascript">
-		$('document').ready(function() {
-			var options = { videoId: '6XQeojdV8W4', ratio: 4/3, start: 0 };
-			$('#container').tubular(options);
-		});
+		userAgent = window.navigator.userAgent;
+		if(/iP(hone|od|ad)/.test(userAgent)==false) {
+			$('document').ready(function() {
+				var options = { videoId: '6XQeojdV8W4', ratio: 4/3, start: 0 };
+				$('#container').tubular(options);
+			});
+		}
 	</script>
 
 {% include 'footer' %}

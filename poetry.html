@@ -6,17 +6,17 @@
 	{% if type == "tag" or type == "taxonomy" %}
 		<h2 style="margin-bottom:20px;"><em>a way to organize</em> <a href="{{ parent.parent.url }}">{{ parent.parent.title }}</a></h2>
 	{% endif %}
-	{% if pages or posts %} 
+	{% if pages or posts %}
 		<section class="subpages">
 {% comment %} Show subpages if there are any available {% endcomment %}
-						{% if title == "Poems" %}
+						{% if title == "poetry" %}
 						<h2>Books</h2>
 						{% endif %}
 			{% for subpage in pages %}
 				<h3>
 					<a href="{{subpage.url}}">
 						{% for asset in subpage.assets %}<img src="{{asset.url}}" title="{{subpage.title}}" />{% endfor %}
-						{% if title != "Poems" %}
+						{% if title != "poetry" %}
 							<span class="title">{{subpage.title}}</span>
 						{% endif %}
 					</a>
@@ -44,8 +44,8 @@
 							<li><h3><a href="{{post.url}}">{{post.title}} <span class="date">{{post.date | date: "%B %Y" }}</a></h3></li>
 						{% endfor %}
 					</ul>
-				{% elsif permalink contains "poems/" %}
-				{% comment %} For poems show selections and no date {% endcomment %}
+				{% elsif permalink contains "poetry/" %}
+				{% comment %} For poetry show selections and no date {% endcomment %}
 					<h2 style="margin-top:20px;">Peruse</h2>
 					<ul>
 						{% for post in posts %}
@@ -62,7 +62,7 @@
 							<li><h3><a href="{{post.url}}"><span class="date">{{post.date | date: "%B %-d, %Y, %-I%p" }}</span><br />{% if post.meta['locale'] %}<span class="locale">{{post.meta['locale']}}</span><br />{% endif %}{{post.title}}</a></h3></li>
 						{% endfor %}
 						{% endif %}
-					</ul>				
+					</ul>
 				{% else %}
 					{% if posts.size != 0 %}
 						{% comment %} For everything else show small vague date {% endcomment %}

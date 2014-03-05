@@ -4,7 +4,7 @@ body{
 	font-family: 'Chronicle SSm A', 'Chronicle SSm B';
 	font-style: normal;
 	font-weight:100;
-	font-size: 16px;
+	font-size: 15px;
 	line-height: 1.5;
 	background: #fff;
 	color:#080217;
@@ -28,11 +28,10 @@ a:link, a:visited {
 	margin:0;
 	border-bottom:2px solid #dfdfdf;
 }
-a:hover, .is-current-page {
+a:hover {
 	border-bottom:2px solid black!important;
 }
 header, footer {
-	text-align: center;
 	a:link, a:visited {
 		border-color:rgba(0,0,0,0);
 	}
@@ -43,8 +42,8 @@ hr {
 	border-top:1px solid #ccc;
 }
 
-h1 { 
-	font-size: 1.75em; 
+h1 {
+	font-size: 1.75em;
 	line-height:1.15em;
 }
 h2 { font-size: 1.25em; }
@@ -53,10 +52,9 @@ h5 { font-size: .83em; }
 h6 { font-size: .75em; }
 
 header {
-	padding:15px;
+	padding:15px 0;
 	li {
 		display:inline-block;
-		margin-right: 2px;
 	}
 }
 
@@ -67,27 +65,36 @@ article, header, nav, section {
 		display: block;
 }
 
-nav .home {
-	display:inline-block;
-	height:24px;
-	a:link, a:visited {
-		display:inline-block;
-		padding:0;
-		margin:1px 1px 0 0;
-		height:23px;
-		width:23px;
-		text-indent: -5000em;
-		background-image: url(home.png);
-		background-size:23px 47px;
-		background-repeat:no-repeat;
-		border:none!important;
-		-webkit-transition: none;
-	}
-	a:hover, a:active {
-		background-position:bottom;
+#poetry .poetry a, #essays .essays a, #events a.where, #about a.about {
+	border-bottom:2px solid black!important;
+}
+header {
+	nav {
+		li{
+			margin-right:4px;
+		}
+		.home {
+			display:inline-block;
+			height:24px;
+			a:link, a:visited {
+				display:inline-block;
+				padding:0;
+				margin:1px 1px 0 0;
+				height:23px;
+				width:23px;
+				text-indent: -5000em;
+				background-image: url(home.png);
+				background-size:23px 47px;
+				background-repeat:no-repeat;
+				border:none!important;
+				-webkit-transition: none;
+			}
+			a:hover, a:active {
+				background-position:bottom;
+			}
+		}
 	}
 }
-
 p.intro {
 	font-style:italic;
 }
@@ -101,14 +108,7 @@ span.locale {
 }
 
 p {
-//	max-width:500px;
 	margin:1em auto;
-}
-
-.parent-essays, #about, .parent-reviews {
-	p {
-		max-width: 600px
-	}
 }
 
 blockquote {
@@ -124,25 +124,18 @@ ul {
 #tomhealy {
 	font-family: 'Gotham SSm A', 'Gotham SSm B';
 	font-weight:bold;
-	color:#FFAE00;
 }
 
 body#home {
-	background-image:url('tomhealyis-ghost.png');
-	background-size: cover;
-	background-attachment: fixed;
-	text-align: center;
-	h1 {
-		color:lime;
-	}
+	background-size: auto 100%;
+	background-position:center;
 	article section {
 		margin:50px auto;
 	}
 	section#about {
-		margin: 0 auto 35px auto;
+		margin: 0 0 0 0;
 	}
-	section#poems {
-		max-width:800px;
+	section#poetry {
 		#cover {
 			margin:0;
 		}
@@ -158,10 +151,6 @@ body#home {
 	}
 }
 
-body#essays {
-	#taxonomy {padding:0 10px;margin:0;float:right;width:20%;}
-}
-
 #essays, .tag {
 	a {
 		span.title {
@@ -172,7 +161,7 @@ body#essays {
 .subpages {
 	margin:20px 0;
 }
-.parent-poems .subpages, #about .subpages, #taxonomy {
+.parent-poetry .subpages, #about .subpages, #taxonomy {
 	border:1px solid #dfdfdf;
 	padding:0 10px;
 	ul li {
@@ -191,28 +180,10 @@ footer {
 	clear:both;
 	margin-top:30px;
 	border-top:1px solid #dfdfdf;
-	section {
-		vertical-align: top;
-		margin:0;
-		padding:0;
-	}
-	h2 {
-		font-size:1em;
-		line-height:1;
-		font-weight:bold;
-	}
-	h2.name {
-		color:lime;
-		text-transform: uppercase;
-	}
-	a {
-		text-transform: none;
-	}
 }
 
 #container {
 	max-width:960px;
-	margin:auto;
 	padding:2.5% 5%;
 }
 
@@ -226,9 +197,15 @@ article {
 		padding:0;
 		margin:15px 0;
 	}
+	h1.content-title {
+		margin-bottom:5px;
+	}
+	h2.breadcrumb {
+		margin-top:0;
+	}
 }
 
-body#poems {
+body#poetry {
 	article {
 		img {
 			max-width:100%;
@@ -250,23 +227,17 @@ body#poems {
 
 // 480px
 @media only screen and (min-width: 480px) {
-	footer {
-		section {
-			display: inline-block;
-			width:24%;
-		}
-	}
-	header li {
+	header nav li {
 		margin-right:10px;
 	}
-	body#poems article h3 {
+	body#poetry article h3 {
 		display:inline-block;
 		width:48%;
 		margin:10px 0;
 	}
 }
 @media only screen and (min-width: 600px) {
-	.parent-poems {
+	.parent-poetry {
 		h1 {
 			margin-bottom:20px;
 		}
@@ -281,59 +252,24 @@ body#poems {
 	}
 }
 
-/*	BigVideo Styles 
-	You may need to adjust these styles to get this working right in your design. 
+/*	BigVideo Styles
+	You may need to adjust these styles to get this working right in your design.
 */
 #tubular-shield {background:rgba(255,255,255,.75);}
 
-/*
-Telescopic Text
-Concept and code by Joe Michael Lambert Davis, taken from http://www.telescopictext.org
-Thank you!
-*/
-
-.telescopictext {
-	display:none;
-	word-wrap:break-word;
-	p {
-		margin:0 auto;
-		padding:15px;
-	}
-}
-
-span._b {
-	background-color:lime;
-}
-
-span._b:hover {
-	background-color:#BBB;
-	cursor:pointer;
-	cursor:hand;
-}
-span._b:active {
-	background-color:#999;
-}
-
-span._node_content {
-	background-color:#CCC;
-	color:#FFF;
-}
-
-span._node_content:hover {
-	background-color:#AAA;
-	cursor:pointer;
-	cursor:hand;
-}
-span._node_content:active {
-	background-color:#888;
-}
-
-span.c {
-	background-color:rgba(0,255,0,.25);
-}
-
 @media only screen and (min-width: 768px) {
   /* 768 =================================================== */
+	body {
+		font-size:16px;
+	}
+	body#home {
+		background-image:url('tomhealyis-ghost.png');
+		background-size: auto 100%;
+		background-position:center;
+	}
+	body#essays {
+		#taxonomy {padding:0 10px;margin:0;float:right;width:20%;}
+	}
 }
 @media only screen and (min-width: 992px) {
   /* 992 =================================================== */

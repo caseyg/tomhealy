@@ -13,9 +13,10 @@
 		<header>
 			<nav>
 				<ul>
-				{% for page in site.pages %}
-					<li class="{{page.slug}}"><a href="{{page.url}}"{% if page.url == url %} class="is-current-page"{% endif %}>{{page.title}}</a></li>
-				{% endfor %}
+					<li class="home"><a href="/">T.H.</a></li>
+					<li class="poetry"><a href="/poetry">Poetry</a></li>
+					<li class="essays"><a href="/essays">Essays</a></li>
+					<li class="whereabouts"><a href="/events" class="where">Where</a>(<a href="/about" class="about">About</a>)s</li>
 				</ul>
 			</nav>
 		</header>

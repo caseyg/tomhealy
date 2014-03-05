@@ -6,7 +6,7 @@
 	{% if type == "tag" or type == "taxonomy" %}
 		<h2 style="margin-bottom:20px;"><em>a way to organize</em> <a href="{{ parent.parent.url }}">{{ parent.parent.title }}</a></h2>
 	{% endif %}
-	{% if pages or posts %} 
+	{% if pages or posts %}
 
 			{% if title == "Essays" %}
 
@@ -27,15 +27,15 @@
 							<li><h3><a href="{{post.url}}">{{post.title}} <span class="date">{{post.date | date: "%B %Y" }}</a></h3></li>
 						{% endfor %}
 					</ul>
-				{% elsif permalink contains "poems/" %}
-				{% comment %} For poems show selections and no date {% endcomment %}
+				{% elsif permalink contains "poetry/" %}
+				{% comment %} For poetry show selections and no date {% endcomment %}
 					<h2 style="margin-top:20px;">Peruse</h2>
 					<ul>
 						{% for post in posts %}
 							<li><h3><a href="{{post.url}}">{{post.title}}</a></h3></li>
 						{% endfor %}
 					</ul>
-				{% elsif title == "Where Is Tom?" %}
+				{% elsif title == "Whereabouts" %}
 				<h2>Calendar</h2>
 				<p class="intro">of events, speeches, readings.</p>
 				{% comment %} For events show big date {% endcomment %}
@@ -45,7 +45,7 @@
 							<li><h3><a href="{{post.url}}">{% if post.meta['locale'] %}<span class="locale">{{post.meta['locale']}}</span> on {% endif %}<span class="date">{{post.date | date: "%B %-d, %Y, %-I%p" }}</span><br />{{post.title}}</a></h3></li>
 						{% endfor %}
 						{% endif %}
-					</ul>				
+					</ul>
 				{% else %}
 					{% if posts.size != 0 %}
 						{% comment %} For everything else show small vague date {% endcomment %}
@@ -63,7 +63,7 @@
 
 	{% if type == "post" %}
 		{% if parent %}
-			<h2><em>from</em> <a href="{{parent.url}}">{{parent.title}}</a></h2>
+			<h2 class="breadcrumb"><em>from</em> <a href="{{parent.url}}">{{parent.title}}</a></h2>
 		{% endif %}
 	{% endif %}
 
@@ -91,20 +91,20 @@
 	{% endif %}
 		<section class="subpages">
 {% comment %} Show subpages if there are any available {% endcomment %}
-						{% if title == "Poems" %}
+						{% if title == "poetry" %}
 						<h2>Books</h2>
 						{% endif %}
 			{% for subpage in pages %}
 				<h3>
 					<a href="{{subpage.url}}">
 						{% for asset in subpage.assets %}<img src="{{asset.url}}" title="{{subpage.title}}" />{% endfor %}
-						{% if title != "Poems" %}
+						{% if title != "poetry" %}
 							<span class="title">{{subpage.title}}</span>
 						{% endif %}
 					</a>
 				</h3>
 			{% endfor %}
 
-		</section>	
+		</section>
 </article>
 {% include 'footer' %}
