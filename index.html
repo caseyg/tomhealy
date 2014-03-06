@@ -14,7 +14,7 @@
 <article>
 
 <section id="about">
-	<p><span id="tomhealy">Tom Healy</span> is a writer and poet <a href="/about">and&hellip;</a></p>
+	<h2>Tom Healy is a writer and poet <a href="/about">and&hellip;</a></h2>
 </section>
 
 <header>
@@ -28,26 +28,11 @@
 	</nav>
 </header>
 
-<section id="essays">
-	{% assign page = site.pages.essays %}
-	{% assign posts = page.posts %}
-
-	<h2>{{page.title}}</h2>
-		<ul>
-			{% for post in posts limit:3 %}
-				<li>
-					<h3>
-						<a href="{{post.url}}"><span class="title">{{post.title}}</span> <span class="date">{{post.date | date: "%B %Y" }}</span></a></h3></li>
-			{% endfor %}
-		</ul>
-<a class="more" href="/prose">&hellip;</a>
-</section>
-
 <section id="poetry">
 	{% assign page = site.pages.poetry %}
 	{% assign pages = page.pages %}
 
-	<h2>{{page.title}}</h2>
+	<h2><a href="{{page.url}}">{{page.title}}</a></h2>
 		<ul>
 			{% for page in pages limit:5 %}
 			<li>
@@ -63,12 +48,26 @@
 		</ul>
 </section>
 
+<section id="essays">
+	{% assign page = site.pages.essays %}
+	{% assign posts = page.posts %}
+
+	<h2><a href="{{page.url}}">{{page.title}}</a></h2>
+		<ul>
+			{% for post in posts limit:3 %}
+				<li>
+					<h3>
+						<a href="{{post.url}}"><span class="title">{{post.title}}</span> <span class="date">{{post.date | date: "%B %Y" }}</span></a></h3></li>
+			{% endfor %}
+		</ul>
+</section>
+
 <section id="events">
 
 	{% assign page = site.pages.events %}
 	{% assign posts = page.posts %}
 
-	<h2>{{page.title}}</h2>
+	<h2><a href="{{page.url}}">{{page.title}}</a></h2>
 	<ul>
 		{% if posts %}
 		{% for post in posts limit:3 %}

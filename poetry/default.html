@@ -11,7 +11,7 @@
 
 	{% if type == "post" %}
 		{% if parent %}
-			<h2><em>from</em> <a href="{{parent.url}}">{{parent.title}}</a></h2>
+			<h2 class="breadcrumb"><em>from</em> <a href="{{parent.url}}">{{parent.title}}</a></h2>
 		{% endif %}
 	{% endif %}
 

@@ -46,18 +46,18 @@ h1 {
 	font-size: 1.75em;
 	line-height:1.15em;
 }
-h2 { font-size: 1.25em; }
+h2 { font-size: 1.35em; }
 h3 { font-size: 1.10em; }
 h5 { font-size: .83em; }
 h6 { font-size: .75em; }
 
-header {
+header, footer {
 	padding:15px 0;
 	li {
 		display:inline-block;
+		margin-right:4px;
 	}
 }
-
 
 img, video, object{ max-width: 100% }
 
@@ -70,9 +70,6 @@ article, header, nav, section {
 }
 header {
 	nav {
-		li{
-			margin-right:4px;
-		}
 		.home {
 			display:inline-block;
 			height:24px;
@@ -97,6 +94,7 @@ header {
 }
 p.intro {
 	font-style:italic;
+	margin-top:0;
 }
 
 body#home nav .home a {
@@ -105,6 +103,7 @@ body#home nav .home a {
 
 span.locale {
 	font-weight: bold;
+	display:block;
 }
 
 p {
@@ -130,7 +129,10 @@ body#home {
 	background-size: auto 100%;
 	background-position:center;
 	article section {
-		margin:50px auto;
+		margin:15px auto 30px auto;
+	}
+	h2 {
+		margin-bottom:0;
 	}
 	section#about {
 		margin: 0 0 0 0;
@@ -141,12 +143,15 @@ body#home {
 		}
 		li {
 			display:inline-block;
-			width:48%;
+			max-width:46%;
 			margin:10px 0;
 			vertical-align: middle;
 			img {
 				box-shadow: 0px 2px 5px rgba(0,0,0,.15);
 			}
+		}
+		li:nth-child(odd) {
+			margin-right:5%!important;
 		}
 	}
 }
@@ -180,6 +185,9 @@ footer {
 	clear:both;
 	margin-top:30px;
 	border-top:1px solid #dfdfdf;
+	.credit {
+		font-size:13px;
+	}
 }
 
 #container {
@@ -203,6 +211,9 @@ article {
 	h2.breadcrumb {
 		margin-top:0;
 	}
+	li h3 {
+		margin: 10px 0;
+	}
 }
 
 body#poetry {
@@ -213,6 +224,7 @@ body#poetry {
 			max-width:400px;
 			margin-bottom:5px;
 			border:1px solid #ccc;
+			display:block;
 		}
 	}
 	.subpages h3 {
@@ -250,6 +262,12 @@ body#poetry {
 			margin-right: 2%;
 		}
 	}
+	.parent-essays, #about, .parent-reviews {
+		p {
+			max-width: 600px;
+			margin-left:0;
+		}
+	}
 }
 
 /*	BigVideo Styles
@@ -268,7 +286,7 @@ body#poetry {
 		background-position:center;
 	}
 	body#essays {
-		#taxonomy {padding:0 10px;margin:0;float:right;width:20%;}
+		#taxonomy {padding:0 10px;margin:0 0 0 10px;float:right;width:20%;}
 	}
 }
 @media only screen and (min-width: 992px) {
