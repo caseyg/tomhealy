@@ -10,7 +10,7 @@
 
 			{% if title == "Essays" %}
 
-			<p class="intro">A chronological list of speeches, essays, criticism and other prose.</p>
+			<p class="intro">{{meta['intro']}}</p>
 
 			<section id="taxonomy">
 				<h4><strong>Wayfinding</strong>: {% for tagset in taxonomy %} {% if tagset.size != 0 %} {% for tag in tagset %}<a href="{{tag.url}}">{{tag.value}}</a>  {% endfor %} {% endif %} {% endfor %}</h4>
@@ -42,7 +42,7 @@
 					<ul>
 						{% if posts %}
 						{% for post in posts %}
-							<li><h3><a href="{{post.url}}">{% if post.meta['locale'] %}<span class="locale">{{post.meta['locale']}}</span> on {% endif %}<span class="date">{{post.date | date: "%B %-d, %Y, %-I%p" }}</span><br />{{post.title}}</a></h3></li>
+							<li><h3><a href="{{post.url}}">{% if post.meta['locale'] %}<span class="locale">{{post.meta['locale']}}</span> {% endif %}<span class="date">{{post.date | date: "%B %-d, %Y, %-I%p" }}</span><br />{{post.title}}</a></h3></li>
 						{% endfor %}
 						{% endif %}
 					</ul>
