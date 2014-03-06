@@ -1,0 +1,33 @@
+{% include 'header' %}
+<article>
+  {% if body %}
+    {{ body }}
+    <hr />
+  {% endif %}
+  <h2>Essays</h2>
+  <p class="intro">{{meta['intro']}}</p>
+  <section id="taxonomy">
+    <h4><strong>Wayfinding</strong>: {% for tagset in taxonomy %} {% if tagset.size != 0 %} {% for tag in tagset %}<a href="{{tag.url}}">{{tag.value}}</a>  {% endfor %} {% endif %} {% endfor %}</h4>
+  </section>
+  <ul>
+    {% for post in posts %}
+      <li>
+        <a href="{{post.url}}">
+        {% for asset in post.assets limit:1 %}
+          {% if asset.type == 'image' %}
+            <img class="thumbnail" src="{{asset.url}}">
+          {% endif %}
+        {% endfor %}
+        <div class="post">
+          <h3>
+            <span class="title">{{post.title}}</span> <span class="date">{{post.date | date: "%B %Y" }}</span></h3>
+            {% if post.meta['excerpt'] %}
+              <blockquote>&ldquo;{{post.meta['excerpt'] | truncatewords: 50}}&rdquo;</blockquote>
+            {% endif %}
+        </div>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</article>
+{% include 'footer' %}

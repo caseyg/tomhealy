@@ -47,7 +47,7 @@ h1 {
 	line-height:1.15em;
 }
 h2 { font-size: 1.35em; }
-h3 { font-size: 1.10em; }
+h3 { font-size: 1.10em; font-weight: bold; }
 h5 { font-size: .83em; }
 h6 { font-size: .75em; }
 
@@ -155,14 +155,6 @@ body#home {
 		}
 	}
 }
-
-#essays, .tag {
-	a {
-		span.title {
-			font-weight: bold;
-		}
-	}
-}
 .subpages {
 	margin:20px 0;
 }
@@ -191,7 +183,6 @@ footer {
 }
 
 #container {
-	max-width:960px;
 	padding:2.5% 5%;
 }
 
@@ -237,8 +228,48 @@ body#poetry {
 	}
 }
 
-// 480px
+body#essays {
+	article {
+		ul {
+			li {
+				clear:left;
+				a:link, a:visited {
+					padding:15px 0;
+					.thumbnail {
+						max-height:40px;
+						max-width:40px;
+						float:left;
+						margin-right:10px;
+					}
+					span.title {
+						border-bottom:2px solid #eee;
+					}
+					span.date {
+						font-weight:100;
+					}
+				}
+				a:hover, a:active {
+					span.title {
+						border-bottom:2px solid #000;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*	BigVideo Styles
+	You may need to adjust these styles to get this working right in your design.
+*/
+#tubular-shield {background:rgba(255,255,255,.75);}
+
 @media only screen and (min-width: 480px) {
+/* 480 =================================================== */
+	body#home {
+		background-image:url('tomhealyis-ghost.png');
+		background-size: auto 100%;
+		background-position:center;
+	}
 	header nav li {
 		margin-right:10px;
 	}
@@ -249,6 +280,7 @@ body#poetry {
 	}
 }
 @media only screen and (min-width: 600px) {
+/* 480 =================================================== */
 	.parent-poetry {
 		h1 {
 			margin-bottom:20px;
@@ -270,27 +302,30 @@ body#poetry {
 	}
 }
 
-/*	BigVideo Styles
-	You may need to adjust these styles to get this working right in your design.
-*/
-#tubular-shield {background:rgba(255,255,255,.75);}
-
 @media only screen and (min-width: 768px) {
   /* 768 =================================================== */
 	body {
 		font-size:16px;
 	}
-	body#home {
-		background-image:url('tomhealyis-ghost.png');
-		background-size: auto 100%;
-		background-position:center;
-	}
 	body#essays {
 		#taxonomy {padding:0 10px;margin:0 0 0 10px;float:right;width:20%;}
 	}
+	body#about {
+		video {
+			width:35%;
+			float:right;
+			margin-left:15px;
+			margin-bottom:15px;
+		}
+	}
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1280px) {
   /* 992 =================================================== */
+	body#about {
+		video {
+			width:45%;
+		}
+	}
 }
 @media only screen and (min-width: 1382px) {
   /* 1382 =================================================== */
