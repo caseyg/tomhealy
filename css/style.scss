@@ -80,7 +80,7 @@ header {
 				height:23px;
 				width:23px;
 				text-indent: -5000em;
-				background-image: url(home.png);
+				background-image: url(/img/home.png);
 				background-size:23px 47px;
 				background-repeat:no-repeat;
 				border:none!important;
@@ -266,7 +266,7 @@ body#essays {
 @media only screen and (min-width: 480px) {
 /* 480 =================================================== */
 	body#home {
-		background-image:url('tomhealyis-ghost.png');
+		background-image:url('/img/tomhealyis-ghost.png');
 		background-size: auto 100%;
 		background-position:center;
 	}
