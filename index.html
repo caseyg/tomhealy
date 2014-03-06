@@ -14,7 +14,7 @@
 <article>
 
 <section id="about">
-	<h2>Tom Healy is a writer and poet <a href="/about">and&hellip;</a></h2>
+	<h1>Tom Healy is a writer.</h1>
 </section>
 
 <header>
@@ -23,12 +23,12 @@
 			<li class="home"><a href="/" class="is-current-page">T.H.</a></li>
 			<li class="poetry"><a href="/poetry">Poetry</a></li>
 			<li class="essays"><a href="/essays">Essays</a></li>
-			<li class="events"><a href="/events">Where</a>(<a href="/about">About</a>)s</li>
+			<li class="events"><a href="/events">Where</a>(<a href="/about">about</a>)s</li>
 		</ul>
 	</nav>
 </header>
 
-<section id="poetry">
+<section>
 	{% assign page = site.pages.poetry %}
 	{% assign pages = page.pages %}
 
@@ -37,11 +37,7 @@
 			{% for page in pages limit:5 %}
 			<li>
 				<a href="{{page.url}}">
-					{% for asset in page.assets %}
-							<section id="cover">
-								<img src="{{asset.url}}">
-							</section>
-					{% endfor %}
+					Animal Spirits<br />Monk Books, 2013
 				</a>
 			</li>
 			{% endfor %}
