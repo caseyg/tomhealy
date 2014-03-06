@@ -11,5 +11,12 @@
 			</section>
 		</footer>
 	</section> <!-- container -->
+	<script src="instantclick.min.js" data-no-instant></script>
+	<script data-no-instant type="text/javascript">
+		userAgent = window.navigator.userAgent;
+		if(/iP(hone|od|ad)/.test(userAgent)==false) {
+			InstantClick.init();
+		}
+	</script>
 </body>
 </html>
