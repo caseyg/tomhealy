@@ -6,76 +6,81 @@
 	<title>{{site.title}} | {{title}}</title>
 	<link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
 	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7254632/675602/css/fonts.css" />
-	<link rel="stylesheet" type="text/css" href="/style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
 </head>
 <body id="{{ slug }}" class="{{ type }} parent-{{ parent.slug }}">
-	<section id="container">
+<section id="container">
+	<article>
+		<section id="about">
+			<h1>Tom Healy is a writer.</h1>
+		</section>
 
-<article>
+		{% include 'nav' %}
 
-<section id="about">
-	<h1>Tom Healy is a writer.</h1>
-</section>
+		<section id="poetry">
+			{% assign page = site.pages.poetry %}
+			{% assign pages = page.pages %}
 
-<header>
-	<nav>
-		<ul>
-			<li class="home"><a href="/" class="is-current-page">T.H.</a></li>
-			<li class="poetry"><a href="/poetry">Poetry</a></li>
-			<li class="essays"><a href="/essays">Essays</a></li>
-			<li class="events"><a href="/events">Where</a>(<a href="/about">about</a>)s</li>
-		</ul>
-	</nav>
-</header>
+			<h2><a href="{{page.url}}">{{page.title}}</a></h2>
+				<ul class="content-list">
+					{% for page in pages limit:5 %}
+					<li>
+						<a href="{{page.url}}">
+								<span class="title">{{page.title}}</span>
+								<span class="publisher">{{page.meta['publisher']}},</span> <span class="date">{{page.date | date: "%Y" }}</span>
+						</a>
+					</li>
+					{% endfor %}
+				</ul>
+		</section>
 
-<section>
-	{% assign page = site.pages.poetry %}
-	{% assign pages = page.pages %}
+		<section id="prose">
+			{% assign page = site.pages.prose %}
+			{% assign posts = page.posts %}
 
-	<h2><a href="{{page.url}}">{{page.title}}</a></h2>
-		<ul>
-			{% for page in pages limit:5 %}
-			<li>
-				<a href="{{page.url}}">
-					{}<br />Monk Books, 2013
-				</a>
-			</li>
-			{% endfor %}
-		</ul>
-</section>
+			<h2><a href="{{page.url}}">{{page.title}}</a></h2>
+				<ul class="content-list">
+					{% for post in posts limit:3 %}
+						<li>
+							<a href="{{post.url}}">
+									<span class="title">{{post.title}}</span>
+									<span class="date">{{post.date | date: "%B %Y" }}</span>
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+		</section>
 
-<section id="essays">
-	{% assign page = site.pages.essays %}
-	{% assign posts = page.posts %}
+		<section id="events">
 
-	<h2><a href="{{page.url}}">{{page.title}}</a></h2>
-		<ul>
-			{% for post in posts limit:3 %}
-				<li>
-					<h3>
-						<a href="{{post.url}}"><span class="title">{{post.title}}</span> <span class="date">{{post.date | date: "%B %Y" }}</span></a></h3></li>
-			{% endfor %}
-		</ul>
-</section>
+			{% assign page = site.pages.events %}
+			{% assign posts = page.posts %}
 
-<section id="events">
+			<h2><a href="{{page.url}}">{{page.title}}</a></h2>
 
-	{% assign page = site.pages.events %}
-	{% assign posts = page.posts %}
+			<ul class="content-list">
+				{% if posts %}
+				{% for post in posts limit:3 %}
+					<li>
+						<a href="{{post.url}}">
+							{% if post.meta['locale'] %}<span class="locale">{{post.meta['locale']}}</span>{% endif %}
+							<span class="date">{{post.date | date: "%B %-d, %Y, %-I%p" }}</span><br>
+							<span class="title">{{post.title}}</span>
+						</a>
+					</li>
+				{% endfor %}
+				{% endif %}
+			</ul>
+		</section>
 
-	<h2><a href="{{page.url}}">{{page.title}}</a></h2>
-	<ul>
-		{% if posts %}
-		{% for post in posts limit:3 %}
-			<li><h3><a href="{{post.url}}">{% if post.meta['locale'] %}<span class="locale">{{post.meta['locale']}}</span> on {% endif %}<span class="date">{{post.date | date: "%B %-d, %Y, %-I%p" }}</span><br />{{post.title}}</a></h3></li>
-		{% endfor %}
-		{% endif %}
-	</ul>
-</section>
-</article>
+		<section id="about">
+			<h2><a href="/about">About</a></h2>
+		</section>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script src="/js/jquery.tubular.1.0.js"></script>
+	</article>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="/js/jquery.tubular.1.0.js"></script>
 	<script type="text/javascript">
 		userAgent = window.navigator.userAgent;
 		if(/iP(hone|od|ad)/.test(userAgent)==false) {

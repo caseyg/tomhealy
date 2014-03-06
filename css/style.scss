@@ -1,110 +1,23 @@
+/* Imports */
+
+// even things out across browsers
 @import "normalize.css";
 
-body{
-	font-family: 'Chronicle SSm A', 'Chronicle SSm B';
-	font-style: normal;
-	font-weight:100;
-	font-size: 15px;
-	line-height: 1.5;
-	background: #fff;
-	color:#080217;
-}
+// components
+@import "variables";
+@import "base";
+@import "media-queries";
 
-h1, h2, h3, h4, h5, nav, footer {
-	font-family: 'Gotham SSm A', 'Gotham SSm B';
-	font-weight:100;
-	color:black;
-}
+// modules
+@import "content-list";
+@import "top-bottom-nav";
 
-a:link, a:visited {
-	color:black;
-	text-decoration:none;
-}
-a:link, a:visited {
-	vertical-align: baseline;
-	font-weight: 400;
-	letter-spacing: 0;
-	padding:0px 0;
-	margin:0;
-	border-bottom:2px solid #dfdfdf;
-}
-a:hover {
-	border-bottom:2px solid black!important;
-}
-header, footer {
-	a:link, a:visited {
-		border-color:rgba(0,0,0,0);
-	}
-}
-
-hr {
-	border:none;
-	border-top:1px solid #ccc;
-}
-
-h1 {
-	font-size: 1.75em;
-	line-height:1.15em;
-}
-h2 { font-size: 1.35em; }
-h3 { font-size: 1.10em; font-weight: bold; }
-h5 { font-size: .83em; }
-h6 { font-size: .75em; }
-
-header, footer {
-	padding:15px 0;
-	li {
-		display:inline-block;
-		margin-right:4px;
-	}
-}
-
-img, video, object{ max-width: 100% }
-
-article, header, nav, section {
-		display: block;
-}
-
-#poetry .poetry a, #essays .essays a, #events a.where, #about a.about {
-	border-bottom:2px solid black!important;
-}
-header {
-	nav {
-		.home {
-			display:inline-block;
-			height:24px;
-			a:link, a:visited {
-				display:inline-block;
-				padding:0;
-				margin:1px 1px 0 0;
-				height:23px;
-				width:23px;
-				text-indent: -5000em;
-				background-image: url(/img/home.png);
-				background-size:23px 47px;
-				background-repeat:no-repeat;
-				border:none!important;
-				-webkit-transition: none;
-			}
-			a:hover, a:active {
-				background-position:bottom;
-			}
-		}
-	}
-}
 p.intro {
 	font-style:italic;
 	margin-top:0;
 }
 
-body#home nav .home a {
-	background-position:bottom;
-}
 
-span.locale {
-	font-weight: bold;
-	display:block;
-}
 
 p {
 	margin:1em auto;
@@ -120,11 +33,6 @@ ul {
 	padding:0;
 }
 
-#tomhealy {
-	font-family: 'Gotham SSm A', 'Gotham SSm B';
-	font-weight:bold;
-}
-
 body#home {
 	background-size: auto 100%;
 	background-position:center;
@@ -136,23 +44,6 @@ body#home {
 	}
 	section#about {
 		margin: 0 0 0 0;
-	}
-	section#poetry {
-		#cover {
-			margin:0;
-		}
-		li {
-			display:inline-block;
-			max-width:46%;
-			margin:10px 0;
-			vertical-align: middle;
-			img {
-				box-shadow: 0px 2px 5px rgba(0,0,0,.15);
-			}
-		}
-		li:nth-child(odd) {
-			margin-right:5%!important;
-		}
 	}
 }
 .subpages {
@@ -177,9 +68,6 @@ footer {
 	clear:both;
 	margin-top:30px;
 	border-top:1px solid #dfdfdf;
-	.credit {
-		font-size:13px;
-	}
 }
 
 #container {
@@ -262,72 +150,3 @@ body#essays {
 	You may need to adjust these styles to get this working right in your design.
 */
 #tubular-shield {background:rgba(255,255,255,.75);}
-
-@media only screen and (min-width: 480px) {
-/* 480 =================================================== */
-	body#home {
-		background-image:url('/img/tomhealyis-ghost.png');
-		background-size: auto 100%;
-		background-position:center;
-	}
-	header nav li {
-		margin-right:10px;
-	}
-	body#poetry article h3 {
-		display:inline-block;
-		width:48%;
-		margin:10px 0;
-	}
-}
-@media only screen and (min-width: 600px) {
-/* 480 =================================================== */
-	.parent-poetry {
-		h1 {
-			margin-bottom:20px;
-		}
-		#cover, article {
-			width:48%;
-			display:inline-block;
-			vertical-align: top;
-		}
-		#cover {
-			margin-right: 2%;
-		}
-	}
-	.parent-essays, #about, .parent-reviews {
-		p {
-			max-width: 600px;
-			margin-left:0;
-		}
-	}
-}
-
-@media only screen and (min-width: 768px) {
-  /* 768 =================================================== */
-	body {
-		font-size:16px;
-	}
-	body#essays {
-		#taxonomy {padding:0 10px;margin:0 0 0 10px;float:right;width:20%;}
-	}
-	body#about {
-		video {
-			width:35%;
-			float:right;
-			margin-left:15px;
-			margin-bottom:15px;
-		}
-	}
-}
-@media only screen and (min-width: 1280px) {
-  /* 992 =================================================== */
-	body#about {
-		video {
-			width:45%;
-		}
-	}
-}
-@media only screen and (min-width: 1382px) {
-  /* 1382 =================================================== */
-
-}

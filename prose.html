@@ -4,7 +4,7 @@
     {{ body }}
     <hr />
   {% endif %}
-  <h2>Essays</h2>
+  <h2>Prose</h2>
   <p class="intro">{{meta['intro']}}</p>
   <section id="taxonomy">
     <h4><strong>Wayfinding</strong>: {% for tagset in taxonomy %} {% if tagset.size != 0 %} {% for tag in tagset %}<a href="{{tag.url}}">{{tag.value}}</a>  {% endfor %} {% endif %} {% endfor %}</h4>

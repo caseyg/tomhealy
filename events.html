@@ -1,0 +1,13 @@
+{% include 'header' %}
+<article>
+  <p class="intro">Calendar of events, speeches, readings.</p>
+  {% comment %} For events show big date {% endcomment %}
+  <ul>
+    {% if posts %}
+      {% for post in posts %}
+        <li><h3><a href="{{post.url}}">{% if post.meta['locale'] %}<span class="locale">{{post.meta['locale']}}</span> {% endif %}<span class="date">{{post.date | date: "%B %-d, %Y, %-I%p" }}</span><br />{{post.title}}</a></h3></li>
+      {% endfor %}
+    {% endif %}
+    </ul>
+</article>
+{% include 'footer' %}

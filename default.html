@@ -8,15 +8,6 @@
 	{% endif %}
 	{% if pages or posts %}
 
-			{% if title == "Essays" %}
-
-			<p class="intro">{{meta['intro']}}</p>
-
-			<section id="taxonomy">
-				<h4><strong>Wayfinding</strong>: {% for tagset in taxonomy %} {% if tagset.size != 0 %} {% for tag in tagset %}<a href="{{tag.url}}">{{tag.value}}</a>  {% endfor %} {% endif %} {% endfor %}</h4>
-			</section>
-			{% endif %}
-
 			{% if type != "post" %}
 			{% comment %} Loop through posts {% endcomment %}
 				{% if permalink contains "reviews" %}
@@ -26,25 +17,6 @@
 						{% for post in posts %}
 							<li><h3><a href="{{post.url}}">{{post.title}} <span class="date">{{post.date | date: "%B %Y" }}</a></h3></li>
 						{% endfor %}
-					</ul>
-				{% elsif permalink contains "poetry/" %}
-				{% comment %} For poetry show selections and no date {% endcomment %}
-					<h2 style="margin-top:20px;">Peruse</h2>
-					<ul>
-						{% for post in posts %}
-							<li><h3><a href="{{post.url}}">{{post.title}}</a></h3></li>
-						{% endfor %}
-					</ul>
-				{% elsif title == "Whereabouts" %}
-				<h2>Calendar</h2>
-				<p class="intro">of events, speeches, readings.</p>
-				{% comment %} For events show big date {% endcomment %}
-					<ul>
-						{% if posts %}
-						{% for post in posts %}
-							<li><h3><a href="{{post.url}}">{% if post.meta['locale'] %}<span class="locale">{{post.meta['locale']}}</span> {% endif %}<span class="date">{{post.date | date: "%B %-d, %Y, %-I%p" }}</span><br />{{post.title}}</a></h3></li>
-						{% endfor %}
-						{% endif %}
 					</ul>
 				{% else %}
 					{% if posts.size != 0 %}
@@ -67,11 +39,6 @@
 		{% endif %}
 	{% endif %}
 
-	{% for asset in assets %}
-		{% if asset.type == 'image' and parent.title != "Prose" %}
-			<img src="{{asset.url}}">
-		{% endif %}
-	{% endfor %}
 	{{body}}
 
 	{% if type == "post" %}

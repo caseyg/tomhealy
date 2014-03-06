@@ -1,0 +1,57 @@
+@media only screen and (min-width: 480px) {
+  /* 480 =================================================== */
+  body#home {
+    background-image:url('/img/tomhealyis-ghost.png');
+    background-size: auto 100%;
+    background-position:center;
+  }
+  header nav li {
+    margin-right:10px;
+  }
+  body#poetry article h3 {
+    display:inline-block;
+    width:48%;
+    margin:10px 0;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /* 600 =================================================== */
+  .parent-poetry {
+    h1 {
+      margin-bottom:20px;
+    }
+    #cover, article {
+      width:48%;
+      display:inline-block;
+      vertical-align: top;
+    }
+    #cover {
+      margin-right: 2%;
+    }
+  }
+  .parent-essays, #about, .parent-reviews {
+    p {
+      max-width: 600px;
+      margin-left:0;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* 768 =================================================== */
+  body {
+    font-size:16px;
+  }
+  body#essays {
+    #taxonomy {padding:0 10px;margin:0 0 0 10px;float:right;width:20%;}
+  }
+  body#about {
+    video {
+      width:35%;
+      float:right;
+      margin-left:15px;
+      margin-bottom:15px;
+    }
+  }
+}
