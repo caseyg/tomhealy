@@ -12,27 +12,6 @@
 @import "content-list";
 @import "top-bottom-nav";
 
-p.intro {
-	font-style:italic;
-	margin-top:0;
-}
-
-
-
-p {
-	margin:1em auto;
-}
-
-blockquote {
-	font-style: italic;
-}
-
-ul {
-	list-style-type:none;
-	margin:0;
-	padding:0;
-}
-
 body#home {
 	background-size: auto 100%;
 	background-position:center;
@@ -64,35 +43,8 @@ body#home {
 	border:none;
 }
 
-footer {
-	clear:both;
-	margin-top:30px;
-	border-top:1px solid #dfdfdf;
-}
-
 #container {
 	padding:2.5% 5%;
-}
-
-video {
-	display:block;
-	margin:auto;
-}
-
-article {
-	h1, h2 {
-		padding:0;
-		margin:15px 0;
-	}
-	h1.content-title {
-		margin-bottom:5px;
-	}
-	h2.breadcrumb {
-		margin-top:0;
-	}
-	li h3 {
-		margin: 10px 0;
-	}
 }
 
 body#poetry {
