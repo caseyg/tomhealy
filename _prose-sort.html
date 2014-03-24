@@ -1,8 +1,0 @@
-<section id="taxonomy-filter">
-	<h2>Ways to organize</h2>
-	{% for tagset in taxonomy %}
-		{% if tagset.size != 0 %}
-			<strong>{{tagset.key}}</strong>: {% for tag in tagset %}<a href="{{tag.url}}">{{tag.value}}</a> {% endfor %}<br />
-		{% endif %}
-	{% endfor %}
-</section>

@@ -4,12 +4,9 @@
     {{ body }}
     <hr />
   {% endif %}
-  <h2>Prose</h2>
+  <h2>Essays</h2>
   <p class="intro">{{meta['intro']}}</p>
-  <section id="taxonomy">
-    <h4><strong>Wayfinding</strong>: {% for tagset in taxonomy %} {% if tagset.size != 0 %} {% for tag in tagset %}<a href="{{tag.url}}">{{tag.value}}</a>  {% endfor %} {% endif %} {% endfor %}</h4>
-  </section>
-  <ul>
+  <ul class="content-list">
     {% for post in posts %}
       <li>
         <a href="{{post.url}}">
@@ -29,5 +26,17 @@
       </li>
     {% endfor %}
   </ul>
+  <section id="taxonomy">
+    {% for tagset in taxonomy %}
+      {% if tagset.size != 0 %}
+      <h4>{{tagset.title}}</h4>
+      <ul>
+        {% for tag in tagset %}
+          <li><a href="{{tag.url}}">{{tag.value}}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    {% endfor %}
+  </section>
 </article>
 {% include 'footer' %}

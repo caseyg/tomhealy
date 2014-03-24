@@ -31,7 +31,7 @@
     }
   }
   .parent-essays, #about, .parent-reviews {
-    p {
+    p, blockquote {
       max-width: 600px;
       margin-left:0;
     }
@@ -43,7 +43,14 @@
   body {
     font-size:16px;
   }
+  #container {
+    padding:2.5% 10%!important;
+  }
   body#essays {
+    .content-list {
+      float:left;
+      width:70%;
+    }
     #taxonomy {padding:0 10px;margin:0 0 0 10px;float:right;width:20%;}
   }
   body#about {

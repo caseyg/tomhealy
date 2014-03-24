@@ -7,7 +7,7 @@ TOP NAV _nav.html
     <ul>
       <li class="home"><a href="/">T.H.</a></li>
       <li class="poetry"><a href="/poetry">Poetry</a></li>
-      <li class="prose"><a href="/prose">Prose</a></li>
+      <li class="essays"><a href="/essays">essays</a></li>
       <li class="whereabouts"><a href="/events" class="events">Where</a>(<a href="/about" class="about">about</a>)s</li>
     </ul>
   </nav>
@@ -66,7 +66,7 @@ header {
 
 // active state, e.g. in a body with an id of poetry, make links with the class poetry look active
 
-body#poetry .poetry a, body#prose .prose a, body#events a.events, body#about a.about {
+body#poetry .poetry a, body#essays .essays a, body#events a.events, body#about a.about {
   border-bottom:2px solid black!important;
   }
 

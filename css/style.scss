@@ -70,7 +70,7 @@ body#poetry {
 
 body#essays {
 	article {
-		ul {
+		ul.content-list {
 			li {
 				clear:left;
 				a:link, a:visited {
@@ -94,6 +94,15 @@ body#essays {
 					}
 				}
 			}
+		}
+	}
+	#taxonomy {
+		padding:0 10px 20px 10px;
+		h4 {
+			margin-bottom:5px;
+		}
+		li {
+			margin-left:0;
 		}
 	}
 }
