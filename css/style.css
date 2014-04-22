@@ -230,7 +230,11 @@ body#home {
   background-size: auto 100%;
   background-position: center; }
   body#home article section {
-    margin: 15px auto 30px auto; }
+    margin: 30px auto 45px auto; }
+    body#home article section ul, body#home article section p {
+      margin-left: 20px; }
+  body#home h1 {
+    margin-bottom: 30px; }
   body#home h2 {
     margin-bottom: 0; }
   body#home section#about {

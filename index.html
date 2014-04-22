@@ -12,10 +12,15 @@
 <section id="container">
 	<article>
 		<section id="about">
-			<h1>Tom Healy <br />is a writer.</h1>
+			<h1>Tom Healy is a writer.</h1>
 		</section>
 
-		{% include 'nav' %}
+		<section id="about">
+			<h2><a href="/about">About</a></h2>
+			<p>
+				Tom Healy is a writer and poet and chairman of the Fulbright Foreign Scholarship Board&hellip;
+			</p>
+		</section>
 
 		<section id="poetry">
 			{% assign page = site.pages.poetry %}
@@ -71,10 +76,6 @@
 				{% endfor %}
 				{% endif %}
 			</ul>
-		</section>
-
-		<section id="about">
-			<h2><a href="/about">About</a></h2>
 		</section>
 
 	</article>
