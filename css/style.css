@@ -162,6 +162,8 @@ footer {
 
 #events .content-list .locale {
   font-weight: bold; }
+#events .content-list .title {
+  font-style: italic; }
 
 /*
 
