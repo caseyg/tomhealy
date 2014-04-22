@@ -1,13 +1,14 @@
 {% include 'header' %}
 <article>
-						<h2>Books</h2>
-			{% for subpage in pages %}
-				<h3>
-					<a href="{{subpage.url}}">
-						{% for asset in subpage.assets %}<img src="{{asset.url}}" title="{{subpage.title}}" />{% endfor %}
-					</a>
-				</h3>
-			{% endfor %}
+		<h2>Books</h2>
+		<p class="intro">{{meta['intro'] | markdown}}</p>
+		{% for subpage in pages %}
+			<h3>
+				<a href="{{subpage.url}}">
+					{% for asset in subpage.assets %}<img src="{{asset.url}}" title="{{subpage.title}}" />{% endfor %}
+				</a>
+			</h3>
+		{% endfor %}
 	{{body}}
 </article>
 {% include 'footer' %}
