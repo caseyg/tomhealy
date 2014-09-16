@@ -5,11 +5,11 @@
   <ul class="content-list">
     {% if posts %}
       {% for post in posts %}
-      	{% assign time = post.date | date: "%-I%p" %}
+      	{% assign time = post.date | date: "%-I%p" %} {% comment %} Setup event time as a variable {% endcomment %}
         <li><h3><a href="{{post.url}}">
-        {% if time == "12AM" %}
-	        <span class="date">{{post.date | date: "%B %-d, %Y" }}</span>
-		{% else %}
+        {% if time == "12AM" %} {% comment %} Check if time is default of 12AM {% endcomment %}
+	        <span class="date">{{post.date | date: "%B %-d, %Y" }}</span> {% comment %} If it is, don't show time {% endcomment %}
+		{% else %} {% comment %} Otherwise show date including time {% endcomment %}
 	        <span class="date">{{post.date | date: "%B %-d, %Y, %-I%p" }}</span>
 		{% endif %}
         {% if post.meta['locale'] %} <span class="locale">{{post.meta['locale']}}</span>{% endif %}<br /><span class="title">{{post.title}}</span></a></h3></li>
