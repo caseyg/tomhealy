@@ -13,19 +13,19 @@
 @import "top-bottom-nav";
 
 body#home {
-	background-size: auto 100%;
-	background-position:center;
-	article section {
-		margin:30px auto 45px auto;
-		ul, p {
-			margin-left:20px;
-		}
+    background:#d4d1ca url('/img/tom-healy-fulbright.jpg') no-repeat left center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	article {
+		margin-bottom:45vh
 	}
 	h1 {
 		margin-bottom:30px;
 	}
 	h2 {
-		margin-bottom:0;
+		margin:0;
 	}
 	section#about {
 		margin: 0 0 0 0;
@@ -112,8 +112,3 @@ body#prose {
 		}
 	}
 }
-
-/*	BigVideo Styles
-	You may need to adjust these styles to get this working right in your design.
-*/
-#tubular-shield {background:rgba(255,255,255,.75);}
