@@ -21,71 +21,20 @@
 
 		<section id="poetry">
 			{% assign page = site.pages.poetry %}
-			{% assign pages = page.pages %}
-
 			<h2><a href="{{page.url}}">{{page.title}}</a></h2>
-				<ul class="content-list">
-					{% for page in pages limit:5 %}
-					<li>
-						<a href="{{page.url}}">
-								<span class="title">{{page.title}}</span>
-								<span class="publisher">{{page.meta['publisher']}},</span> <span class="date">{{page.date | date: "%Y" }}</span>
-						</a>
-					</li>
-					{% endfor %}
-				</ul>
 		</section>
 
 		<section id="prose">
 			{% assign page = site.pages.prose %}
-			{% assign posts = page.posts %}
-
 			<h2><a href="{{page.url}}">{{page.title}}</a></h2>
-				<ul class="content-list">
-					{% for post in posts limit:3 %}
-						<li>
-							<a href="{{post.url}}">
-									<span class="title">{{post.title}}</span>
-									<span class="date">{{post.date | date: "%B %Y" }}</span>
-							</a>
-						</li>
-					{% endfor %}
-				</ul>
 		</section>
 
 		<section id="events">
-
 			{% assign page = site.pages.events %}
-			{% assign posts = page.posts %}
-
 			<h2><a href="{{page.url}}">{{page.title}}</a></h2>
-
-			<ul class="content-list">
-				{% if posts %}
-				{% for post in posts limit:3 %}
-					<li>
-						<a href="{{post.url}}">
-							<span class="date">{{post.date | date: "%B %-d, %Y, %-I%p" }}</span> {% if post.meta['locale'] %}<span class="locale">{{post.meta['locale']}}</span>{% endif %}<br>
-							<span class="title">{{post.title}}</span>
-						</a>
-					</li>
-				{% endfor %}
-				{% endif %}
-			</ul>
 		</section>
-
 	</article>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	<script src="/js/jquery.tubular.1.0.js"></script>
-	<script type="text/javascript">
-		userAgent = window.navigator.userAgent;
-		if(/iP(hone|od|ad)/.test(userAgent)==false) {
-			$('document').ready(function() {
-				var options = { videoId: '6XQeojdV8W4', ratio: 4/3, start: 0 };
-				$('#container').tubular(options);
-			});
-		}
-	</script>
 
 {% include 'footer' %}
