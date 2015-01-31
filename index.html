@@ -11,14 +11,10 @@
 <body id="{{ slug }}" class="{{ type }} parent-{{ parent.slug }}">
 <section id="container">
 	<article>
-			<h1>Tom Healy</h1>
-			<h2><a href="/about">About</a></h2>
-			{% assign page = site.pages.poetry %}
-			<h2><a href="{{page.url}}">{{page.title}}</a></h2>
-			{% assign page = site.pages.prose %}
-			<h2><a href="{{page.url}}">{{page.title}}</a></h2>
-			{% assign page = site.pages.events %}
-			<h2><a href="{{page.url}}">{{page.title}}</a></h2>
+			<h1>Tom Healy</h1>			
+			<h2><a href="/poetry">Poetry</a></h2>
+			<h2><a href="/prose">Prose</a></h2>
+			<h2><a href="/events">Where</a>(<a href="/about">About</a>)s</h2>
 	</article>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
