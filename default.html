@@ -50,7 +50,7 @@
 		<section class="meta">
 			<a title="Click for directions" href="http://maps.google.com/?q={{meta.address}}"><img src="http://maps.googleapis.com/maps/api/staticmap?size=600x300&markers=color:red|{{meta.address}}&sensor=false&key=AIzaSyA0aqlbFHW-CRlBL07LrAkxqanPi7l8olA" alt=""></a>
 		{% endif %}
-		{% if parent.slug == "prose"  %}
+		{% if parent.slug == "essays"  %}
 		<section id="taxonomy">
 			<h4><strong>Related</strong>: {% for tagset in taxonomy %} {% if tagset.size != 0 %} {% for tag in tagset %}<a href="{{tag.url}}">{{tag.value}}</a>  {% endfor %} {% endif %} {% endfor %}</h4>
 		</section>
