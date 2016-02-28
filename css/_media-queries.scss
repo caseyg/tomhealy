@@ -25,7 +25,7 @@
       margin-right: 2%;
     }
   }
-  .parent-essays, #about, .parent-reviews {
+  .parent-prose, #about, .parent-reviews {
     p, blockquote {
       max-width: 600px;
       margin-left:0;
@@ -41,7 +41,7 @@
   #container {
     padding:2.5% 10%!important;
   }
-  body#essays {
+  body#prose {
     .content-list {
       float:left;
       width:70%;
