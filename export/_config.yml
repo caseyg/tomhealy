@@ -1,0 +1,42 @@
+---
+title: Tom Healy
+url: http://tomhealy.net
+timezone: Eastern Time (US & Canada)
+permalink: pretty
+collections:
+  uploads:
+    title: Uploads
+    output: true
+  prose:
+    output: true
+  events:
+    output: true
+  about_interviews:
+    output: true
+    permalink: "/about/interviews/:path"
+  poetry_what-the-right-hand-knows:
+    output: true
+    permalink: "/poetry/what-the-right-hand-knows/:path"
+  poetry_animal-spirits:
+    output: true
+    permalink: "/poetry/animal-spirits/:path"
+  poetry_what-the-right-hand-knows_reviews:
+    output: true
+    permalink: "/poetry/what-the-right-hand-knows/reviews/:path"
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    permalink: "/posts/:title/"
+markdown: redcarpet
+redcarpet:
+  extensions:
+  - autolink
+  - fenced_code_blocks
+  - lax_spacing
+  - strikethrough
+  - superscript
+  - tables
+  - footnotes
+  - highlight
