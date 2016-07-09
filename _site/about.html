@@ -1,0 +1,27 @@
+{% include 'header' %}
+
+<article>
+
+	{{body}}
+
+	<section class="subpages">
+	{% comment %} Show subpages if there are any available {% endcomment %}
+					{% if title == "Poetry" %}
+					<h2>Books</h2>
+					{% endif %}
+		{% for subpage in pages %}
+			<h3>
+				<a href="{{subpage.url}}">
+					{% for asset in subpage.assets %}<img src="{{asset.url}}" title="{{subpage.title}}" />{% endfor %}
+					{% if title != "poetry" %}
+						<span class="title">{{subpage.title}}</span>
+					{% endif %}
+				</a>
+			</h3>
+		{% endfor %}
+
+	</section>
+
+</article>
+
+{% include 'footer' %}
