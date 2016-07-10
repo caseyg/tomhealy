@@ -1,0 +1,12 @@
+<section class="taxonomy flex border border-gray max-width-4 mx-auto center">
+  {% for taxonomy in site.taxonomies %}
+  	<div class="{{ taxonomy }} flex-auto">
+  		<p class="gray caps bold">{{ taxonomy }}</p>
+      <p>
+        {% for item in page.[taxonomy] %}
+    			<a href="/essays/#filter=.{{item | slugify }}">{{ item }}</a>
+    		{% endfor %}
+      </p>
+  	</div>
+  {% endfor %}
+</section>

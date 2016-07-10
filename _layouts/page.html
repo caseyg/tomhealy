@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<main>
+	<article class="max-width-3 mx-auto mt4">
+		<h1>{{ page.title }}</h1>
+		<p class="h3">
+			{{ page.date | date: "%B %Y" }}
+		</p>
+		<div class="content mx-auto">
+			{{ content | markdownify }}
+		</div>
+	</article>
+	<aside>
+		{% include taxonomy.html %}
+	</aside>
+	<style type="text/css">
+		.content img {
+		}
+	</style>
+</main>

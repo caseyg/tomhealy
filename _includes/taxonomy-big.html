@@ -1,0 +1,41 @@
+{% for taxonomy in site.taxonomies %}
+  {% capture t %}{% for essay in site.essays %}{% if essay.[taxonomy] %}{% for item in essay.[taxonomy] %}{{ item }}{% unless essay.last %}|{% endunless %}{% endfor %}{% endif %}{% endfor %}{% endcapture %}
+  {% if taxonomy == site.taxonomies[0] %}
+    {% capture who %}{{ t }}{% endcapture %}
+  {% elsif taxonomy == site.taxonomies[1] %}
+    {% capture what %}{{ t }}{% endcapture %}
+  {% elsif taxonomy == site.taxonomies[2] %}
+    {% capture where %}{{ t }}{% endcapture %}
+  {% elsif taxonomy == site.taxonomies[3] %}
+    {% capture why %}{{ t }}{% endcapture %}
+  {% endif %}
+{% endfor %}
+
+{% assign who = who | split: "|" | uniq %}
+{% assign what = what | split: "|" | uniq %}
+{% assign where = where | split: "|" | uniq %}
+{% assign why = why | split: "|" | uniq %}
+<div class="border-left border-gray sm-col sm-col-4 px2">
+  <h2 id="{{ this_year }}-ref" class="item h1 mt4 gray">Filters</h2>
+  <section class="button-group filter-button-group taxonomy border-gray mx-auto">
+    {% for taxonomy in site.taxonomies %}
+      <section>
+        {% assign var = taxonomy | downcase %}
+        <h3 class="gray caps">{{ taxonomy }}</h3>
+        {% for item in [var] %}
+          <button class="btn btn-outline" data-filter=".{{ item | slugify }}">{{ item }}</button>
+        {% endfor %}
+      </section>
+    {% endfor %}
+  </section>
+</div>
+
+<style media="screen">
+{% assign n = 1 %}
+{% for i in (2..20) %}
+  section>button:nth-child({{forloop.index}}) {
+    color: rgba(0,0,0,{{n}});
+  }
+  {% assign n = n  | minus: '0.075' %}
+{% endfor %}
+</style>

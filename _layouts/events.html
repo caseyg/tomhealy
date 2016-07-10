@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<main class="center">
+  {% for post in site.events reversed | sort: 'date'  %}
+      {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+      {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+
+      {% if forloop.first %}
+      <h2 id="{{ this_year }}-ref" class="block h1 gray mt4">{{this_year}}</h2>
+      <ul class="list-reset">
+      {% endif %}
+        <li class="block pb3">
+          <a href="{{post.url}}" class="text-decoration-none black">
+            <p class="h2 mb0"><strong class="date">{{post.date | date: "%b %-d" }}</strong>{% if post.locale %}<span class="locale">, {{post.locale}}</span>{% endif %}</p>
+            <h2 class="h4 mt2 regular">{{post.title}}</h2>
+          </a>
+        </li>
+      {% if forloop.last %}
+      </ul>
+      {% else %}
+          {% if this_year != next_year %}
+          </ul>
+          <h2 id="{{ next_year }}-ref" class="block h1 gray mt4">{{next_year}}</h2>
+          <ul class="list-reset">
+          {% endif %}
+      {% endif %}
+  {% endfor %}
+</main>

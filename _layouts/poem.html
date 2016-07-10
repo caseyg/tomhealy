@@ -1,0 +1,41 @@
+---
+layout: default
+---
+	{% for asset in assets %}
+			<section id="cover">
+				<img src="{{asset.url}}">
+			</section>
+	{% endfor %}
+<article>
+	{% if parent %}
+		<h1 class="content-title">{{title}}</h1>
+	{% endif %}
+
+	{% if type == "post" %}
+		{% if parent %}
+			<h2 class="breadcrumb"><em>from</em> <a href="{{parent.url}}">{{parent.title}}</a></h2>
+		{% endif %}
+	{% endif %}
+
+	{% if type != "post" %}
+	{% comment %} Loop through posts {% endcomment %}
+			{% if parent.slug == "poetry"  %}
+			<h2 style="margin-top:20px;">Inside</h2>
+			{% endif %}
+			<ul>
+				{% for post in posts %}
+					<li><a href="{{post.url}}">{{post.title}}</a></li>
+				{% endfor %}
+			</ul>
+	{% endif %}
+
+	{{body}}
+
+	{% for subpage in pages %}
+		<h2>
+			<a href="{{subpage.url}}">
+				{{subpage.title}}
+			</a>
+		</h2>
+	{% endfor %}
+</article>

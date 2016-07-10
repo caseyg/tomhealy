@@ -2,8 +2,7 @@
 title: What the Right Hand Knows
 date: 2013-07-25 14:27:00 Z
 publisher: Four Way Books
-assets:
-- path: "/uploads/What-The-Right-Hand-Knows.jpg"
+cover-image: "/uploads/wtrhk.png"
 ---
 
 ## Buy

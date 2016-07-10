@@ -2,8 +2,7 @@
 title: Animal Spirits
 date: 2013-08-23 22:30:00 Z
 publisher: Monk Books
-assets:
-- path: "/uploads/animal-spirits.png"
+cover-image: "/uploads/as.png"
 ---
 
 ## Buy

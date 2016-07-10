@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<main>
+	<section id="books">
+		<h2 class="h1 gray center mt4">Books</h2>
+		<div class="sm-flex center">
+			{% for book in site.poetry %}
+					<a href="{{ book.url }}" class="sm-col sm-col-6 text-decoration-none black content-center">
+						<img class="fit" src="{{ book.cover-image }}" title="{{ book.title }}" />
+						<h3 class="h1 regular">{{ book.title }}</h3>
+					</a>
+			{% endfor %}
+		</div>
+		<div class="h3 max-width-3 block mx-auto">
+			{{ content | markdownify }}
+		</div>
+	</section>
+</main>
