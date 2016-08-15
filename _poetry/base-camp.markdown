@@ -1,7 +1,7 @@
 ---
 title: Base Camp
-book: Animal Spirits
 date: 2013-09-05 09:46:00 -04:00
+book: Animal Spirits
 ---
 
 How much oxygen  
