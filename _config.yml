@@ -11,8 +11,8 @@ collections:
   poetry:
     title: Poetry
     output: true
-  posts:
-    title: Posts
+  poetry:
+    title: Books
     output: true
   prose:
     title: Prose
