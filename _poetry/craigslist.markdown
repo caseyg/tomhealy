@@ -1,5 +1,6 @@
 ---
 title: Craigslist
+book: Animal Spirits
 date: 2014-03-20 11:27:00 -04:00
 ---
 

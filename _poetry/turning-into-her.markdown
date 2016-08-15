@@ -1,5 +1,6 @@
 ---
 title: Turning into Her
+book: Animal Spirits
 date: 2014-03-20 11:28:00 -04:00
 ---
 

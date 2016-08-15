@@ -1,5 +1,6 @@
 ---
 title: Flat-chested Girl from the NGO
+book: Animal Spirits
 date: 2014-03-20 11:29:00 -04:00
 ---
 
