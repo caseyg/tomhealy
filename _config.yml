@@ -2,18 +2,18 @@
 title: Tom Healy
 timezone: America/New_York
 collections:
-  poetry:
-    title: Books
-    output: true
   essays:
     title: Essays
     output: true
   events:
     title: Events
     output: true
-  posts:
-    title: Posts
+  poetry:
+    title: Poetry
     output: true
+  books:
+    title: Books
+    output: false
   prose:
     title: Prose
     output: true
