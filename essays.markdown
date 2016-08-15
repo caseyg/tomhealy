@@ -1,5 +1,6 @@
 ---
 title: Essays
+position: 2
 layout: essays
 order: 4
 books:

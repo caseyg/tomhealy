@@ -1,5 +1,6 @@
 ---
 title: Videos
+position: 5
 layout: videos
 order: 5
 videos:

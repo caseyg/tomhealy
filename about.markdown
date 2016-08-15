@@ -1,5 +1,6 @@
 ---
 title: About Tom Healy
+position: 3
 layout: about
 order: 6
 ---

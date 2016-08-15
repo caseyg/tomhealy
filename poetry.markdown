@@ -1,5 +1,6 @@
 ---
 title: Poetry
+position: 4
 layout: poetry
 order: 3
 ---
