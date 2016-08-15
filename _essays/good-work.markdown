@@ -1,6 +1,6 @@
 ---
 title: Good Work
-date: 2013-01-28 20:23:00 Z
+date: 2013-01-28 15:23:00 -05:00
 assets:
 - path: "/uploads/tumblr_inline_mhhzmaTQkb1rn320i.jpg"
 - path: "/uploads/tumblr_inline_mhhzs88DyQ1rn320i.jpg"

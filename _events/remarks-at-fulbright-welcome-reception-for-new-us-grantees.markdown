@@ -1,6 +1,6 @@
 ---
 title: Remarks at Fulbright Welcome Reception for new U.S. grantees
-date: 2014-09-17 22:15:00 Z
+date: 2014-09-17 18:15:00 -04:00
 address: 
 url: 
 locale: Tokyo

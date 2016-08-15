@@ -1,6 +1,6 @@
 ---
 title: 'Fulbright Scholars: Sharing the World through Storytelling'
-date: 2012-07-06 17:40:00 Z
+date: 2012-07-06 13:40:00 -04:00
 What:
 - Essay
 Who:

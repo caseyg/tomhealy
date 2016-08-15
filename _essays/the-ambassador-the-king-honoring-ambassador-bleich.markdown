@@ -1,6 +1,6 @@
 ---
 title: The Ambassador & The King
-date: 2013-08-22 15:36:00 Z
+date: 2013-08-22 11:36:00 -04:00
 assets:
 - path: "/uploads/tumblr_inline_ms01dhhaCP1qz4rgp.jpg"
 - path: "/uploads/tumblr_inline_mrzn3geAgh1qz4rgp.jpg"

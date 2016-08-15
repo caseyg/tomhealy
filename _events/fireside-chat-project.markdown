@@ -1,6 +1,6 @@
 ---
 title: Fireside Chat Project
-date: 2014-07-09 23:00:00 Z
+date: 2014-07-09 19:00:00 -04:00
 address: Beijing, China
 url: http://projectpengyou.org/events/china-i-hardly-knew-you-american-writers-imagine-an-unknown-world-fireside-chat-with-tom-healy-project-pengyou/
 locale: 

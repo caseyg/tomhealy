@@ -1,6 +1,6 @@
 ---
 title: What the Right Hand Knows
-date: 2014-03-20 15:15:00 Z
+date: 2014-03-20 11:15:00 -04:00
 ---
 
 I am not in stereo.  

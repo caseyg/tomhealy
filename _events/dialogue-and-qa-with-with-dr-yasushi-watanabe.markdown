@@ -1,6 +1,6 @@
 ---
 title: Dialogue and Q&A with with Dr. Yasushi Watanabe
-date: 2014-09-19 23:00:00 Z
+date: 2014-09-19 19:00:00 -04:00
 address: 
 url: 
 locale: Tokyo

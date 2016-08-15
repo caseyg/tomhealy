@@ -1,6 +1,6 @@
 ---
 title: Thinking the Unthinkable
-date: 2012-04-19 18:33:00 Z
+date: 2012-04-19 14:33:00 -04:00
 assets:
 - path: "/uploads/tumblr_m2s8fmciOo1rn320i.jpg"
 - path: "/uploads/tumblr_m2s8gfkahy1rn320i.jpg"

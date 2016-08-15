@@ -1,6 +1,6 @@
 ---
 title: 37th Annual Fulbright Conference
-date: 2014-10-17 19:15:00 Z
+date: 2014-10-17 15:15:00 -04:00
 address: |-
   Ronald Reagan Building and International Trade Center
   1300 Pennsylvania Ave NW

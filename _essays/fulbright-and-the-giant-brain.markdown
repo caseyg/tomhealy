@@ -1,6 +1,6 @@
 ---
 title: Fulbright and the Giant Brain
-date: 2012-04-23 18:35:00 Z
+date: 2012-04-23 14:35:00 -04:00
 assets:
 - path: "/uploads/tumblr_m2xscueAEp1rn320i.jpg"
 - path: "/uploads/tumblr_m2xsxfW7I61rn320i.jpg"

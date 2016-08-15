@@ -1,6 +1,6 @@
 ---
 title: Lecture at Fundação Armando Alvares Penteado
-date: 2014-04-04 15:00:00 Z
+date: 2014-04-04 11:00:00 -04:00
 address: "Rua Alagoas, 903 - Consolação  \nSão Paulo - SP  \n01242-902, Brazil  "
 url: 
 locale: São Paulo

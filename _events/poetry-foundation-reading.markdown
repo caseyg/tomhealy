@@ -1,6 +1,6 @@
 ---
 title: Rome Festival
-date: 2015-02-05 22:15:00 Z
+date: 2015-02-05 17:15:00 -05:00
 address: "Il Tempio di Adriano  \nPiazza di Pietra  \n00186 Roma"
 url: http://www.fondazioneroma.it/documenti/ProgrammaLIGHT.pdf
 locale: Rome

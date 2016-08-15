@@ -1,6 +1,6 @@
 ---
 title: Because a Fire Was In My Head
-date: 2009-01-02 05:00:00 Z
+date: 2009-01-02 00:00:00 -05:00
 assets:
 - path: "/uploads/9CK3Xg4LJpv8kBZW.jpg"
 What:

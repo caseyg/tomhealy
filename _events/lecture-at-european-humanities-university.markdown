@@ -1,6 +1,6 @@
 ---
 title: Lecture at European Humanities University
-date: 2014-05-19 05:00:00 Z
+date: 2014-05-19 01:00:00 -04:00
 address: Vilnius, Lithuania
 url: 
 locale: 

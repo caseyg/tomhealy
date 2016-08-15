@@ -1,6 +1,6 @@
 ---
 title: Lecture at the New Air Festival
-date: 2014-09-16 22:00:00 Z
+date: 2014-09-16 18:00:00 -04:00
 address: Tokyo, Japan
 url: http://dancenewair.jp/index-en
 locale: Tokyo

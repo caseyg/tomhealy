@@ -1,6 +1,6 @@
 ---
 title: Base Camp
-date: 2013-09-05 13:46:00 Z
+date: 2013-09-05 09:46:00 -04:00
 ---
 
 How much oxygen  

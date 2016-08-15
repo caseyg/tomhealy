@@ -1,6 +1,6 @@
 ---
 title: 'Homeschooled: John Ashbery, His House, His Work, His Life'
-date: 2014-03-18 20:00:00 Z
+date: 2014-03-18 16:00:00 -04:00
 address: "300 West 21st Street  \nAustin, TX  78713"
 url: https://www.facebook.com/events/792243167470005/
 locale: Austin

@@ -1,6 +1,6 @@
 ---
 title: The Starn Twins
-date: 2004-07-02 16:00:00 Z
+date: 2004-07-02 12:00:00 -04:00
 What:
 - Article
 Why:

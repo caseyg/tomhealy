@@ -1,6 +1,6 @@
 ---
 title: Ladies and Gentlemen, Let's Rock and Roll
-date: 2012-06-12 17:02:00 Z
+date: 2012-06-12 13:02:00 -04:00
 assets:
 - path: "/uploads/tumblr_m5kbwu2NQ71rn320i.jpg"
 - path: "/uploads/tumblr_m5kd0dZ4dI1rn320i.jpg"

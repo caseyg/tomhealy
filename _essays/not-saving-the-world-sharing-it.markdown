@@ -1,6 +1,6 @@
 ---
 title: Not Saving the World, Sharing It
-date: 2012-02-09 19:20:00 Z
+date: 2012-02-09 14:20:00 -05:00
 What:
 - Welcome
 Who:

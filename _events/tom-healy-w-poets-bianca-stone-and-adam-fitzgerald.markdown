@@ -1,6 +1,6 @@
 ---
 title: Reading at Lillian Vernon Writers House
-date: 2013-09-05 23:00:00 Z
+date: 2013-09-05 19:00:00 -04:00
 address: 58 West 11th Street, New York, NY
 url: https://www.facebook.com/events/578151542223127/
 locale: New York City

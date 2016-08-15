@@ -1,6 +1,6 @@
 ---
 title: Interview with Carol Muske-Dukes
-date: 2010-06-19 20:55:00 Z
+date: 2010-06-19 16:55:00 -04:00
 ---
 
 Tom Healy says his poems are “aggressive.” And something wakes up in the poetry tidepool—awash as we are (according to critics) in gentle wisdom, limpidity and acuity, clairvoyant dreaminess and spotlit linguistics—and here is Tom, describing the unsparing, in-your-face uppercut of his unapologetic poems. “I think that aggressive, martial kind of expressiveness is deep in my bones.”

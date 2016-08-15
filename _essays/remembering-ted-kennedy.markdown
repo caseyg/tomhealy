@@ -1,6 +1,6 @@
 ---
 title: Remembering Ted Kennedy
-date: 2009-08-26 14:57:00 Z
+date: 2009-08-26 10:57:00 -04:00
 What:
 - Tribute
 - Article

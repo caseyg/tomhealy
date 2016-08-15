@@ -1,31 +1,28 @@
 ---
 title: Tom Healy
-url: http://tomhealy.siteleaf.net
-timezone: Eastern Time (US & Canada)
-permalink: pretty
-taxonomies: [Who, What, Where, Why]
-emptyArray: []
+timezone: America/New_York
 collections:
+  essays:
+    title: Essays
+    output: true
+  events:
+    title: Events
+    output: true
+  poetry:
+    title: Poetry
+    output: true
+  posts:
+    title: Posts
+    output: true
+  prose:
+    title: Prose
+    output: true
   uploads:
     title: Uploads
     output: true
-  essays:
-    output: true
   videos:
+    title: Videos
     output: true
-  poetry:
-    output: true
-  events:
-    output: true
-  interviews-and-reviews:
-    output: true
-    permalink: "/interviews-and-reviews/:path"
-  what-the-right-hand-knows:
-    output: true
-    permalink: "/poetry/what-the-right-hand-knows/:path"
-  animal-spirits:
-    output: true
-    permalink: "/poetry/animal-spirits/:path"
 defaults:
 - scope:
     path: ''
@@ -48,5 +45,10 @@ defaults:
     type: reports
   values:
     parent: "/reports/"
-imgix: http://aplusa.imgix.net
+url: http://tomhealy.siteleaf.net
 permalink: pretty
+taxonomies:
+- Who
+- What
+- Where
+- Why

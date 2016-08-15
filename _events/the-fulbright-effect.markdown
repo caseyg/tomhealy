@@ -1,6 +1,6 @@
 ---
 title: Welcome Remarks for The Fulbright Effect
-date: 2014-05-08 20:00:00 Z
+date: 2014-05-08 16:00:00 -04:00
 address: "1300 Pennsylvania Avenue NW  \nWashington, DC 20004"
 url: https://www.facebook.com/events/826127694081911/
 locale: Washington, DC

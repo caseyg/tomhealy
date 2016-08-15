@@ -1,6 +1,6 @@
 ---
 title: 'Craft Lecture: "Should You Steal?"'
-date: 2014-07-17 15:56:00 Z
+date: 2014-07-17 11:56:00 -04:00
 address: "Fort Worden State Park  \nPort Townsend, WA "
 url: 
 locale: 

@@ -1,6 +1,6 @@
 ---
 title: Lecture at Fundação Armando Alvares Penteado
-date: 2014-08-21 15:00:00 Z
+date: 2014-08-21 11:00:00 -04:00
 address: 
 url: 
 locale: São José dos Campos, Brazil

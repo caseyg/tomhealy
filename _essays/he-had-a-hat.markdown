@@ -1,6 +1,6 @@
 ---
 title: He Had a Hat
-date: 2012-07-26 15:54:00 Z
+date: 2012-07-26 11:54:00 -04:00
 What:
 - Introduction
 Who:

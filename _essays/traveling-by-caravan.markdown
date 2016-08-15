@@ -1,6 +1,6 @@
 ---
 title: Traveling by Caravan
-date: 2012-03-12 18:21:00 Z
+date: 2012-03-12 14:21:00 -04:00
 What:
 - Lecture
 Who:

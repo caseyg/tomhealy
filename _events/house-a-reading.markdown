@@ -1,6 +1,6 @@
 ---
 title: 'HOUSE: a reading'
-date: 2014-03-13 22:00:00 Z
+date: 2014-03-13 18:00:00 -04:00
 address: Claremont, CA
 url: http://pitweb.pitzer.edu/presidentsresidence/house-reading/
 locale: Claremont

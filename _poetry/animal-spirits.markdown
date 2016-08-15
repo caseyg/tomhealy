@@ -1,6 +1,6 @@
 ---
 title: Animal Spirits
-date: 2013-08-23 22:30:00 Z
+date: 2013-08-23 18:30:00 -04:00
 publisher: Monk Books
 cover-image: "/uploads/as.png"
 ---

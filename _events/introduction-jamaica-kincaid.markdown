@@ -1,6 +1,6 @@
 ---
 title: 'Introduction: Jamaica Kincaid'
-date: 2014-07-25 00:00:00 Z
+date: 2014-07-24 20:00:00 -04:00
 address: "Davis Audiorium, Palamountain Hall  \nSkidmore College  \nSaratoga, NY "
 url: http://www.albany.edu/writers-inst/webpages4/archives/sumread.html
 locale: 

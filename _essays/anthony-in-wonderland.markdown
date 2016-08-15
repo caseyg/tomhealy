@@ -1,6 +1,6 @@
 ---
 title: Anthony in Wonderland
-date: 2003-07-19 20:35:00 Z
+date: 2003-07-19 16:35:00 -04:00
 What:
 - Introduction
 Why:

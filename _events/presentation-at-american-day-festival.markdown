@@ -1,6 +1,6 @@
 ---
 title: Speech in Osaka at American Day Festival
-date: 2014-09-23 15:00:00 Z
+date: 2014-09-23 11:00:00 -04:00
 address: 
 url: 
 locale: Osaka

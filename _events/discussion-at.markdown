@@ -1,6 +1,6 @@
 ---
 title: Carnegie Endowment for International Peace
-date: 2014-10-16 16:00:00 Z
+date: 2014-10-16 12:00:00 -04:00
 address: 
 url: 
 locale: Washington, DC

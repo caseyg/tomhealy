@@ -1,6 +1,6 @@
 ---
 title: What Will We Say to Each Other?
-date: 2012-03-28 18:26:00 Z
+date: 2012-03-28 14:26:00 -04:00
 assets:
 - path: "/uploads/tumblr_m1yjkyUrZl1rn320i-1.jpg"
 - path: "/uploads/tumblr_m1yjrxSiXU1rn320i-1.jpg"

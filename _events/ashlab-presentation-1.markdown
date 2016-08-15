@@ -1,6 +1,6 @@
 ---
 title: An Evening with ASHLAB on John Ashbery's Poetry
-date: 2014-04-08 00:00:00 Z
+date: 2014-04-07 20:00:00 -04:00
 address: "66 West 12th Street  \nNew York, NY  10011"
 url: http://events.newschool.edu/event/an_evening_with_ashlab#.U1AGOFVdV6I
 locale: New York City

@@ -1,6 +1,6 @@
 ---
 title: Mystery Pipes
-date: 2009-11-13 15:29:00 Z
+date: 2009-11-13 10:29:00 -05:00
 What:
 - Article
 Who:

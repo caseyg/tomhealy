@@ -1,6 +1,6 @@
 ---
 title: Interview with David Svenson
-date: 2010-07-19 20:56:00 Z
+date: 2010-07-19 16:56:00 -04:00
 ---
 
 The following interview with poet Tom Healy focuses on his recently published collection, What the Right Hand Knows (Four Way Books, 70 pp.), his first book of poems. But I would be remiss if I didn't acknowledge the scope of Tom's experiences beyond the book.

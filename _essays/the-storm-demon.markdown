@@ -1,6 +1,6 @@
 ---
 title: The Storm Demon, Father of all Monsters
-date: 2012-11-09 16:55:00 Z
+date: 2012-11-09 11:55:00 -05:00
 assets:
 - path: "/uploads/tumblr_mdb2nnmVDf1rn320i.jpg"
 - path: "/uploads/tumblr_mdb2bvXUBx1rn320i.jpg"

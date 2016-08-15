@@ -1,6 +1,6 @@
 ---
 title: Essay on Psalm 139
-date: 2011-04-26 15:01:00 Z
+date: 2011-04-26 11:01:00 -04:00
 What:
 - Essay
 Who:

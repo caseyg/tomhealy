@@ -1,6 +1,6 @@
 ---
 title: Introducing Carolyn Forché
-date: 2014-11-04 01:15:00 Z
+date: 2014-11-03 20:15:00 -05:00
 address: Lexington Avenue at 92nd St
 url: http://www.92y.org/Event/Carolyn-Forche-Robin-Robertson.aspx
 locale: New York City

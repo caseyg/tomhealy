@@ -1,6 +1,6 @@
 ---
 title: Troubling the Water
-date: 2013-04-04 19:11:00 Z
+date: 2013-04-04 15:11:00 -04:00
 assets:
 - path: "/uploads/tumblr_inline_mkquuj5MOw1qz4rgp.jpg"
 - path: "/uploads/tumblr_inline_mkqv6uLjeQ1qz4rgp.jpg"

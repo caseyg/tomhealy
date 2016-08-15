@@ -1,6 +1,6 @@
 ---
 title: Stories in the Wilderness and in the City
-date: 2012-06-27 04:51:00 Z
+date: 2012-06-27 00:51:00 -04:00
 assets:
 - path: "/uploads/tumblr_m6a96f2XgT1rn320i.jpg"
 - path: "/uploads/tumblr_m6a8ogKHLi1rn320i.jpg"

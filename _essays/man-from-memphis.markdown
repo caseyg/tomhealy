@@ -1,6 +1,6 @@
 ---
 title: Man From Memphis
-date: 2014-04-19 14:42:00 Z
+date: 2014-04-19 10:42:00 -04:00
 excerpt: 
 Where:
 - Miami

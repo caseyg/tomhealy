@@ -1,6 +1,6 @@
 ---
 title: Keynote Speech at Fulbright Birthday Celebration
-date: 2014-04-09 18:30:00 Z
+date: 2014-04-09 14:30:00 -04:00
 address: "1 University of Arkansas  \nFayetteville, Arkansas  72701"
 url: http://newswire.uark.edu/articles/23938/celebrate-j-william-fulbright-s-birth-with-fulbright-college-april-9
 locale: Fayetteville

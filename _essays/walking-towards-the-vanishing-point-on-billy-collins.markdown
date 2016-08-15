@@ -1,6 +1,6 @@
 ---
 title: 'Walking Towards the Vanishing Point: On Billy Collins'
-date: 2012-04-01 16:26:00 Z
+date: 2012-04-01 12:26:00 -04:00
 What:
 - Introduction
 Who:

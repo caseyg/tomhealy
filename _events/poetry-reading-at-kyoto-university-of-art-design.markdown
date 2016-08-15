@@ -1,6 +1,6 @@
 ---
 title: Poetry Reading at Kyoto University of Art & Design
-date: 2014-09-21 19:30:00 Z
+date: 2014-09-21 15:30:00 -04:00
 address: 
 url: 
 locale: Kyoto

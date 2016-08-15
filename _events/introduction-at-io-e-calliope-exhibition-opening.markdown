@@ -1,6 +1,6 @@
 ---
 title: Introduction at IO E CALLIOPE Exhibition Opening
-date: 2014-10-09 22:00:00 Z
+date: 2014-10-09 18:00:00 -04:00
 address: |-
   NYU Casa Italiana
   24 West 12th Street

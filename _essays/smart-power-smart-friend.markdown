@@ -1,6 +1,6 @@
 ---
 title: Smart Power, Smart Friend
-date: 2012-03-27 18:25:00 Z
+date: 2012-03-27 14:25:00 -04:00
 assets:
 - path: "/uploads/tumblr_m2fcyjS3wa1rn320i.jpg"
 - path: "/uploads/tumblr_m2fd1ybDcy1rn320i.jpg"

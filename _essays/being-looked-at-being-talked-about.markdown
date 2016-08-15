@@ -1,6 +1,6 @@
 ---
 title: Being Looked At, Being Talked About
-date: 2012-08-23 15:58:00 Z
+date: 2012-08-23 11:58:00 -04:00
 assets:
 - path: "/uploads/tumblr_m98fwbx6EA1rn320i.jpg"
 - path: "/uploads/tumblr_m987gixFNG1rn320i.jpg"

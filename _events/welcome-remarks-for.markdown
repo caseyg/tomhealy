@@ -1,6 +1,6 @@
 ---
 title: Welcome Remarks for Fulbright Seminar
-date: 2014-08-20 13:00:00 Z
+date: 2014-08-20 09:00:00 -04:00
 address: |-
   Rua Tutóia, 77 - Jardim Paulista
   São Paulo - SP

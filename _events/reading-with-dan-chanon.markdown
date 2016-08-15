@@ -1,6 +1,6 @@
 ---
 title: Reading with Dan Chaon
-date: 2014-07-15 23:00:00 Z
+date: 2014-07-15 19:00:00 -04:00
 address: "Fort Worden State Park  \nPort Townsend, WA "
 url: 
 locale: 

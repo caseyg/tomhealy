@@ -1,6 +1,6 @@
 ---
 title: Joan Jonas
-date: 2008-01-01 17:34:00 Z
+date: 2008-01-01 12:34:00 -05:00
 What:
 - Introduction
 Why:

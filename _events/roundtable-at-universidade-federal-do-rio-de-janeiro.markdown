@@ -1,6 +1,6 @@
 ---
 title: Roundtable at Universidade Federal do Rio de Janeiro
-date: 2014-04-01 02:30:00 Z
+date: 2014-03-31 22:30:00 -04:00
 address: "Av. Pedro Calmon, 550 - Cidade Universitária  \nRio de Janeiro - RJ, 21941-901,
   Brazil"
 url: 

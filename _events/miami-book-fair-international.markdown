@@ -1,6 +1,6 @@
 ---
 title: Miami Book Fair International
-date: 2014-11-16 05:00:00 Z
+date: 2014-11-16 00:00:00 -05:00
 address: |-
   300 NE 2nd Ave
   Miami, FL 33132

@@ -1,6 +1,6 @@
 ---
 title: 'As Much Power as a Word: Hard, Soft, and Smart Power'
-date: 2013-08-22 14:00:00 Z
+date: 2013-08-22 10:00:00 -04:00
 assets:
 - path: "/uploads/tumblr_inline_mry4ooFGeE1qz4rgp.jpg"
 - path: "/uploads/tumblr_inline_mry4ufUDHB1qz4rgp.jpg"

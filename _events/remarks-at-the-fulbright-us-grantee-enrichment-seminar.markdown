@@ -1,6 +1,6 @@
 ---
 title: Remarks at the Fulbright U.S. Grantee Enrichment Seminar
-date: 2014-09-17 14:00:00 Z
+date: 2014-09-17 10:00:00 -04:00
 address: 
 url: 
 locale: Tokyo

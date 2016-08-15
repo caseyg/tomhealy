@@ -1,6 +1,6 @@
 ---
 title: The Senator's Music
-date: 2014-04-09 14:13:00 Z
+date: 2014-04-09 10:13:00 -04:00
 excerpt: 
 assets:
 - path: "/uploads/Senator-Fulbright-book.jpg"
