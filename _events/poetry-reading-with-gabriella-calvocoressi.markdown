@@ -1,6 +1,6 @@
 ---
 title: 'Chapel Hill lecture and reading '
-date: 2015-02-19 20:30:00 Z
+date: 2015-02-19 15:30:00 -05:00
 address: |-
   University of North Carolina at Chapel Hill
   Chapel Hill, NC

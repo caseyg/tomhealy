@@ -1,6 +1,6 @@
 ---
 title: The Februaries of Sylvia Plath and Ted Hughes
-date: 2016-02-11 16:09:00 Z
+date: 2016-02-11 11:09:00 -05:00
 excerpt: 
 Where:
 - Reno

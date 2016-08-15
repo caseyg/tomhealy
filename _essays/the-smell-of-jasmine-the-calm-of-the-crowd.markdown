@@ -1,6 +1,6 @@
 ---
 title: The Smell of Jasmine, the Calm of the Crowd
-date: 2013-03-30 19:12:00 Z
+date: 2013-03-30 15:12:00 -04:00
 assets:
 - path: "/uploads/tumblr_inline_mkp23wA4861qz4rgp.jpg"
 - path: "/uploads/tumblr_inline_mkp2nr9AWF1qz4rgp.jpg"

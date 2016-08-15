@@ -1,6 +1,6 @@
 ---
 title: A Paean of Such Patience
-date: 2009-11-11 15:37:00 Z
+date: 2009-11-11 10:37:00 -05:00
 What:
 - Article
 Who:

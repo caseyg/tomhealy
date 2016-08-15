@@ -3,6 +3,7 @@ title: About Tom Healy
 layout: about
 order: 6
 ---
+
 **Tom Healy** is a writer and educator.
 
 Healy is the author of *Animal Spirits* and *What the Right Hand Knows*, which was a finalist for the 2009 L.A. Times Book Prize and the Lambda Literary Award. Two books of his essays are forthcoming: *Not Untrue, Not Unkind*, reflections on friendship, and *The Rest of the World*, an examination of U.S. public diplomacy efforts to engage the American people with citizens of other countries.  

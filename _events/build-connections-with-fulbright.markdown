@@ -1,6 +1,6 @@
 ---
 title: Build Connections with Fulbright at the NAFSA Conference
-date: 2014-05-28 12:45:00 Z
+date: 2014-05-28 08:45:00 -04:00
 address: |-
   111 W Harbor Dr
   San Diego, CA 92101

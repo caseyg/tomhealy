@@ -1,6 +1,6 @@
 ---
 title: 'Inter-changes: A Discussion of Impact & Experiences'
-date: 2014-05-21 15:30:00 Z
+date: 2014-05-21 11:30:00 -04:00
 address: |-
   Drumcondra Road Upper
   Dublin 9

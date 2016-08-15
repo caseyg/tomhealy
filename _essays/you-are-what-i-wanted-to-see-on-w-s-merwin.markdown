@@ -1,6 +1,6 @@
 ---
 title: '"you are what I wanted to see": On W. S. Merwin'
-date: 2012-04-30 16:19:00 Z
+date: 2012-04-30 12:19:00 -04:00
 What:
 - Introduction
 Who:

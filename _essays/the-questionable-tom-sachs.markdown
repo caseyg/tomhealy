@@ -1,6 +1,6 @@
 ---
 title: The Questionable Tom Sachs
-date: 2005-01-01 20:49:00 Z
+date: 2005-01-01 15:49:00 -05:00
 What:
 - Introduction
 Why:

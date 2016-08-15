@@ -1,6 +1,6 @@
 ---
 title: Manna not the Maid
-date: 2009-11-12 15:35:00 Z
+date: 2009-11-12 10:35:00 -05:00
 What:
 - Article
 Who:

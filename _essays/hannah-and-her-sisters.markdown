@@ -1,6 +1,6 @@
 ---
 title: Hannah and Her Sisters
-date: 2009-11-14 15:25:00 Z
+date: 2009-11-14 10:25:00 -05:00
 What:
 - Article
 Who:

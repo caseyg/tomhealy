@@ -1,6 +1,6 @@
 ---
 title: Chairman's Welcome for the Fulbright Scholar Enrichment Program
-date: 2014-03-19 09:00:00 Z
+date: 2014-03-19 05:00:00 -04:00
 address: 1617 N Interstate Highway 35 Austin, TX 78702
 url: http://world.utexas.edu/isss/intercultural/special/fulbright_enrichment
 locale: Austin

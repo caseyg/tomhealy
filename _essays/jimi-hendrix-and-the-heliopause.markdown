@@ -1,6 +1,6 @@
 ---
 title: Jimi Hendrix and the Heliopause
-date: 2013-09-18 18:52:00 Z
+date: 2013-09-18 14:52:00 -04:00
 assets:
 - path: "/uploads/boy-scout-4.jpg"
 - path: "/uploads/original.jpg"

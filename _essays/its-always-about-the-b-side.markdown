@@ -1,6 +1,6 @@
 ---
 title: It’s Always About The B-Side
-date: 2014-03-18 14:53:00 Z
+date: 2014-03-18 10:53:00 -04:00
 excerpt: 
 What:
 - Essay

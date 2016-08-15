@@ -1,6 +1,6 @@
 ---
 title: Panel and Q&A at the Fulbright Poland 55th Anniversary Conference
-date: 2014-05-15 20:00:00 Z
+date: 2014-05-15 16:00:00 -04:00
 address: Warsaw, Poland
 url: http://www.fulbright55.pl/
 locale: Warsaw

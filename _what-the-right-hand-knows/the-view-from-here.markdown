@@ -1,6 +1,6 @@
 ---
 title: The View From Here
-date: 2014-03-20 15:09:00 Z
+date: 2014-03-20 11:09:00 -04:00
 ---
 
 Giotto drew a perfect circle  

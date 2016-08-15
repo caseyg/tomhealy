@@ -1,6 +1,6 @@
 ---
 title: 'Inter-changes: A Showcase of Fulbright Writers & Performers'
-date: 2014-05-22 20:45:00 Z
+date: 2014-05-22 16:45:00 -04:00
 address: "11A Eustace St  \nTemple Bar, Dublin 2  \nCo. Dublin, Ireland"
 url: https://www.facebook.com/FulbrightIreland
 locale: Dublin

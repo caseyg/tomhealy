@@ -1,6 +1,6 @@
 ---
 title: Finding Words to Translate the World
-date: 2016-02-10 19:30:00 Z
+date: 2016-02-10 14:30:00 -05:00
 address: University of Nevada, Reno
 url: 
 locale: Reno

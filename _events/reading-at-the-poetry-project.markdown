@@ -1,6 +1,6 @@
 ---
 title: Jane Freilicher tribute
-date: 2014-12-13 01:00:00 Z
+date: 2014-12-12 20:00:00 -05:00
 address: |-
   131 E 10th St
   New York, NY 10003

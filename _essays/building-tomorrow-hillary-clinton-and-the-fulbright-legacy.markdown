@@ -1,6 +1,6 @@
 ---
 title: 'Building Tomorrow: Hillary Clinton and the Fulbright Legacy'
-date: 2013-07-29 18:42:00 Z
+date: 2013-07-29 14:42:00 -04:00
 assets:
 - path: "/uploads/tumblr_inline_mqts1eSlZB1qz4rgp.jpg"
 - path: "/uploads/tumblr_inline_mqts6cvuzZ1qz4rgp.jpg"

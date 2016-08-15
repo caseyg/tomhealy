@@ -1,6 +1,6 @@
 ---
 title: Wondering as I begin to wander out under your internet gaze
-date: 2009-11-08 15:54:00 Z
+date: 2009-11-08 10:54:00 -05:00
 What:
 - Article
 Who:

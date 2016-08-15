@@ -1,6 +1,6 @@
 ---
 title: Seeing Fire in the Clouds
-date: 2013-02-27 20:15:00 Z
+date: 2013-02-27 15:15:00 -05:00
 assets:
 - path: "/uploads/tumblr_inline_miw9l5NysO1rn320i.jpg"
 - path: "/uploads/tumblr_inline_miw9mmaD7b1rn320i.jpg"

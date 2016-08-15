@@ -1,6 +1,6 @@
 ---
 title: Listening to Our Mothers
-date: 2012-05-06 17:57:00 Z
+date: 2012-05-06 13:57:00 -04:00
 assets:
 - path: "/uploads/tumblr_m3vbw8MpYN1rn320i.jpg"
 - path: "/uploads/tumblr_m3vc1ww64b1rn320i.jpg"

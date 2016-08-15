@@ -1,6 +1,6 @@
 ---
 title: Looking at Your Shoes Instead of My Own
-date: 2012-04-12 18:30:00 Z
+date: 2012-04-12 14:30:00 -04:00
 assets:
 - path: "/uploads/tumblr_m2fsbaUGGF1rn320i.gif"
 - path: "/uploads/tumblr_m2flgaLZfT1rn320i.jpg"

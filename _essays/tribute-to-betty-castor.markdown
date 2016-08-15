@@ -1,6 +1,6 @@
 ---
 title: She Leaves Town to Climb Mountains
-date: 2014-03-20 18:18:00 Z
+date: 2014-03-20 14:18:00 -04:00
 excerpt: 
 assets:
 - path: "/uploads/Betty Castor-1.jpg"

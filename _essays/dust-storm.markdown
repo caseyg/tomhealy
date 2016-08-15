@@ -1,6 +1,6 @@
 ---
 title: Dust Storm
-date: 2009-11-09 15:44:00 Z
+date: 2009-11-09 10:44:00 -05:00
 What:
 - Article
 Who:

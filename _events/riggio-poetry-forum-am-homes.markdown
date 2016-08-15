@@ -1,6 +1,6 @@
 ---
 title: 'Riggio Fiction Forum: A.M. Homes'
-date: 2013-11-04 22:41:00 Z
+date: 2013-11-04 17:41:00 -05:00
 address: 66 West 12th Street, New York, NY
 url: http://newschoolwriting.org/audiograph-m-homes-tom-healy/
 locale: New York City

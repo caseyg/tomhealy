@@ -1,6 +1,6 @@
 ---
 title: 'The Shipwreck of Pandora: Finding Hope in Science'
-date: 2013-06-11 18:43:00 Z
+date: 2013-06-11 14:43:00 -04:00
 assets:
 - path: "/uploads/tumblr_inline_moluafjDvg1qz4rgp.bmp"
 - path: "/uploads/tumblr_inline_moluelKsqi1qz4rgp.jpg"

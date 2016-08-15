@@ -1,6 +1,6 @@
 ---
 title: Lecture at Jagiellonian University
-date: 2014-05-13 17:30:00 Z
+date: 2014-05-13 13:30:00 -04:00
 address: |-
   Rynek Główny 34
   Kraków

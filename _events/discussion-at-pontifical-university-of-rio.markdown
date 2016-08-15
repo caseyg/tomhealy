@@ -1,6 +1,6 @@
 ---
 title: Discussion at Pontifical University of Rio de Janeiro
-date: 2014-04-01 19:45:00 Z
+date: 2014-04-01 15:45:00 -04:00
 address: "R. Marquês de São Vicente, 225 - Gávea  \nRio de Janeiro - RJ, 22451-041,
   Brazil"
 url: 

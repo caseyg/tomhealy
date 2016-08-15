@@ -1,6 +1,6 @@
 ---
 title: 'Riggio Poetry Forum: Ariana Reines'
-date: 2013-10-08 15:22:00 Z
+date: 2013-10-08 11:22:00 -04:00
 address: 66 West 12th Street, New York, NY
 url: http://events.newschool.edu/event/poetry_forum_ariana_reines
 locale: New York City

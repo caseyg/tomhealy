@@ -1,6 +1,6 @@
 ---
 title: Portable (Real) Estate
-date: 2001-07-19 20:36:00 Z
+date: 2001-07-19 16:36:00 -04:00
 What:
 - Introduction
 Why:

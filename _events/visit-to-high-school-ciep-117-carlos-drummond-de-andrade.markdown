@@ -1,6 +1,6 @@
 ---
 title: Visit to High School CIEP 117 – Carlos Drummond de Andrade
-date: 2014-04-02 15:00:00 Z
+date: 2014-04-02 11:00:00 -04:00
 address: "Rua Tomás Fonseca, 650  \nComendador Soares  \nNova Iguaçu, RJ"
 url: 
 locale: Rio de Janeiro

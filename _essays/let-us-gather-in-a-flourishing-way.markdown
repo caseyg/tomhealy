@@ -1,6 +1,6 @@
 ---
 title: Let Us Gather in a Flourishing Way
-date: 2016-02-08 15:56:00 Z
+date: 2016-02-08 10:56:00 -05:00
 excerpt: 
 assets:
 - path: "/uploads/unnamed-1.jpg"

@@ -1,6 +1,6 @@
 ---
 title: Discussion with Ryoichi Niimoto
-date: 2014-09-21 17:00:00 Z
+date: 2014-09-21 13:00:00 -04:00
 address: 
 url: 
 locale: Kyoto

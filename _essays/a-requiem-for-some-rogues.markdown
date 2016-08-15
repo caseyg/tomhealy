@@ -1,6 +1,6 @@
 ---
 title: A Requiem for Some Rogues
-date: 2013-09-25 15:13:00 Z
+date: 2013-09-25 11:13:00 -04:00
 excerpt: Erik taught in English and broken Arabic, but mostly he taught with the movement
   of his body.
 assets:

@@ -1,6 +1,6 @@
 ---
 title: Remarks Honoring Betty Castor
-date: 2014-03-20 04:00:00 Z
+date: 2014-03-20 00:00:00 -04:00
 address: Tampa, FL
 url: 
 locale: Tampa

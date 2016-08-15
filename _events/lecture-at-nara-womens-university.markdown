@@ -1,6 +1,6 @@
 ---
 title: Lecture at Nara Women’s University
-date: 2014-09-22 17:30:00 Z
+date: 2014-09-22 13:30:00 -04:00
 address: 
 url: 
 locale: Kyoto

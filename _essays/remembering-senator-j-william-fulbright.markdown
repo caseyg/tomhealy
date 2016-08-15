@@ -1,6 +1,6 @@
 ---
 title: Remembering Senator J. William Fulbright
-date: 2013-04-09 19:09:00 Z
+date: 2013-04-09 15:09:00 -04:00
 assets:
 - path: "/uploads/tumblr_inline_ml02ikIGiy1qz4rgp.jpg"
 - path: "/uploads/tumblr_inline_ml02g0rkbu1qz4rgp.jpg"

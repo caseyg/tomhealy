@@ -1,6 +1,6 @@
 ---
 title: 'Suffering Insight: On Chase Twichell'
-date: 2012-07-16 16:13:00 Z
+date: 2012-07-16 12:13:00 -04:00
 What:
 - Introduction
 Who:

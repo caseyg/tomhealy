@@ -1,6 +1,6 @@
 ---
 title: 'Memory and Our Mothers: Peg Boyers in Venice'
-date: 2012-07-18 16:10:00 Z
+date: 2012-07-18 12:10:00 -04:00
 What:
 - Introduction
 Who:

@@ -1,6 +1,6 @@
 ---
 title: The Sphinx and the Dutch Treat
-date: 2009-11-10 15:41:00 Z
+date: 2009-11-10 10:41:00 -05:00
 What:
 - Article
 Who:

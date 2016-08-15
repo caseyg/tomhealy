@@ -1,6 +1,6 @@
 ---
 title: Reading and Discussion in Stockholm
-date: 2013-10-24 21:45:00 Z
+date: 2013-10-24 17:45:00 -04:00
 address: Strandvagen 31, Stockholm, Sweden
 url: 
 locale: Stockholm

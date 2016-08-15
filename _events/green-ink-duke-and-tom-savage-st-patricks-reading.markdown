@@ -1,6 +1,6 @@
 ---
 title: 'GREEN INK: Duke Riley and Tom Healy''s Savage St. Patrick''s Day Party'
-date: 2014-03-17 22:30:00 Z
+date: 2014-03-17 18:30:00 -04:00
 address: 308 Bowery , New York, New York 10012
 url: https://www.facebook.com/events/636800289717431/
 locale: New York City

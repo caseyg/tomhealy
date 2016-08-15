@@ -1,6 +1,6 @@
 ---
 title: Lecture at the University of Warsaw
-date: 2014-05-14 16:45:00 Z
+date: 2014-05-14 12:45:00 -04:00
 address: |-
   Aleja Niepodległości 22
   Warszawa

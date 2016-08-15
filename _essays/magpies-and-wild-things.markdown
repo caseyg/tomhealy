@@ -1,6 +1,6 @@
 ---
 title: Magpies and Wild Things
-date: 2013-05-08 19:05:00 Z
+date: 2013-05-08 15:05:00 -04:00
 assets:
 - path: "/uploads/tumblr_inline_mmjee4Ql4O1qz4rgp.jpg"
 - path: "/uploads/tumblr_inline_mmjetrpg7w1qz4rgp.jpg"

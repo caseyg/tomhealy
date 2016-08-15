@@ -1,6 +1,6 @@
 ---
 title: Reading with John Ashbery and Robert Polito
-date: 2014-08-13 22:00:00 Z
+date: 2014-08-13 18:00:00 -04:00
 address: Hudson, NY
 url: http://ashberyhomeschool.org/schedule/
 locale: 

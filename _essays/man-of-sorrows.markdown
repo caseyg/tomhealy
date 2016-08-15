@@ -1,6 +1,6 @@
 ---
 title: Man of Sorrows
-date: 2012-07-24 16:04:00 Z
+date: 2012-07-24 12:04:00 -04:00
 What:
 - Introduction
 Who:

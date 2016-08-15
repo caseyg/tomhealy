@@ -1,6 +1,6 @@
 ---
 title: Fulbright Foreign Scholarship Board 264th Quarterly Meeting
-date: 2014-09-11 13:00:00 Z
+date: 2014-09-11 09:00:00 -04:00
 address: 
 url: 
 locale: Fayetteville

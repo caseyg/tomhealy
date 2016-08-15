@@ -1,6 +1,6 @@
 ---
 title: Potatoes, Monks, Gossip and Electricity
-date: 2013-04-21 18:44:00 Z
+date: 2013-04-21 14:44:00 -04:00
 assets:
 - path: "/uploads/tumblr_inline_mmsmiqD94u1qz4rgp.jpg"
 - path: "/uploads/tumblr_inline_mmso1iYMKm1qz4rgp.jpg"

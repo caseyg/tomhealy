@@ -1,6 +1,6 @@
 ---
 title: Open Dialogue at the NAFSA Conference
-date: 2014-05-28 18:45:00 Z
+date: 2014-05-28 14:45:00 -04:00
 address: "111 W Harbor Dr  \nSan Diego, CA   92101"
 url: http://www.nafsa.org/Attend_Events/Annual_Conference/
 locale: San Diego

@@ -1,6 +1,6 @@
 ---
 title: Moon Drawn
-date: 2011-10-02 16:00:00 Z
+date: 2011-10-02 12:00:00 -04:00
 What:
 - Introduction
 Why:

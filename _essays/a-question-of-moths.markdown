@@ -1,6 +1,6 @@
 ---
 title: A Question of Moths
-date: 2005-01-02 17:00:00 Z
+date: 2005-01-02 12:00:00 -05:00
 What:
 - Introduction
 Why:
