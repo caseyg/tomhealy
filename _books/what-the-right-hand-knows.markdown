@@ -1,7 +1,7 @@
 ---
 title: What the Right Hand Knows
-genre: poetry
 date: 2013-07-25 10:27:00 -04:00
+genre: poetry
 publisher: Four Way Books
 cover-image: "/uploads/wtrhk.png"
 ---
