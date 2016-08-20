@@ -8,3 +8,4 @@ forthcoming_books:
   description: Essays About Artists and Friends, About Art and Friendship
 layout: essays
 ---
+
