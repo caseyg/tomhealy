@@ -22,7 +22,7 @@
 		    <ul class="list-reset sm-flex center">
 					{% assign sorted_pages = site.pages | sort: 'position' %}
 					{% for item in sorted_pages %}
-						{% if item.order %}
+						{% if item.position %}
 							<li class="flex-auto mr1 h3 {{ item.title | slugify }} {% if page.url contains item.url %}bold{% endif %}"><a class="text-decoration-none black inline-block py1" href="{{ item.url }}">{{ item.title }}</a></li>
 						{% endif %}
 					{% endfor %}
