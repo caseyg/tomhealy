@@ -15,8 +15,9 @@ layout: default
     </div>
   </section>
   <section id="essays sm-flex">
-    <div class="sm-col sm-col-8 essays-list">
-      <h2 id="{{ next_year }}-ref" class="item h1 mt0 aqua left">Essays</h2>
+    <div class="sm-col sm-col-8 pr1">
+      <h2 class="item h1 mt0 aqua left">Essays</h2>
+      <div class="essays-list mt4">
       {% for post in site.essays reversed %}
           {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
           {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
@@ -53,57 +54,57 @@ layout: default
               {% endif %}
           {% endif %}
       {% endfor %}
+      </div>
     </div>
     {% include taxonomy-big.html %}
   </section>
 </main>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="//npmcdn.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
 <script type="text/javascript">
-  function getHashFilter() {
-    // get filter=filterName
-    var matches = location.hash.match( /filter=([^&]+)/i );
-    var hashFilter = matches && matches[1];
-    return hashFilter && decodeURIComponent( hashFilter );
+
+function getHashFilter() {
+  // get filter=filterName
+  var matches = location.hash.match( /filter=([^&]+)/i );
+  var hashFilter = matches && matches[1];
+  return hashFilter && decodeURIComponent( hashFilter );
+}
+
+// init Isotope
+var $grid = $('.essays-list');
+
+// bind filter button click
+var $filterButtonGroup = $('.filter-button-group');
+$filterButtonGroup.on( 'click', 'button', function() {
+  var filterAttr = $( this ).attr('data-filter');
+  // set filter in hash
+  location.hash = 'filter=' + encodeURIComponent( filterAttr );
+});
+
+var isIsotopeInit = false;
+
+function onHashchange() {
+  var hashFilter = getHashFilter();
+  if ( !hashFilter && isIsotopeInit ) {
+    return;
   }
-
-  // init Isotope
-  var $grid = $('.essays-list');
-
-  // bind filter button click
-  var $filterButtonGroup = $('.filter-button-group');
-  $filterButtonGroup.on( 'click', 'button', function() {
-    var filterAttr = $( this ).attr('data-filter');
-    // set filter in hash
-    location.hash = 'filter=' + encodeURIComponent( filterAttr );
+  isIsotopeInit = true;
+  // filter isotope
+  $grid.isotope({
+    itemSelector: '.item',
+    layoutMode: 'vertical',
+    filter: hashFilter,
+    // no transitions
+    transitionDuration: 0
   });
-
-  var isIsotopeInit = false;
-
-  function onHashchange() {
-    var hashFilter = getHashFilter();
-    if ( !hashFilter && isIsotopeInit ) {
-      return;
-    }
-    isIsotopeInit = true;
-    // filter isotope
-    $grid.isotope({
-      itemSelector: '.item',
-      layoutMode: 'vertical',
-      vertical: {
-        horizontalAlignment: 0.5,
-      },
-      filter: hashFilter,
-      // no transitions
-      transitionDuration: 0
-    });
-    // set selected class on button
-    if ( hashFilter ) {
-      $filterButtonGroup.find('.is-checked').removeClass('is-checked');
-      $filterButtonGroup.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
-    }
+  // set selected class on button
+  if ( hashFilter ) {
+    $filterButtonGroup.find('.is-checked').removeClass('is-checked');
+    $filterButtonGroup.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
   }
+}
 
-  $(window).on( 'hashchange', onHashchange );
+$(window).on( 'hashchange', onHashchange );
 
-  // trigger event handler to init Isotope
-  onHashchange();
+onHashchange();
 </script>

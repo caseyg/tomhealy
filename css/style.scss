@@ -1,118 +1,26 @@
 ---
 ---
-
-/* Imports */
-
-// even things out across browsers
-//@import "normalize.css";
-
-// components
-@import "variables";
-@import "base";
-@import "media-queries";
-
-// modules
-@import "content-list";
-@import "top-bottom-nav";
-
-body#home {
-    background:#d4d1ca url('/img/tom-healy-fulbright.jpg') no-repeat left center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-	article {
-		margin-bottom:45vh
-	}
-	h1 {
-		margin-bottom:30px;
-		text-transform: uppercase;
-	}
-	h2 {
-		margin:0;
-	}
-	section#about {
-		margin: 0 0 0 0;
-	}
-}
-.subpages {
-	margin:20px 0;
-}
-.parent-poetry .subpages, #about .subpages, #taxonomy {
-	border:1px solid #dfdfdf;
-	padding:0 10px;
-	ul li {
-		margin-left:1em;
-	}
-}
-.subpages ul {
-		margin: 0!important;
+body {
+  font-family: adobe-caslon-pro, serif;
 }
 
-#reviews .subpages ul {
-	border:none;
+h1, h2, h3, h4, h5, h6, nav, .taxonomy, .btn {
+  font-family: ff-dagny-web-pro, sans-serif;
 }
 
-#container {
-	padding:2.5% 5%;
+.btn {
+  display: inline-block;
+  margin-bottom: 5px;
 }
 
-body#poetry {
-	article {
-		img {
-			max-width:100%;
-			max-height:400px;
-			max-width:400px;
-			margin-bottom:5px;
-			border:1px solid #ccc;
-			display:block;
-		}
-	}
-	.subpages h3 {
-		a:link, a:visited, a:hover, a:active {
-			border:none!important;
-		}
-	}
-	.subpages h3 a:hover .title {
-		border-bottom:2px solid #000;
-	}
+p {
+  font-size: 1.5em;
+  line-height: 1.4;
 }
 
-body#prose {
-	article {
-		ul.content-list {
-			li {
-				clear:left;
-				a:link, a:visited {
-					padding:15px 0;
-					.thumbnail {
-						max-height:40px;
-						max-width:40px;
-						float:left;
-						margin-right:10px;
-					}
-					span.title {
-						border-bottom:2px solid #eee;
-					}
-					span.date {
-						font-weight:100;
-					}
-				}
-				a:hover, a:active {
-					span.title {
-						border-bottom:2px solid #000;
-					}
-				}
-			}
-		}
-	}
-	#taxonomy {
-		padding:0 10px 20px 10px;
-		h4 {
-			margin-bottom:5px;
-		}
-		li {
-			margin-left:0;
-		}
-	}
+.is-checked {
+  background-color: #7FDBFF!important;
+  color: #fff!important;
+  outline: 0!important;
+  box-shadow: none!important;
 }

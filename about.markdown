@@ -2,6 +2,12 @@
 title: About Tom Healy
 position: 5
 layout: about
+contact: |
+  Email  
+  [contact@heyday.us](mailto:contact@heyday.us)  
+
+  Twitter  
+  [@tphealy](http://twitter.com/tphealy)  
 ---
 
 **Tom Healy** is a writer and educator.
@@ -17,8 +23,3 @@ Healy has taught on the faculties of NYU, The Pratt Institute and The New School
 Healy is a trustee of PEN America, Creative Time, O, Miami Poetry Festival and University of the People, the only accredited, tuition-free online university, dedicated to educating people around the world for whom college is often out of reach. He serves on the advisory board of the NYU Leadership Initiative and is a life member of the Council on Foreign Relations.  
 
 Healy grew up on his family's small dairy farm in upstate New York.  He studied at Harvard and Columbia. His life partner, Fred Hochberg, is chairman of the Export-Import Bank of the United States. They live in Miami and New York City.
-
-##Contact
-
-**Email:** contact@heyday.us    
-**Twitter:** @tphealy  
