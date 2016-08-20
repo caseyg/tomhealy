@@ -2,7 +2,6 @@
 title: About Tom Healy
 position: 3
 layout: about
-order: 6
 ---
 
 **Tom Healy** is a writer and educator.

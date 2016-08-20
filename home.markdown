@@ -3,7 +3,6 @@ title: Home
 permalink: "/"
 position: 0
 layout: home
-order: 1
 ---
 
 **Tom Healy** is a writer and educator.

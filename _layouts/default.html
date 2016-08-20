@@ -20,7 +20,7 @@
 		<header>
 		  <nav>
 		    <ul class="list-reset sm-flex center">
-					{% assign sorted_pages = site.pages | sort: 'order' %}
+					{% assign sorted_pages = site.pages | sort: 'position' %}
 					{% for item in sorted_pages %}
 						{% if item.order %}
 							<li class="flex-auto mr1 h3 {{ item.title | slugify }} {% if page.url contains item.url %}bold{% endif %}"><a class="text-decoration-none black inline-block py1" href="{{ item.url }}">{{ item.title }}</a></li>
@@ -32,7 +32,7 @@
 
 		{{ content }}
 
-		<footer class="pt3 mt4 border-top">
+		<footer class="pt3 mt4 border-top border-gray">
 			<nav>
 				<ul class="list-reset flex center">
 					<li class="flex-auto"><a class="black text-decoration-none" href="/">Tom Healy</a></li>
