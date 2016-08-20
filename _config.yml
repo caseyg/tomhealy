@@ -4,7 +4,7 @@ timezone: America/New_York
 collections:
   books:
     title: Books
-    output: false
+    output: true
   essays:
     title: Essays
     output: true
@@ -13,12 +13,6 @@ collections:
     output: true
   poetry:
     title: Poetry
-    output: true
-  posts:
-    title: Posts
-    output: true
-  prose:
-    title: Prose
     output: true
   uploads:
     title: Uploads
@@ -39,15 +33,16 @@ defaults:
     layout: event
 - scope:
     path: ''
+    type: books
+  values:
+    parent: "/books/"
+    layout: book
+- scope:
+    path: ''
     type: essays
   values:
     parent: "/essays/"
     layout: page
-- scope:
-    path: ''
-    type: reports
-  values:
-    parent: "/reports/"
 url: http://tomhealy.siteleaf.net
 permalink: pretty
 taxonomies:
