@@ -1,6 +1,6 @@
 ---
 title: Poetry
-position: 4
+position: 3
 layout: poetry
 ---
 

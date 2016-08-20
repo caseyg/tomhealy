@@ -1,6 +1,6 @@
 ---
 title: Videos
-position: 5
+position: 4
 layout: videos
 ---
 
