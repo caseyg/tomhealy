@@ -1,6 +1,7 @@
 ---
 title: My Orbit
 date: 2014-03-20 11:14:00 -04:00
+book: What the Right Hand Knows
 ---
 
 I spar with a boxer  

@@ -1,7 +1,7 @@
 ---
 title: Poetry
+position: 3
 layout: poetry
-order: 3
 ---
 
 Healy is the author of two books of poetry: _Animal Spirits_, a collaboration

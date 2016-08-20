@@ -2,19 +2,19 @@
 layout: default
 ---
 
-<main class="center">
+<main class="px4">
   {% for post in site.events reversed | sort: 'date'  %}
       {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
       {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
 
       {% if forloop.first %}
-      <h2 id="{{ this_year }}-ref" class="block h1 gray mt4">{{this_year}}</h2>
+      <h2 id="{{ this_year }}-ref" class="block h1 olive pt3 pb1 mb0 border-bottom border-olive">{{this_year}}</h2>
       <ul class="list-reset">
       {% endif %}
-        <li class="block pb3">
+        <li class="block pt0 pb2">
           <a href="{{post.url}}" class="text-decoration-none black">
-            <p class="h2 mb0"><strong class="date">{{post.date | date: "%b %-d" }}</strong>{% if post.locale %}<span class="locale">, {{post.locale}}</span>{% endif %}</p>
-            <h2 class="h4 mt2 regular">{{post.title}}</h2>
+            <h3 class="h2 mb0"><strong class="date">{{post.date | date: "%b %-d" }}</strong>{% if post.locale %}<span class="locale">, {{post.locale}}</span>{% endif %}</h3>
+            <p class="mt2 regular">{{post.title}}</p>
           </a>
         </li>
       {% if forloop.last %}
@@ -22,7 +22,7 @@ layout: default
       {% else %}
           {% if this_year != next_year %}
           </ul>
-          <h2 id="{{ next_year }}-ref" class="block h1 gray mt4">{{next_year}}</h2>
+          <h2 id="{{ next_year }}-ref" class="block h1 olive pt3 pb1 border-bottom border-olive">{{next_year}}</h2>
           <ul class="list-reset">
           {% endif %}
       {% endif %}
