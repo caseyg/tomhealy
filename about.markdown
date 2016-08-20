@@ -2,12 +2,8 @@
 title: About Tom Healy
 position: 5
 layout: about
-contact: |
-  Email  
-  [contact@heyday.us](mailto:contact@heyday.us)  
-
-  Twitter  
-  [@tphealy](http://twitter.com/tphealy)  
+contact: "Email  \n[contact@heyday.us](mailto:contact@heyday.us)  \n\nTwitter  \n[@tphealy](http://twitter.com/tphealy)
+  \ \n"
 ---
 
 **Tom Healy** is a writer and educator.
