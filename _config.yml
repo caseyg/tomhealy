@@ -52,8 +52,8 @@ defaults:
   values:
     subtitle: 
     format: youtube OR vimeo
-    code:
-    image:
+    code: 
+    image: 
 url: http://tomhealy.siteleaf.net
 permalink: pretty
 taxonomies:
