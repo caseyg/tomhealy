@@ -46,6 +46,14 @@ defaults:
   values:
     parent: "/essays/"
     layout: page
+- scope:
+    path: ''
+    type: videos
+  values:
+    subtitle: 
+    format: youtube OR vimeo
+    code:
+    image:
 url: http://tomhealy.siteleaf.net
 permalink: pretty
 taxonomies:
