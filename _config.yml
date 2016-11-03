@@ -49,7 +49,7 @@ defaults:
     Who:
     What:
     Where:
-    Why: 
+    Why:
 - scope:
     path: ''
     type: videos
