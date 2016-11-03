@@ -46,18 +46,18 @@ defaults:
   values:
     parent: "/essays/"
     layout: page
-    Who:
-    What:
-    Where:
-    Why:
+    Who: 
+    What: 
+    Where: 
+    Why: 
 - scope:
     path: ''
     type: videos
   values:
-    subtitle:
+    subtitle: 
     format: youtube
-    code:
-    image:
+    code: 
+    image: 
 url: http://tomhealy.siteleaf.net
 permalink: pretty
 taxonomies:
