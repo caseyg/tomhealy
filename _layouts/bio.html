@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<main class="px4">
+	<article class="max-width-3 mt4">
+		<div class="content mx-auto">
+			{{ content | markdownify }}
+		</div>
+	</article>
+	<aside class="mt4">
+		{% include taxonomy.html %}
+	</aside>
+	<style type="text/css">
+		.content img {
+		}
+	</style>
+</main>
