@@ -4,10 +4,10 @@ layout: default
 
 <main class="px4 clearfix">
   <section id="books" class="sm-col sm-col-12 mb4">
-    <h2 class="block h1 aqua pt2">Forthcoming Books</h2>
+    <h2 class="block h1 pt2">Forthcoming Books</h2>
 		<div class="sm-flex center mxn1">
       {% for book in page.forthcoming_books %}
-					<div class="sm-col sm-col-6 text-decoration-none black content-center border border-aqua mx1 my1 p1" style="border-style:dashed;">
+					<div class="sm-col sm-col-6 text-decoration-none black content-center border mx1 my1 p1" style="border-style:dashed;">
 						<h3 class="h1 regular mb0 gray">{{ book.title }}</h3>
             <p class="h3 pb2 gray">{{ book.description }}</p>
 					</div>
@@ -16,7 +16,7 @@ layout: default
   </section>
   <section id="essays sm-flex">
     <div class="sm-col sm-col-8 pr1">
-      <h2 class="item h1 mt0 aqua left">Essays</h2>
+      <h2 class="item h1 mt0 left">Essays</h2>
       <div class="essays-list mt4">
       {% for post in site.essays reversed %}
           {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
