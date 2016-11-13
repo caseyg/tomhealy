@@ -4,6 +4,19 @@ date: 2013-07-25 10:27:00 -04:00
 genre: poetry
 publisher: Four Way Books
 cover-image: "/uploads/wtrhk.png"
+poetry:
+- A Possum Entering the Argument
+- The View From Here
+- Learning to Land
+- The Only Fruit
+- Phocion's Wife
+- Living on Someone Else's Money
+- My Orbit
+- Local or Strange
+- Test poem with no page
+- Milk-Truck Driver
+- The Anesthesiologist's Kiss
+- Chorus of Animals
 ---
 
 ## Buy
