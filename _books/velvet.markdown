@@ -1,6 +1,7 @@
 ---
 title: Velvet
 date: 2016-11-08 10:49:00 -05:00
+position: 2
 genre: poetry
 publisher: Monk Books
 cover-image: "/uploads/TH_Velvet_Cover_Website-f95faa.jpg"
