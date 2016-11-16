@@ -1,7 +1,7 @@
 ---
 title: Quiet Hands
 date: 2014-03-20 11:26:00 -04:00
-position: 3
+position: 4
 book: Animal Spirits
 ---
 
