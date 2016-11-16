@@ -1,6 +1,7 @@
 ---
 title: Chorus of Animals
 date: 2014-03-20 11:19:00 -04:00
+position: 2
 book: What the Right Hand Knows
 ---
 
