@@ -4,6 +4,8 @@ layout: default
 
 <main class="px4">
   <article class="max-width-3 mx-auto mt4">
+
+    <img src="{{page.cover-image}}" alt="{{page.title}}">
     <h1>{{ page.title }}</h1>
     {{ content }}
     {% if page.address %}
@@ -11,3 +13,16 @@ layout: default
     {% endif %}
   </article>
 </main>
+<ul>
+{% for book_poem in page.poetry %}
+      <li>
+        {% for site_poem in site.poetry %}
+          {% if book_poem == site_poem.title %}
+            <a href="{{ site_poem.url }}">{{ book_poem }}</a>
+          {% else %}
+            {{ book_poem }}
+          {% endif %}
+        {% endfor %}
+      </li>
+{% endfor %}
+</ul>
