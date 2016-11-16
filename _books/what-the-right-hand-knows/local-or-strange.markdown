@@ -1,6 +1,7 @@
 ---
 title: Local or Strange
 date: 2014-03-20 11:16:00 -04:00
+position: 3
 book: What the Right Hand Knows
 ---
 

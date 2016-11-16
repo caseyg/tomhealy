@@ -1,7 +1,7 @@
 ---
 title: A Possum Entering the Argument
 date: 2014-03-20 11:08:00 -04:00
-position: 3
+position: 4
 book: What the Right Hand Knows
 ---
 
