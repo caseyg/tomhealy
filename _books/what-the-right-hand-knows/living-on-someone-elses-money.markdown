@@ -1,6 +1,7 @@
 ---
 title: Living on Someone Else's Money
 date: 2014-03-20 11:13:00 -04:00
+position: 5
 book: What the Right Hand Knows
 ---
 
