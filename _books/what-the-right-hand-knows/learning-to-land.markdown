@@ -1,6 +1,7 @@
 ---
 title: Learning to Land
 date: 2014-03-20 11:10:00 -04:00
+position: 8
 book: What the Right Hand Knows
 ---
 
