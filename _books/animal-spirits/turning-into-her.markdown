@@ -1,7 +1,7 @@
 ---
 title: Turning into Her
 date: 2014-03-20 11:28:00 -04:00
-position: 5
+position: 2
 book: Animal Spirits
 ---
 
