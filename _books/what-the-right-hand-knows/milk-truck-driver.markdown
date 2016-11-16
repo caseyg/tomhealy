@@ -1,6 +1,7 @@
 ---
 title: Milk-Truck Driver
 date: 2014-03-20 11:17:00 -04:00
+position: 2
 book: What the Right Hand Knows
 ---
 
