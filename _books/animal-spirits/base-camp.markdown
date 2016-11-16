@@ -1,7 +1,7 @@
 ---
 title: Base Camp
 date: 2013-09-05 09:46:00 -04:00
-position: 1
+position: 2
 book: Animal Spirits
 ---
 
