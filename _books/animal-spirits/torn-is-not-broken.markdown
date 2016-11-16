@@ -1,7 +1,7 @@
 ---
 title: Torn is not Broken
 date: 2014-03-20 11:31:00 -04:00
-position: 1
+position: 0
 book: Animal Spirits
 ---
 
