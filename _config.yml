@@ -47,28 +47,28 @@ defaults:
     parent: "/essays/"
     layout: page
     Who:
-    -
+    - 
     What:
-    -
+    - 
     Where:
-    -
+    - 
     Why:
-    -
+    - 
 - scope:
     path: ''
     type: poetry
   values:
     parent: "/poetry/"
     layout: poem
-    book:
+    book: 
 - scope:
     path: ''
     type: videos
   values:
-    subtitle:
+    subtitle: 
     format: youtube
-    code:
-    image:
+    code: 
+    image: 
 url: http://tomhealy.siteleaf.net
 permalink: pretty
 taxonomies:
