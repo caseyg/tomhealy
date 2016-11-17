@@ -5,8 +5,49 @@ body {
   font-family: adobe-caslon-pro, serif;
 }
 
-h1, h2, h3, h4, h5, h6, nav, .taxonomy, .btn {
+h1, h2, h3, h4, h5, h6, nav, .taxonomy, .btn, ul, ol {
   font-family: ff-dagny-web-pro, sans-serif;
+}
+
+li.home a:link, li.home a:visited {
+  display:inline-block;
+  padding:0;
+  margin:.5rem 1px 0 0;
+  height:23px;
+  width:23px;
+  text-indent: -5000em;
+  background-image: url(/img/home.png);
+  background-size:23px 47px;
+  background-repeat:no-repeat;
+  border:none!important;
+  -webkit-transition: none;
+}
+
+li.home a:hover, li.home a:active, li.home.bold a:link, li.home.bold a:visited {
+  background-position:bottom;
+}
+
+main {
+  a:link,
+  a:visited {
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #eee;
+  }
+  a:hover {
+    color: blue;
+    border-bottom: 1px solid blue;
+  }
+}
+
+.toc {
+  a:link,
+  a:visited {
+    color: gray;
+  }
+  a:hover {
+    color: blue;
+  }
 }
 
 .btn {

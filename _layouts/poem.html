@@ -2,41 +2,30 @@
 layout: default
 ---
 
-	{% for asset in assets %}
-			<section id="cover">
-				<img src="{{asset.url}}">
-			</section>
-	{% endfor %}
-<article>
-	{% if parent %}
-		<h1 class="content-title">{{title}}</h1>
-	{% endif %}
+<main class="px4 clearfix">
+	<div class="sm-col sm-col-9 pr3">
+		<h1 class="block h1 black pt3 mb0">{{ page.title }}</h1>
+		<article class="max-width-3 mt4">
+			<div class="content mx-auto">
+				{{ content | markdownify }}
+			</div>
+		</article>
+	</div>
+	<div class="sm-col sm-col-3 mt3 toc">
+		{% assign books = site.books | where: "title", page.book %}
+		{% for book in books %}
+			<h3><a href="{{book.url}}">{{page.book}}</a></h3>
+		{% endfor %}
 
-	{% if type == "post" %}
-		{% if parent %}
-			<h2 class="breadcrumb"><em>from</em> <a href="{{parent.url}}">{{parent.title}}</a></h2>
-		{% endif %}
-	{% endif %}
-
-	{% if type != "post" %}
-	{% comment %} Loop through posts {% endcomment %}
-			{% if parent.slug == "poetry"  %}
-			<h2 style="margin-top:20px;">Inside</h2>
-			{% endif %}
-			<ul>
-				{% for post in posts %}
-					<li><a href="{{post.url}}">{{post.title}}</a></li>
-				{% endfor %}
-			</ul>
-	{% endif %}
-
-	{{body}}
-
-	{% for subpage in pages %}
-		<h2>
-			<a href="{{subpage.url}}">
-				{{subpage.title}}
-			</a>
-		</h2>
-	{% endfor %}
-</article>
+		{% assign contents = site.poetry | where:"book", page.book %}
+    {% if contents.size > 0 %}
+      <ul class="list-reset">
+        {% for poem in contents %}
+          <li class="pb1 {% if poem.url == page.url %}bold{% endif %}">
+            <a href="{{ poem.url }}" class="h4">{{ poem.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+	</div>
+</main>
