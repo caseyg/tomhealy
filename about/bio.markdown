@@ -1,14 +1,7 @@
 ---
-title: About Tom Healy
-position: 5
-contact: "Email  \n[contact@heyday.us](mailto:contact@heyday.us)  \n\nTwitter  \n[@tphealy](http://twitter.com/tphealy)
-  \ \n"
-Interviews & Reviews:
-- title: 'Gulfstream — On What the Right Hand Knows '
-  url: http://w3.fiu.edu/gulfstream/issue2/healyinterview.asp
-- title: Bomb Magazine — On What the Right Hand Knows
-  url: http://bombmagazine.org/article/3539/
-layout: about
+title: Bio
+date: 2016-10-31 20:18:00 -04:00
+layout: bio
 ---
 
 **Tom Healy** is a writer and educator.

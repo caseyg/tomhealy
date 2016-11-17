@@ -8,7 +8,7 @@ layout: default
       {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
 
       {% if forloop.first %}
-      <h2 id="{{ this_year }}-ref" class="block h1 olive pt3 pb1 mb0 border-bottom border-olive">{{this_year}}</h2>
+      <h2 id="{{ this_year }}-ref" class="block h1 pt3 pb1 mb0 border-bottom">{{this_year}}</h2>
       <ul class="list-reset">
       {% endif %}
         <li class="block pt0 pb2">
@@ -22,7 +22,7 @@ layout: default
       {% else %}
           {% if this_year != next_year %}
           </ul>
-          <h2 id="{{ next_year }}-ref" class="block h1 olive pt3 pb1 border-bottom border-olive">{{next_year}}</h2>
+          <h2 id="{{ next_year }}-ref" class="block h1 pt3 pb1 border-bottom">{{next_year}}</h2>
           <ul class="list-reset">
           {% endif %}
       {% endif %}

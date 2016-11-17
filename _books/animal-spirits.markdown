@@ -1,6 +1,7 @@
 ---
 title: Animal Spirits
 date: 2013-08-23 18:30:00 -04:00
+position: 0
 genre: poetry
 publisher: Monk Books
 cover-image: "/uploads/as.png"

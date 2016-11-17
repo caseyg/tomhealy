@@ -1,6 +1,7 @@
 ---
 title: Phocion's Wife
 date: 2014-03-20 11:12:00 -04:00
+position: 6
 book: What the Right Hand Knows
 ---
 
