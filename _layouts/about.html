@@ -16,6 +16,12 @@ layout: default
 
 				<h2>Interviews &amp; Reviews</h2>
 
+				{% for item in page.interviews-and-reviews %}
+				<ul>
+					<li><a href="{{item.url}}">{{item.title}}</a></li>
+				</ul>
+				{% endfor %}
+
 			</aside>
 		</article>
 	</div>
