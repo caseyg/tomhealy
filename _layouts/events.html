@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<main class="px4">
+<main class="px2 sm-px4">
   {% for post in site.events reversed | sort: 'date'  %}
       {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
       {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
@@ -11,10 +11,10 @@ layout: default
       <h2 id="{{ this_year }}-ref" class="block h1 pt3 pb1 mb0 border-bottom">{{this_year}}</h2>
       <ul class="list-reset">
       {% endif %}
-        <li class="block pt0 pb2">
+        <li class="block pt0 pb0 sm-pb2">
           <a href="{{post.url}}" class="text-decoration-none black">
-            <h3 class="h2 mb0"><strong class="date">{{post.date | date: "%b %-d" }}</strong>{% if post.locale %}<span class="locale">, {{post.locale}}</span>{% endif %}</h3>
-            <p class="mt2 regular">{{post.title}}</p>
+            <h3 class="h3 sm-h2 mb0"><strong class="date">{{post.date | date: "%b %-d" }}</strong>{% if post.locale %}<span class="locale">, {{post.locale}}</span>{% endif %}</h3>
+            <p class="mt1 sm-mt2 regular">{{post.title}}</p>
           </a>
         </li>
       {% if forloop.last %}

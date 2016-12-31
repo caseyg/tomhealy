@@ -3,30 +3,32 @@ layout: default
 ---
 
 <main>
-	<div class="sm-flex px4 pt2 max-width-4 mx-auto">
+	<div class="px2 sm-px4 pt2 max-width-4 mx-auto">
 		<article>
 			<h2 class="block h1">About Tom Healy</h2>
-			<div class="content sm-col sm-col-8">
-				{{ content | markdownify }}
+			<div class="sm-flex">
+				<aside class="pt1 sm-pt0 sm-col sm-col-4 sm-pl4 order-last">
+					<h2>Contact</h2>
+
+					{{ page.contact | markdownify }}
+
+					<h2>Read More</h2>
+
+					<p><a href="/about/bio">Full Biography</a></p>
+
+					<h2>Interviews &amp; Reviews</h2>
+
+					{% for item in page.interviews-and-reviews %}
+					<ul style="padding-left:1em;">
+						<li><a href="{{item.url}}">{{item.title}}</a></li>
+					</ul>
+					{% endfor %}
+
+				</aside>
+				<div class="content pt3 sm-pt0 sm-col sm-col-8">
+					{{ content | markdownify }}
+				</div>
 			</div>
-			<aside class="sm-col sm-col-4 pl4">
-				<h2>Contact</h2>
-
-				{{ page.contact | markdownify }}
-
-				<h2>Read More</h2>
-
-				<p><a href="/about/bio">Full Biography</a></p>
-
-				<h2>Interviews &amp; Reviews</h2>
-
-				{% for item in page.interviews-and-reviews %}
-				<ul style="padding-left:1em;">
-					<li><a href="{{item.url}}">{{item.title}}</a></li>
-				</ul>
-				{% endfor %}
-
-			</aside>
 		</article>
 	</div>
 </main>

@@ -13,17 +13,20 @@
 	<link href="https://unpkg.com/basscss-border-colors@2.1.0/css/border-colors.css" rel="stylesheet">
 	<link href="https://unpkg.com/basscss-btn-outline@1.1.0/css/btn-outline.css" rel="stylesheet">
 	<link href="https://unpkg.com/basscss-background-colors@2.1.0/css/background-colors.css" rel="stylesheet">
+	<link href="https://unpkg.com/basscss-responsive-type-scale/css/responsive-type-scale.css" rel="stylesheet">
+	<link href="https://unpkg.com/basscss-responsive-margin/css/responsive-margin.css" rel="stylesheet">
+	<link href="https://unpkg.com/basscss-responsive-padding/css/responsive-padding.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body id="{{ page.title | slugify }}" class="{{ page.collection | default: 'pages' }}">
 	<section id="container">
 		<header>
 		  <nav>
-		    <ul class="list-reset sm-flex center">
+				<ul class="list-reset flex center">
 					{% assign sorted_pages = site.pages | sort: 'position' %}
 					{% for item in sorted_pages %}
 						{% if item.position %}
-							<li class="flex-auto mr1 h3 {{ item.title | slugify }} {% if page.url contains item.url %}bold{% endif %}"><a class="text-decoration-none black inline-block py1" href="{{ item.url }}">{{ item.title }}</a></li>
+							<li class="flex-auto mr1 h4 sm-h3 {{ item.title | slugify }} {% if page.title == item.title %}bold{% endif %}"><a class="text-decoration-none black inline-block py1" href="{{ item.url }}">{{ item.title }}</a></li>
 						{% endif %}
 					{% endfor %}
 		    </ul>
@@ -32,7 +35,7 @@
 
 		{{ content }}
 
-		<footer class="py3 border-top border-gray">
+		<footer class="py1 sm-py3 border-top border-gray">
 			<nav>
 				<ul class="list-reset flex center">
 					<li class="flex-auto"><a class="black text-decoration-none" href="/">Tom Healy</a></li>
@@ -48,6 +51,7 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js" data-no-instant></script>
 	<script src="//unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
 	<script data-no-instant type="text/javascript">
+		$(".content").fitVids();
 		InstantClick.init();
 		InstantClick.on('change', function() {
 			$(".content").fitVids();
@@ -64,7 +68,7 @@
 
 	// init Isotope
   var $grid = $('.essays-list');
-	
+
 	// bind filter button click
 	var $filterButtonGroup = $('.filter-button-group');
 	$filterButtonGroup.on( 'click', 'button', function() {

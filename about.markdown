@@ -1,5 +1,5 @@
 ---
-title: About Tom Healy
+title: About
 position: 5
 contact: "Email  \n[contact@heyday.us](mailto:contact@heyday.us)  \n\nTwitter  \n[@tphealy](http://twitter.com/tphealy)
   \ \n"
