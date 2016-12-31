@@ -9,6 +9,14 @@ h1, h2, h3, h4, h5, h6, nav, .taxonomy, .btn, ul, ol {
   font-family: ff-dagny-web-pro, sans-serif;
 }
 
+.home-nav a:link, .home-nav a:visited {
+  color: rgba(255,255,255,.75)
+}
+
+.home-nav a:hover, .home-nav a:active {
+  color: #fff;
+}
+
 li.home a:link, li.home a:visited {
   display:inline-block;
   padding:0;
@@ -27,16 +35,21 @@ li.home a:hover, li.home a:active, li.home.bold a:link, li.home.bold a:visited {
   background-position:bottom;
 }
 
-main {
+.content, aside {
   a:link,
   a:visited {
-    text-decoration: none;
-    color: #000;
-    border-bottom: 1px solid #eee;
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: #ccc!important;
   }
   a:hover {
     color: blue;
-    border-bottom: 1px solid blue;
+  }
+}
+
+.list-reset {
+  a:hover {
+    color: blue;
   }
 }
 
