@@ -32,7 +32,7 @@
 
 		{{ content }}
 
-		<footer class="pt3 mt4 border-top border-gray">
+		<footer class="py3 border-top border-gray">
 			<nav>
 				<ul class="list-reset flex center">
 					<li class="flex-auto"><a class="black text-decoration-none" href="/">Tom Healy</a></li>
@@ -46,11 +46,59 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" data-no-instant></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js" data-no-instant></script>
-	<script type="text/javascript">
-		$("main").fitVids();
-	</script>
+	<script src="//unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
 	<script data-no-instant type="text/javascript">
 		InstantClick.init();
+		InstantClick.on('change', function() {
+			$(".content").fitVids();
+		});
+	</script>
+	<script type="text/javascript">
+
+	function getHashFilter() {
+	  // get filter=filterName
+	  var matches = location.hash.match( /filter=([^&]+)/i );
+	  var hashFilter = matches && matches[1];
+	  return hashFilter && decodeURIComponent( hashFilter );
+	}
+
+	// init Isotope
+  var $grid = $('.essays-list');
+	
+	// bind filter button click
+	var $filterButtonGroup = $('.filter-button-group');
+	$filterButtonGroup.on( 'click', 'button', function() {
+	  var filterAttr = $( this ).attr('data-filter');
+	  // set filter in hash
+	  location.hash = 'filter=' + encodeURIComponent( filterAttr );
+	});
+
+	var isIsotopeInit = false;
+
+	function onHashchange() {
+	  var hashFilter = getHashFilter();
+	  if ( !hashFilter && isIsotopeInit ) {
+	    return;
+	  }
+	  isIsotopeInit = true;
+	  // filter isotope
+	  $grid.isotope({
+	    itemSelector: '.item',
+	    layoutMode: 'vertical',
+	    filter: hashFilter,
+	    // no transitions
+	    transitionDuration: 0
+	  });
+	  // set selected class on button
+	  if ( hashFilter ) {
+	    $filterButtonGroup.find('.is-checked').removeClass('is-checked');
+	    $filterButtonGroup.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
+	  }
+	}
+
+	$(window).on( 'hashchange', onHashchange );
+
+	onHashchange();
 	</script>
 </body>
 </html>
