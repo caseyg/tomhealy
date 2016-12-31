@@ -14,10 +14,14 @@ layout: default
 
 				{{ page.contact | markdownify }}
 
+				<h2>Read More</h2>
+
+				<p><a href="/about/bio">Full Biography</a></p>
+
 				<h2>Interviews &amp; Reviews</h2>
 
 				{% for item in page.interviews-and-reviews %}
-				<ul>
+				<ul style="padding-left:1em;">
 					<li><a href="{{item.url}}">{{item.title}}</a></li>
 				</ul>
 				{% endfor %}
