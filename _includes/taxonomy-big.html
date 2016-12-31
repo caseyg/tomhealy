@@ -23,7 +23,9 @@
         {% assign var = taxonomy | downcase %}
         <h3 class="gray caps">{{ taxonomy }}</h3>
         {% for item in [var] %}
-          <button class="btn btn-outline" data-filter=".{{ item | slugify }}">{{ item }}</button>
+          {% if item != "" %}
+            <button class="btn btn-outline" data-filter=".{{ item | slugify }}">{{ item }}</button>
+          {% endif %}
         {% endfor %}
       </section>
     {% endfor %}
@@ -36,6 +38,6 @@
   section>button:nth-child({{forloop.index}}) {
     color: rgba(0,0,0,{{n}});
   }
-  {% assign n = n  | minus: '0.075' %}
+  {% assign n = n  | minus: '0.05' %}
 {% endfor %}
 </style>
