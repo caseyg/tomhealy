@@ -2,14 +2,14 @@
 layout: default
 ---
 
-<main class="px4 clearfix">
+<main class="px2 sm-px4 clearfix">
   <section id="books" class="sm-col sm-col-12 mb4">
     <h2 class="block h1 pt2">Forthcoming Books</h2>
 		<div class="sm-flex center mxn1">
       {% for book in page.forthcoming_books %}
 					<div class="sm-col sm-col-6 text-decoration-none black content-center border mx1 my1 p1" style="border-style:dashed;">
-						<h3 class="h1 regular mb0 gray">{{ book.title }}</h3>
-            <p class="h3 pb2 gray">{{ book.description }}</p>
+						<h3 class="h2 sm-h1 regular mb0 gray">{{ book.title }}</h3>
+            <p class="h3 pb1 gray">{{ book.description }}</p>
 					</div>
 			{% endfor %}
     </div>
@@ -26,14 +26,14 @@ layout: default
           {% capture tag_class %} {% for taxonomy in site.taxonomies %}{% for tag in post.[taxonomy] %} {{ tag | slugify }}{% endfor %}{% endfor %}{% endcapture %}
 
           {% if forloop.first %}
-          <h3 id="{{ this_year }}-ref" class="item h2 mt4 gray">{{this_year}}</h3>
-          <h4 id="{{ this_year }}-{{ this_month }}-ref" class="item h4 gray mb3">{{ this_month }}</h4>
+          <h3 id="{{ this_year }}-ref" class="item h2 mt4 sm-mt2 gray">{{this_year}}</h3>
+          <h4 id="{{ this_year }}-{{ this_month }}-ref" class="item h4 gray sm-mb3">{{ this_month }}</h4>
           <ul class="list-reset">
           {% endif %}
 
-          <li class="item pb2 {{ tag_class }}">
+          <li class="item sm-pb2 {{ tag_class }}">
             <a href="{{post.url}}" class="text-decoration-none black">
-              <h3 class="h1 m0 pb1 regular">{{post.title}}</h3>
+              <h3 class="h2 sm-h1 m0 pb1 regular">{{post.title}}</h3>
             </a>
           </li>
 
@@ -42,13 +42,13 @@ layout: default
           {% else %}
               {% if this_year != next_year %}
               </ul>
-              <h3 id="{{ next_year }}-ref" class="item h2 mt4 gray">{{next_year}}</h3>
-              <h4 id="{{ next_year }}-{{ next_month }}-ref" class="item h4 gray mb3">{{ next_month }}</h4>
+              <h3 id="{{ next_year }}-ref" class="item h2 sm-mt4 gray">{{next_year}}</h3>
+              <h4 id="{{ next_year }}-{{ next_month }}-ref" class="item h4 gray sm-mb3">{{ next_month }}</h4>
               <ul class="list-reset">
               {% else %}
                   {% if this_month != next_month %}
                   </ul>
-                  <h4 id="{{ this_year }}-{{ next_month }}-ref" class="item h4 gray">{{ next_month }}</h4>
+                  <h4 id="{{ this_year }}-{{ next_month }}-ref" class="item h4 gray sm-mb3">{{ next_month }}</h4>
                   <ul class="list-reset">
                   {% endif %}
               {% endif %}
@@ -59,52 +59,3 @@ layout: default
     {% include taxonomy-big.html %}
   </section>
 </main>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="//npmcdn.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
-<script type="text/javascript">
-
-function getHashFilter() {
-  // get filter=filterName
-  var matches = location.hash.match( /filter=([^&]+)/i );
-  var hashFilter = matches && matches[1];
-  return hashFilter && decodeURIComponent( hashFilter );
-}
-
-// init Isotope
-var $grid = $('.essays-list');
-
-// bind filter button click
-var $filterButtonGroup = $('.filter-button-group');
-$filterButtonGroup.on( 'click', 'button', function() {
-  var filterAttr = $( this ).attr('data-filter');
-  // set filter in hash
-  location.hash = 'filter=' + encodeURIComponent( filterAttr );
-});
-
-var isIsotopeInit = false;
-
-function onHashchange() {
-  var hashFilter = getHashFilter();
-  if ( !hashFilter && isIsotopeInit ) {
-    return;
-  }
-  isIsotopeInit = true;
-  // filter isotope
-  $grid.isotope({
-    itemSelector: '.item',
-    layoutMode: 'vertical',
-    filter: hashFilter,
-    // no transitions
-    transitionDuration: 0
-  });
-  // set selected class on button
-  if ( hashFilter ) {
-    $filterButtonGroup.find('.is-checked').removeClass('is-checked');
-    $filterButtonGroup.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
-  }
-}
-
-$(window).on( 'hashchange', onHashchange );
-
-onHashchange();
-</script>

@@ -7,23 +7,26 @@
 	<link rel="alternate" type="application/rss+xml" href="{{ site.feed_url }}" />
 	<script src="https://use.typekit.net/hxc5lmc.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>  <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" rel="stylesheet">
-  <link href="https://npmcdn.com/basscss@8.0.1/css/basscss.min.css" rel="stylesheet">
-	<link href="https://npmcdn.com/basscss-btn@1.1.1/css/btn.css" rel="stylesheet">
-	<link href="https://npmcdn.com/basscss-colors@2.2.0/css/colors.css" rel="stylesheet">
-	<link href="https://npmcdn.com/basscss-border-colors@2.1.0/css/border-colors.css" rel="stylesheet">
-	<link href="https://npmcdn.com/basscss-btn-outline@1.1.0/css/btn-outline.css" rel="stylesheet">
-	<link href="https://npmcdn.com/basscss-background-colors@2.1.0/css/background-colors.css" rel="stylesheet">
+  <link href="https://unpkg.com/basscss@8.0.1/css/basscss.min.css" rel="stylesheet">
+	<link href="https://unpkg.com/basscss-btn@1.1.1/css/btn.css" rel="stylesheet">
+	<link href="https://unpkg.com/basscss-colors@2.2.0/css/colors.css" rel="stylesheet">
+	<link href="https://unpkg.com/basscss-border-colors@2.1.0/css/border-colors.css" rel="stylesheet">
+	<link href="https://unpkg.com/basscss-btn-outline@1.1.0/css/btn-outline.css" rel="stylesheet">
+	<link href="https://unpkg.com/basscss-background-colors@2.1.0/css/background-colors.css" rel="stylesheet">
+	<link href="https://unpkg.com/basscss-responsive-type-scale/css/responsive-type-scale.css" rel="stylesheet">
+	<link href="https://unpkg.com/basscss-responsive-margin/css/responsive-margin.css" rel="stylesheet">
+	<link href="https://unpkg.com/basscss-responsive-padding/css/responsive-padding.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body id="{{ page.title | slugify }}" class="{{ page.collection | default: 'pages' }}">
 	<section id="container">
 		<header>
 		  <nav>
-		    <ul class="list-reset sm-flex center">
+				<ul class="list-reset flex center">
 					{% assign sorted_pages = site.pages | sort: 'position' %}
 					{% for item in sorted_pages %}
 						{% if item.position %}
-							<li class="flex-auto mr1 h3 {{ item.title | slugify }} {% if page.url contains item.url %}bold{% endif %}"><a class="text-decoration-none black inline-block py1" href="{{ item.url }}">{{ item.title }}</a></li>
+							<li class="flex-auto mr1 h4 sm-h3 {{ item.title | slugify }} {% if page.title == item.title %}bold{% endif %}"><a class="text-decoration-none black inline-block py1" href="{{ item.url }}">{{ item.title }}</a></li>
 						{% endif %}
 					{% endfor %}
 		    </ul>
@@ -32,7 +35,7 @@
 
 		{{ content }}
 
-		<footer class="pt3 mt4 border-top border-gray">
+		<footer class="py1 sm-py3 border-top border-gray">
 			<nav>
 				<ul class="list-reset flex center">
 					<li class="flex-auto"><a class="black text-decoration-none" href="/">Tom Healy</a></li>
@@ -46,11 +49,60 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" data-no-instant></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js" data-no-instant></script>
-	<script type="text/javascript">
-		$("main").fitVids();
-	</script>
+	<script src="//unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
 	<script data-no-instant type="text/javascript">
+		$(".content").fitVids();
 		InstantClick.init();
+		InstantClick.on('change', function() {
+			$(".content").fitVids();
+		});
+	</script>
+	<script type="text/javascript">
+
+	function getHashFilter() {
+	  // get filter=filterName
+	  var matches = location.hash.match( /filter=([^&]+)/i );
+	  var hashFilter = matches && matches[1];
+	  return hashFilter && decodeURIComponent( hashFilter );
+	}
+
+	// init Isotope
+  var $grid = $('.essays-list');
+
+	// bind filter button click
+	var $filterButtonGroup = $('.filter-button-group');
+	$filterButtonGroup.on( 'click', 'button', function() {
+	  var filterAttr = $( this ).attr('data-filter');
+	  // set filter in hash
+	  location.hash = 'filter=' + encodeURIComponent( filterAttr );
+	});
+
+	var isIsotopeInit = false;
+
+	function onHashchange() {
+	  var hashFilter = getHashFilter();
+	  if ( !hashFilter && isIsotopeInit ) {
+	    return;
+	  }
+	  isIsotopeInit = true;
+	  // filter isotope
+	  $grid.isotope({
+	    itemSelector: '.item',
+	    layoutMode: 'vertical',
+	    filter: hashFilter,
+	    // no transitions
+	    transitionDuration: 0
+	  });
+	  // set selected class on button
+	  if ( hashFilter ) {
+	    $filterButtonGroup.find('.is-checked').removeClass('is-checked');
+	    $filterButtonGroup.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
+	  }
+	}
+
+	$(window).on( 'hashchange', onHashchange );
+
+	onHashchange();
 	</script>
 </body>
 </html>

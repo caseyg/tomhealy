@@ -15,7 +15,7 @@
 {% assign what = what | split: "|" | uniq %}
 {% assign where = where | split: "|" | uniq %}
 {% assign why = why | split: "|" | uniq %}
-<div class="border-left sm-col sm-col-4 px2 center">
+<div class="border-left sm-col sm-col-4 px2 center xs-hide">
   <h2 id="{{ this_year }}-ref" class="item h1 mt0 gray">Filters</h2>
   <section class="button-group filter-button-group taxonomy border-gray mx-auto">
     {% for taxonomy in site.taxonomies %}
@@ -23,7 +23,9 @@
         {% assign var = taxonomy | downcase %}
         <h3 class="gray caps">{{ taxonomy }}</h3>
         {% for item in [var] %}
-          <button class="btn btn-outline" data-filter=".{{ item | slugify }}">{{ item }}</button>
+          {% if item != "" %}
+            <button class="btn btn-outline" data-filter=".{{ item | slugify }}">{{ item }}</button>
+          {% endif %}
         {% endfor %}
       </section>
     {% endfor %}
@@ -36,6 +38,6 @@
   section>button:nth-child({{forloop.index}}) {
     color: rgba(0,0,0,{{n}});
   }
-  {% assign n = n  | minus: '0.075' %}
+  {% assign n = n  | minus: '0.05' %}
 {% endfor %}
 </style>

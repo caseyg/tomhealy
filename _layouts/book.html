@@ -2,8 +2,8 @@
 layout: default
 ---
 
-<main class="clearfix mt4 px4">
-  <div class="col col-6 center">
+<main class="clearfix mt4 px2 sm-px4 content sm-flex">
+  <div class="sm-col-6">
     <img src="{{page.cover-image}}" alt="{{page.title}}" style="max-width:100%;">
     {% assign buy = page.buy %}
     {% if buy.size > 0 %}
@@ -15,7 +15,7 @@ layout: default
       </section>
     {% endif %}
   </div>
-  <article class="col col-6">
+  <article class="sm-col-6">
     <h1>{{ page.title }}</h1>
 
     {% assign contents = site.poetry | where:"book", page.title %}

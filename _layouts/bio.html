@@ -2,18 +2,13 @@
 layout: default
 ---
 
-<main class="px4">
-	<article class="max-width-3">
-		<h2 class="block h1 pt3">Tom Healy Biography</h2>
-		<div class="content mx-auto">
-			{{ content | markdownify }}
-		</div>
-	</article>
-	<aside class="mt4">
-		{% include taxonomy.html %}
-	</aside>
-	<style type="text/css">
-		.content img {
-		}
-	</style>
+<main>
+	<div class="sm-flex px2 sm-px4 pt2 max-width-4 mx-auto">
+		<article>
+			<h2 class="block h1">{{ page.title }}</h2>
+			<div class="content sm-col sm-col-8">
+				{{ content | markdownify }}
+			</div>
+		</article>
+	</div>
 </main>
