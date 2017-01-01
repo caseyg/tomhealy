@@ -1,5 +1,18 @@
 ---
 ---
+$colors-list: #47DBFF #65DCE8 #84DED2 #A3DFBC #C1E1A6 #E0E290 #FFE47A;
+@each $current-color in $colors-list {
+    $i: index($colors-list, $current-color);
+    .home-nav h2:nth-child(0n+#{$i}) a:link, .home-nav h2:nth-child(0n+#{$i}) a:visited {
+      background: $current-color;
+      color: darken($current-color,33%);
+      transition: all .15s;
+    }
+    .home-nav h2:nth-child(0n+#{$i}) a:hover {
+      background: darken($current-color,5%);
+    }
+}
+
 
 body {
   font-family: adobe-caslon-pro, serif;
@@ -9,12 +22,8 @@ h1, h2, h3, h4, h5, h6, nav, .taxonomy, .btn, ul, ol {
   font-family: ff-dagny-web-pro, sans-serif;
 }
 
-.home-nav a:link, .home-nav a:visited {
-  color: rgba(255,255,255,.75)
-}
-
 .home-nav a:hover, .home-nav a:active {
-  color: #fff;
+  color: #fff!important;
 }
 
 li.home a:link, li.home a:visited {
