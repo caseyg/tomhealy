@@ -3,11 +3,17 @@ title: About
 position: 5
 contact: "Email  \n[contact@heyday.us](mailto:contact@heyday.us)  \n\nTwitter  \n[@tphealy](http://twitter.com/tphealy)
   \ \n"
-interviews-and-reviews:
+Reviews and Poems:
 - title: 'Gulfstream — On What the Right Hand Knows '
   url: http://w3.fiu.edu/gulfstream/issue2/healyinterview.asp
 - title: Bomb Magazine — On What the Right Hand Knows
   url: http://bombmagazine.org/article/3539/
+- title: The New York Times — A Picture and a Poem
+  url: www.nytimes.com/2014/06/03/t-magazine/a-picture-and-a-poem-tom-healy-tom-sachs.html
+- title: Bomb Magazine — Two Poems
+  url: bombmagazine.org/article/7109/two-poems
+- title: Bomb Magazine — Three Poems
+  url: bombmagazine.org/article/3162/three-poems
 layout: about
 ---
 
