@@ -1,9 +1,8 @@
 ---
-title: SWI 2010
+title: 'SWI 2010: Poetry and Fiction Reading'
 date: 2016-08-15 17:05:00 -04:00
-subtitle: 'Poetry and Fiction Reading: Amy Hempel and Tom Healy'
+subtitle: With Amy Hempel and Tom Healy
 format: youtube
 code: Aab9ONnFBQc
-image: 
 ---
 
