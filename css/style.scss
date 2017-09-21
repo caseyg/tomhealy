@@ -1,5 +1,6 @@
 ---
 ---
+
 $colors-list: #47DBFF #65DCE8 #84DED2 #A3DFBC #C1E1A6 #E0E290 #FFE47A;
 @each $current-color in $colors-list {
     $i: index($colors-list, $current-color);

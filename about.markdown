@@ -3,7 +3,7 @@ title: About
 position: 5
 contact: "Email  \n[contact@heyday.us](mailto:contact@heyday.us)  \n\nTwitter  \n[@tphealy](http://twitter.com/tphealy)
   \ \n"
-interviews-and-reviews:
+Interviews-and-Reviews:
 - title: 'Gulfstream — On What the Right Hand Knows '
   url: http://w3.fiu.edu/gulfstream/issue2/healyinterview.asp
 - title: Bomb Magazine — On What the Right Hand Knows
